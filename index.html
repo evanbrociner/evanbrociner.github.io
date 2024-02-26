@@ -6,73 +6,434 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OnePlace Health: The one place to navigate government assistance programs like WIC and SNAP in Raleigh, NC. Find personalized support and connect with essential social services to help make ends meet.">
 
-    <title>OnePlace Health</title>
+    <title>Medicaid Resources For Startups</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-ZSPLX4Z01B"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZSPLX4Z01B');
-    </script>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="grid.css" rel="stylesheet">
     <style>
       body {
         background-color: #FAFAF4;
         font-size: 1.2rem;
       }
 
-      
+      /* Style for all tables, except those with 'unique-table' class */
+      table:not(.unique-table) {
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      table:not(.unique-table) tr th:nth-child(2) {
+        width: 65%;
+      }
+
+      table:not(.unique-table) tr td:first-child {
+        font-weight: bold;
+      }
+
+      .unique-table {
+        table-layout: fixed;
+      }
     </style>
+
   </head>
 
   <body>
 
-    <h4 id="theory">Theory</h4>
-  
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: center">File</th>
-        <th style="text-align: center">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: center"><a href="/files/cheatsheets/CS_theory_cheat_sheet.pdf">CS Theory Cheatsheet</a></td>
-        <td style="text-align: center">CS theory cheat sheet, originally accessed <a href="https://www.tug.org/texshowcase/cheat.pdf">here</a></td>
-      </tr>
-      <tr>
-        <td style="text-align: center">Tim Roughgarden’s <a href="https://theory.stanford.edu/~tim/notes.html">Lectures on Algorithms</a> and <a href="http://www.algorithmsilluminated.org/">Algorithms Illuminated</a></td>
-        <td style="text-align: center">Tim Roughgarden is one of most natural teachers I’ve ever seen. The first link is to lecture notes in PDF form from many classes. Videos for his Algorithms 2 class (CS 261) are <a href="https://www.youtube.com/playlist?list=PLEGCF-WLh2RJh2yDxlJJjnKswWdoO8gAc">here</a>. The second is a link to his page for his new textbook, but that page also has links out to all the youtube videos from his coursera version of CS 161 (Algorithms 1).</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="container">
+      <h1>Medicaid Resources For Startups</h1>
+
+      <h3>By, Evan Brociner</h3>
+      <p style="margin-bottom: 20px;">An active collection of my favorite Medicaid resources.</p>
+
+      <h3 style="margin-top: 20px;">Outline</h3>
+      <ul>
+        <li>
+          <a href="#101">Medicaid 101</a>
+        </li>
+        <li>
+          <a href="#managed-care">Managed Care</a>
+        </li>
+        <li>
+          <a href="#waiver1115">Waiver 1115</a>
+        </li>
+        <li>
+          <a href="#social-care">Social Care</a>
+        </li>
+        <li>
+          <a href="#learning-the-patient-perspective">Learning the Patient Perspective</a>
+        </li>
+        <li>
+          <a href="#trends">Trends</a>
+        </li>
+        <li>
+          <a href="#lessons">Lessons From Founders</a>
+        </li>
+        <li>
+          <a href="#investors-focusing-on-medicaid">Investors Focusing on Medicaid</a>
+        </li>
+      </ul>
+
+      <section id="101">
+
+        <h3 id="101" style="margin-top: 40px;">Medicaid 101</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Medicaid</td>
+              <td>A government-funded health insurance program for low-income individuals and families.</td>
+            </tr>
+            <tr>
+              <td>CBO (Community Based Organization)</td>
+              <td>A non-profit organization that provides services and support to a specific community, often focusing on social and health needs.</td>
+            </tr>
+            <tr>
+              <td>FQHC (Federally Qualified Health Center)</td>
+              <td>A community-based health clinic that receives federal funding to provide primary care services in underserved areas.</td>
+            </tr>
+            <tr>
+              <td>Capitated Payments</td>
+              <td>A payment model where healthcare providers receive a fixed amount per patient per month, regardless of the number of services provided.</td>
+            </tr>
+            <tr>
+              <td>Managed Care</td>
+              <td>A type of health insurance where the insurer contracts with providers and coordinates care to control costs and improve quality.
+              </td>
+            </tr>
+            <tr>
+              <td>CHW (Community Health Worker)</td>
+              <td>A frontline public health professional who serves as a trusted link between healthcare providers and a community, often focusing on outreach and health education.</td>
+            </tr>
+
+            <tr>
+              <td>MCO (Managed Care Organization)
+              </td>
+              <td>
+                A type of health insurance company that contracts with healthcare providers to form a network and emphasizes preventative care and cost management.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <img src="static/img/Screenshot 2023-11-13 at 9.01.12 PM.png" class="rounded mx-auto d-block" alt="..." width="800" height="500">
+
+        <h4 id="101" style="margin-top: 40px;">Breakdown (2019)</h4>
+
+        <table class="table mx-auto unique-table">
+
+          <thead>
+            <tr>
+              <th>Group</th>
+
+              <th>
+                <a href="https://www.kff.org/medicaid/state-indicator/medicaid-spending-by-enrollment-group/?dataView=0&currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D">Cost</a>
+              </th>
+              <th>
+                <a href="https://www.kff.org/medicaid/state-indicator/distribution-of-medicaid-enrollees-by-enrollment-group/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D#notes">Number of People</a>
+              </th>
+              <th>Cost Ratio (Relative to Population)</th>
+              <th>Weight of Cost to Population</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Seniors</td>
+            <td>$122,304,815,900 (21.23%)</td>
+            <td>8,527,000 (9.71%)</td>
+            <td>$14,342.34</td>
+            <td>0.2555</td>
+          </tr>
+          <tr>
+            <td>Individuals with Disabilities</td>
+            <td>$196,614,960,400 (34.09%)</td>
+            <td>10,037,600 (11.42%)</td>
+            <td>$19,571.25</td>
+            <td>0.3491</td>
+          </tr>
+          <tr>
+            <td>Adult</td>
+            <td>$56,884,386,300 (9.87%)</td>
+            <td>14,812,200 (16.87%)</td>
+            <td>$3,838.79</td>
+            <td>0.0683</td>
+          </tr>
+          <tr>
+            <td>Children</td>
+            <td>$100,323,192,200 (17.43%)</td>
+            <td>35,361,500 (40.26%)</td>
+            <td>$2,835.62</td>
+            <td>0.0506</td>
+          </tr>
+          <tr>
+            <td>Newly Eligible Adult</td>
+            <td>$99,956,643,000 (17.36%)</td>
+            <td>19,129,700 (21.77%)</td>
+            <td>$5,224.39</td>
+            <td>0.0933</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$576,083,997,800 (100%)</td>
+            <td>87,868,000 (100%)</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+        </table>
+
+      </section>
+
+      <section id="managed-care">
+
+        <h3 id="Managed Care" style="margin-top: 40px;">Managed Care</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://hbr.org/2020/02/how-to-improve-care-for-high-need-high-cost-medicaid-patients">
+                  How to Improve Care for High-Need, High-Cost Medicaid Patients</a>
+              </td>
+              <td>To improve care for high-need, high-cost Medicaid patients, focus on those who will benefit most from intensive care. Provide integrated care that addresses both medical and social needs through a team approach. Target the key factors driving poor health outcomes to achieve better results.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.healthaffairs.org/content/forefront/dispelling-myths-hindering-medicaid-innovation">
+                  Dispelling The Myths Hindering Medicaid Innovation</a>
+              </td>
+              <td>Discusses the misconception that Medicaid has no money for innovation. In reality, Medicaid plans have incentives to invest in medical and non-medical services. The article also discusses the myth that startups cannot scale Medicaid innovations because of state-specific regulations. The authors recommend that companies understand state-based market dynamics.</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section id="waiver 1115">
+
+        <h3 id="Managed Care" style="margin-top: 40px;">Waiver 1115</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.kff.org/medicaid/issue-brief/medicaid-waiver-tracker-approved-and-pending-section-1115-waivers-by-state/">
+                  Medicaid Waiver Tracker: Approved and Pending Section 1115 Waivers by State</a>
+              </td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Social-care">
+
+        <h3 id="Social Care" style="margin-top: 40px;">Social Care</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/watch?v=cyNLd746V_o">
+                  Community As Medicine | Elizabeth Markle</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/watch?v=cyNLd746V_o">
+                  SNAP</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://academic.oup.com/healthaffairsscholar/article/1/5/qxad060/7378812">
+                  “More than just checking the box”: community-based organizations on their role in Medicaid redesigns</a>
+              </td>
+              <td>
+                <p>
+
+                  This article examines the role of community-based organizations (CBOs) in Medicaid programs in New York and Massachusetts. It analyzes feedback from CBOs to highlight their experiences and potential for improvement.</p>
+
+                <h3>Key Points</h3>
+
+                <ul>
+                  <li>CBOs raised concerns about funding, timing, and the flow of payments.</li>
+                  <li>CBOs suggested improvements for better partnerships between CBOs and health care providers.</li>
+                  <li>The article emphasizes the need for better financial support and clearer guidelines for CBO participation in Medicaid redesigns.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://thehealthcareblog.com/blog/2024/02/23/putting-the-value-in-value-based-payments/">
+                  Putting the ‘value’ in value-based payments</a>
+              </td>
+              <td>Discusses the issue of high healthcare spending in the US despite not achieving good health outcomes. It proposes that we focus more on social determinants of health, like housing and employment, to improve health outcomes. The author argues that this could be achieved by rewarding providers for achieving social outcomes, as well as patient-reported outcomes.</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Learing the Patient Perspective">
+
+        <h3 id="Patient-perspective" style="margin-top: 40px;">Learing the Patient Perspective</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.reddit.com/r/Medicaid/">
+                  r/Medicaid</a>
+              </td>
+              <td>Subreddit for Medicaid questions.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.reddit.com/r/povertyfinance/">
+                  r/povertyfinance
+                </a>
+              </td>
+              <td>Subreddit for financial advice, frugality tips, stories, opportunities, and general guidance for people who are struggling financially.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.uhccommunityandstate.com/content/articles/medicaid-as-seen-through-the-eyes-of-beneficiaries">
+                  Medicaid as seen through the eyes of beneficiaries
+                </a>
+              </td>
+              <td>This article outlines the challenges Medicaid beneficiaries face in accessing care and achieving good health. Many beneficiaries lack a regular primary care provider and may struggle to afford transportation to appointments. Additionally, they often feel they are treated as second-class citizens by providers.</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Trends">
+
+        <h3 id="Trends" style="margin-top: 40px;">Customer Problems</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://rockhealth.com/insights/unwinding-the-opportunity-medicaids-digital-health-moment/">
+                  Unwinding the opportunity: Medicaid’s digital health moment</a>
+              </td>
+              <td>
+                Rock Health's article explores the potential for digital health solutions within Medicaid. Despite challenges, the large customer base and increasing interest make it an attractive market. Key areas for startups include extending provider capacity, improving enrollee engagement, and using data for better insights. Rock Health predicts significant growth in Medicaid-focused digital health innovation soon.</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Lessons">
+
+        <h3 id="Lessons" style="margin-top: 40px;">Lessons From Founders</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://chaojessica.medium.com/lessons-from-founding-a-venture-backed-health-equity-startup-9d80d43a3f9a">
+                  Jessica Chao: Lessons from founding a venture-backed health equity startup</a>
+              </td>
+              <td>
+                Jessica discusses the difficulties of finding a product-market fit and the importance of building trust with users. Jessica also highlight the need for a sustainable business model. Some of the key takeaways are that it is important to beware of a tech-enabled services model with specialized talent, to build trust during user acquisition, and to know how to fit into the broader ecosystem supporting your mission.</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Investors Focusing on Medicaid">
+
+        <h3 id="Patient-perspective" style="margin-top: 40px;">Investors Focusing on Medicaid</h3>
+
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Investor</th>
+              <th scope="col">Fund</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.linkedin.com/in/saumitrathakur?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAALjpoQBtrsIvvkg3LIpwbDsGy-pFvIR26A&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bq%2F5t7Wl%2FQFer9gLCV%2FAsxw%3D%3D">
+                  Saumitra Thakur</a>
+              </td>
+              <td>MedMountain</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+
   </body>
 
- 
+  <footer class="footer mt-auto py-3 ">
+    <div class="container d-flex justify-content-between">
+      <span class="text-muted">Contact me: Evanbrociner@gmail.com</span>
+    </div>
+  </footer>
 
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container d-flex justify-content-between">
-        <span class="text-muted">OnePlace Health</span>
-        <span class="text-muted">Contact us: Evanbrociner@gmail.com</span>
-        <a href="{{ url_for('FAQ') }}" class="text-muted">Frequently Asked Questions</a>
-        <a href="{{ url_for('terms') }}" class="text-muted">Terms of Service</a>
-        <a href="{{ url_for('privacy') }}" class="text-muted">Privacy</a>
-      </div>
-    </footer>
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  </body>
+</body>
 
 </html>
