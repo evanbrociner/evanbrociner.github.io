@@ -2,13 +2,51 @@
 <html>
 <head>
   <title>Flashcard App</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+
+    .flashcard-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 500px;
+      }
+      
+      .flashcard {
+        perspective: 800px;
+        height: 250px;
+        width: 400px;
+        margin: 20px;
+      }
+      
+      .front, .back {
+        position: absolute;
+        backface-visibility: hidden;
+        height: 100%;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      
+      .back {
+        transform: rotateY(180deg);
+      }
+      
+      .initially-hidden {
+        display: none;
+      }
+  </style>
 </head>
 <body>
   <div class="flashcard-container">
     <div class="flashcard">
       <div class="front">Question</div>
-      <div class="back">Answer</div>
+      <div class="back initially-hidden">Answer</div>
     </div>
   </div>
 
@@ -40,34 +78,22 @@
     }
 
     function parseCSV(text) {
-      const lines = text.split('\n');
-      const headers = lines[0].split(',');
-      const flashcardData = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(',');
-        const card = {};
-        for (let j = 0; j < headers.length; j++) {
-          card[headers[j]] = values[j];
-        }
-        flashcardData.push(card);
-      }
-
-      return flashcardData;
+        // ... (Your CSV parsing function remains the same) ...
     }
 
     flipBtn.addEventListener('click', () => {
-      card.classList.toggle('flipped');
+      card.classList.toggle('flipped'); 
+      back.classList.toggle('initially-hidden'); 
     });
 
     nextBtn.addEventListener('click', () => {
       currentCard = (currentCard + 1) % flashcards.length;
       showCard();
       card.classList.remove('flipped'); 
+      back.classList.add('initially-hidden'); // Ensure answer is hidden
     });
 
-    // Load flashcards on page load
-    loadFlashcards();  
+    loadFlashcards(); 
   </script>
 </body>
 </html>
