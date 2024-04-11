@@ -49,8 +49,8 @@
 <body>
   <div class="flashcard-container">
     <div class="flashcard">
-      <div class="front">Question</div>
-      <div class="back initially-hidden">Answer</div>
+        <div class="front">Question</div>
+        <div class="back initially-hidden">Answer</div> 
     </div>
   </div>
 
@@ -98,12 +98,12 @@
         return flashcards;
       }
 
-    flipBtn.addEventListener('click', () => {
-        console.log("Flip button clicked!"); // Check if this logs the message
-
-      card.classList.toggle('flipped'); 
-      back.classList.toggle('initially-hidden'); 
-    });
+      flipBtn.addEventListener('click', () => {
+        console.log("Flip button clicked!"); 
+        card.classList.toggle('flipped');
+        back.classList.toggle('initially-hidden');
+        front.classList.toggle('initially-hidden'); 
+      });
 
     nextBtn.addEventListener('click', () => {
       currentCard = (currentCard + 1) % flashcards.length;
