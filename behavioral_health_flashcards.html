@@ -5,22 +5,44 @@
 
   <style>
 
+    html, body {
+        height: 100%;  /* Make the 'html' and 'body' elements take up the full screen */
+        margin: 0;     /* Remove any default margins */
+     }
+
     .flipped {
         transform: none !important;
       }
 
     .flashcard-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-        width: 500px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);   /* Optional: Set the width of the container */
+        
       }
+
+      .button-container {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);   /* Optional: Set the width of the container */
+        
+      }
+
+      .button-container button { /* Targets buttons within the 'button-container' */
+      height: 50px;   /* Adjust the height as desired */
+      width: 150px;   /* Adjust the width as desired */
+      padding: 10px 20px; /* Add inner spacing (optional) */
+      font-size: 18px;    /* Increase the font size (optional) */
+    }
       
       .flashcard {
         perspective: 800px; 
-        height: 250px;
-        width: 400px;
+        height: 500px;
+        width: 800px;
         margin: 20px;
         position: relative;  
       }
@@ -54,15 +76,20 @@
   </style>
 </head>
 <body>
+
   <div class="flashcard-container">
     <div class="flashcard">
         <div class="front">Question</div>
         <div class="back initially-hidden">Answer</div> 
     </div>
   </div>
+  <div class="button-container">
+    <div class="buttons">
 
   <button id="flip-btn">Flip</button>
   <button id="next-btn">Next</button>
+</div>
+</div>
 
   <script>
     const card = document.querySelector('.flashcard');
