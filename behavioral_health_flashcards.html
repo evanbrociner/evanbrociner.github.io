@@ -5,6 +5,10 @@
 
   <style>
 
+    .flipped {
+        transform: none !important;
+      }
+
     .flashcard-container {
         display: flex;
         justify-content: center;
@@ -32,7 +36,14 @@
         text-align: center;
         border: 2px solid black;
         border-radius: 5px;
+        transition: opacity 0.5s ease; /* Or adjust timing and easing */
+
       }
+
+      .hide {
+        opacity: 0;
+    }
+    
       
       .initially-hidden {
         display: none;
@@ -95,27 +106,21 @@
       }
 
       flipBtn.addEventListener('click', () => {
-        console.log("Flip button clicked!"); 
+        console.log("Flip button clicked!");
         card.classList.toggle('flipped');
         back.classList.toggle('initially-hidden');
-        front.classList.toggle('initially-hidden'); 
+        front.classList.toggle('initially-hidden');
       });
-
+  
       nextBtn.addEventListener('click', () => {
         currentCard = (currentCard + 1) % flashcards.length;
         showCard();
-      
-        // Reset visibility based on state
-        if (card.classList.contains('flipped')) {
-          front.classList.add('hide'); 
-          back.classList.remove('hide'); 
-        } else {
-          front.classList.remove('hide'); 
-          back.classList.add('hide');  
-        }
-      
-        card.classList.remove('flipped'); // Ensure card isn't flipped
-      });
+  
+        // Ensure the card is reset to the question side
+        card.classList.remove('flipped'); 
+        front.classList.remove('initially-hidden');
+        back.classList.add('initially-hidden'); 
+      });  
 
     loadFlashcards(); 
   </script>
