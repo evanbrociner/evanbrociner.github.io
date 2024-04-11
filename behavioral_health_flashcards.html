@@ -78,8 +78,21 @@
     }
 
     function parseCSV(text) {
-        // ... (Your CSV parsing function remains the same) ...
-    }
+        const lines = text.split('\n');
+        const headers = lines[0].split(',');
+        const flashcards = [];
+     
+        for (let i = 1; i < lines.length; i++) {
+          const values = lines[i].split(',');
+          const card = {};
+          for (let j = 0; j < headers.length; j++) {
+            card[headers[j]] = values[j];
+          }
+          flashcards.push(card);
+        }
+     
+        return flashcards;
+      }
 
     flipBtn.addEventListener('click', () => {
       card.classList.toggle('flipped'); 
