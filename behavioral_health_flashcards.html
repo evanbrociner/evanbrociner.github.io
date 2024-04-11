@@ -72,6 +72,20 @@
       .initially-hidden {
         display: none;
       }
+
+      .progress-bar-container {
+        width: 100%; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+        background-color: #ddd; /* Light gray background */
+        margin-top: 10px;     /* Add some spacing */
+      }
+      
+      .progress-bar {
+        width: 0%; /* Initially empty */
+        height: 100%; 
+        background-color: #4CAF50; /* Example: Green fill color */
+        transition: width 0.5s ease; /* Add a smooth transition */
+      }
       
     
 
@@ -90,6 +104,10 @@
 
   <button id="flip-btn">Flip</button>
   <button id="next-btn">Next</button>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
 </div>
 </div>
 
@@ -108,11 +126,21 @@
       back.textContent = flashcards[currentCard].answer;
     }
 
+    function randomizeFlashcards() {
+        // Using the Fisher-Yates Shuffle algorithm:
+        for (let i = flashcards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [flashcards[i], flashcards[j]] = [flashcards[j], flashcards[i]]; 
+        }
+      }
+
     function loadFlashcards() {
       fetch('static/csv/test.csv')
         .then(response => response.text())
         .then(text => {
           flashcards = parseCSV(text); 
+          randomizeFlashcards(); // Call the randomization function
+
           showCard(); 
         });
     }
@@ -148,6 +176,10 @@
         card.classList.remove('flipped'); 
         front.classList.remove('initially-hidden');
         back.classList.add('initially-hidden'); 
+
+        const progressBar = document.querySelector('.progress-bar');
+        const progressPercentage = ((currentCard + 1) / flashcards.length) * 100;
+        progressBar.style.width = `${progressPercentage}%`; 
 
         showCard();
  
