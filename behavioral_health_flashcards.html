@@ -114,12 +114,14 @@
   
       nextBtn.addEventListener('click', () => {
         currentCard = (currentCard + 1) % flashcards.length;
-        showCard();
   
         // Ensure the card is reset to the question side
         card.classList.remove('flipped'); 
         front.classList.remove('initially-hidden');
         back.classList.add('initially-hidden'); 
+
+        showCard();
+ 
       });  
 
     loadFlashcards(); 
