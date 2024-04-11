@@ -14,28 +14,14 @@
       }
       
       .flashcard {
-        perspective: 800px;
+        perspective: 800px; 
         height: 250px;
         width: 400px;
         margin: 20px;
-        position: relative; /* Important Change */
+        position: relative;  
       }
       
-      .back {
-        position: absolute;
-        backface-visibility: hidden;
-        height: 100%; /* Adjust if needed */
-        width: 100%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border: 2px solid black;
-        border-radius: 5px;
-        transform: rotateY(180deg); /* Initially rotate the back */
-      }
-      
-      .front {
+      .front, .back {
         position: absolute;
         backface-visibility: hidden;
         height: 100%;
@@ -48,14 +34,12 @@
         border-radius: 5px;
       }
       
-      
       .initially-hidden {
         display: none;
       }
+      
+    
 
-      .flipped {
-        transform: rotateY(180deg);
-      }
   </style>
 </head>
 <body>
