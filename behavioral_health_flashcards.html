@@ -101,12 +101,21 @@
         front.classList.toggle('initially-hidden'); 
       });
 
-    nextBtn.addEventListener('click', () => {
-      currentCard = (currentCard + 1) % flashcards.length;
-      showCard();
-      card.classList.remove('flipped'); 
-      back.classList.add('initially-hidden'); // Ensure answer is hidden
-    });
+      nextBtn.addEventListener('click', () => {
+        currentCard = (currentCard + 1) % flashcards.length;
+        showCard();
+      
+        // Reset visibility based on state
+        if (card.classList.contains('flipped')) {
+          front.classList.add('hide'); 
+          back.classList.remove('hide'); 
+        } else {
+          front.classList.remove('hide'); 
+          back.classList.add('hide');  
+        }
+      
+        card.classList.remove('flipped'); // Ensure card isn't flipped
+      });
 
     loadFlashcards(); 
   </script>
