@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flashcard App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="flashcard-container">
+    <div class="flashcard">
+      <div class="front">Question</div>
+      <div class="back">Answer</div>
+    </div>
+  </div>
+
+  <button id="flip-btn">Flip</button>
+  <button id="next-btn">Next</button>
+
+  <script>
+    const card = document.querySelector('.flashcard');
+    const front = document.querySelector('.front');
+    const back = document.querySelector('.back');
+    const flipBtn = document.getElementById('flip-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let flashcards = []; 
+    let currentCard = 0; 
+
+    function showCard() {
+      front.textContent = flashcards[currentCard].question;
+      back.textContent = flashcards[currentCard].answer;
+    }
+
+    function loadFlashcards() {
+      fetch('static/csv/test.csv')
+        .then(response => response.text())
+        .then(text => {
+          flashcards = parseCSV(text); 
+          showCard(); 
+        });
+    }
+
+    function parseCSV(text) {
+      const lines = text.split('\n');
+      const headers = lines[0].split(',');
+      const flashcardData = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split(',');
+        const card = {};
+        for (let j = 0; j < headers.length; j++) {
+          card[headers[j]] = values[j];
+        }
+        flashcardData.push(card);
+      }
+
+      return flashcardData;
+    }
+
+    flipBtn.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentCard = (currentCard + 1) % flashcards.length;
+      showCard();
+      card.classList.remove('flipped'); 
+    });
+
+    // Load flashcards on page load
+    loadFlashcards();  
+  </script>
+</body>
+</html>
