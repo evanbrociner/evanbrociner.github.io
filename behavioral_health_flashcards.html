@@ -171,7 +171,7 @@
       }
 
     function loadFlashcards() {
-      fetch('static/csv/test.csv')
+      fetch('static/csv/behavioral_health.csv')
         .then(response => response.text())
         .then(text => {
           flashcards = parseCSV(text); 
