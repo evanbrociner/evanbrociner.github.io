@@ -174,10 +174,10 @@
       fetch('static/csv/behavioral_health.csv')
         .then(response => response.text())
         .then(text => {
-          flashcards = parseCSV(text); 
+          flashcards = parseCSV(text);
           randomizeFlashcards(); // Call the randomization function
 
-          showCard(); 
+          showCard();
         });
     }
 
