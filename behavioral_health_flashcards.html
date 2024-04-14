@@ -159,8 +159,6 @@
     let currentCard = 0; 
 
     function showCard() {
-
-      console.log(flashcards[currentCard])
       front.textContent = flashcards[currentCard].question;
       back.textContent = flashcards[currentCard].answer;
     }
@@ -177,10 +175,7 @@
         fetch('static/csv/behavioral_health.csv')
           .then(response => response.text())
           .then(text => {
-            console.log(text)
-
             flashcards = parseCSV(text);
-            console.log(flashcards)
             randomizeFlashcards(); // Call the randomization function
             showCard();
           });
@@ -188,7 +183,9 @@
       
       function parseCSV(text) {
         const results = Papa.parse(text, {
-            header: true // Indicates your CSV has a header row
+            header: true ,
+            quoteChar: '"' // Use double quotes to enclose fields that might contain commas
+
         });
       
         return results.data; // flashcards will be an array of objects
