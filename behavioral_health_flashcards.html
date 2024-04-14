@@ -9,7 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="grid.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Deep Dives in Healthcare</a>
@@ -170,44 +171,22 @@
         }
       }
 
-    function parseTSV(text) {
-    const lines = text.split('\n');
-    const flashcards = [];
-
-    for (let line of lines) {
-        const fields = line.split('\t');
-        flashcards.push(fields); 
-    }
-
-    return flashcards;
-}
-
-    function loadFlashcards() {
-      fetch('static/csv/behavioral_health.tsv')
-        .then(response => response.text())
-        .then(text => {
-          flashcards = parseTSV(text);
-          randomizeFlashcards(); // Call the randomization function
-
-          showCard();
+      function loadFlashcards() {
+        fetch('static/csv/behavioral_health.csv')
+          .then(response => response.text())
+          .then(text => {
+            const flashcards = parseCSV(text);
+            randomizeFlashcards(); // Call the randomization function
+            showCard();
+          });
+      }
+      
+      function parseCSV(text) {
+        const results = Papa.parse(text, {
+            header: true // Indicates your CSV has a header row
         });
-    }
-
-    function parseCSV(text) {
-        const lines = text.split('\n');
-        const headers = lines[0].split(',');
-        const flashcards = [];
-     
-        for (let i = 1; i < lines.length; i++) {
-          const values = lines[i].split(',');
-          const card = {};
-          for (let j = 0; j < headers.length; j++) {
-            card[headers[j]] = values[j];
-          }
-          flashcards.push(card);
-        }
-     
-        return flashcards;
+      
+        return results.data; // flashcards will be an array of objects
       }
 
       flipBtn.addEventListener('click', () => {
