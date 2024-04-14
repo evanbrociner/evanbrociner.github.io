@@ -170,6 +170,18 @@
         }
       }
 
+    function parseTSV(text) {
+    const lines = text.split('\n');
+    const flashcards = [];
+
+    for (let line of lines) {
+        const fields = line.split('\t');
+        flashcards.push(fields); 
+    }
+
+    return flashcards;
+}
+
     function loadFlashcards() {
       fetch('static/csv/behavioral_health.tsv')
         .then(response => response.text())
