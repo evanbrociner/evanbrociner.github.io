@@ -159,7 +159,6 @@
     let currentCard = 0; 
 
     function showCard() {
-    flashcards[currentCard].answer = flashcards[currentCard].answer + ", " + flashcards[currentCard].parsed_extra.join(", ")
 
       front.textContent = flashcards[currentCard].question;
       back.textContent = flashcards[currentCard].answer;
