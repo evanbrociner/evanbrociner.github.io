@@ -159,6 +159,7 @@
     let currentCard = 0; 
 
     function showCard() {
+        console.log(flashcards[currentCard].question)
       front.textContent = flashcards[currentCard].question;
       back.textContent = flashcards[currentCard].answer;
     }
