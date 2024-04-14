@@ -175,7 +175,10 @@
         fetch('static/csv/behavioral_health.csv')
           .then(response => response.text())
           .then(text => {
+            console.log(text)
+
             const flashcards = parseCSV(text);
+            console.log(flashcards)
             randomizeFlashcards(); // Call the randomization function
             showCard();
           });
