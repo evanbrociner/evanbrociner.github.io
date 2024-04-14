@@ -159,7 +159,8 @@
     let currentCard = 0; 
 
     function showCard() {
-        console.log(flashcards[currentCard].question)
+
+      console.log(flashcards[currentCard])
       front.textContent = flashcards[currentCard].question;
       back.textContent = flashcards[currentCard].answer;
     }
@@ -178,7 +179,7 @@
           .then(text => {
             console.log(text)
 
-            const flashcards = parseCSV(text);
+            flashcards = parseCSV(text);
             console.log(flashcards)
             randomizeFlashcards(); // Call the randomization function
             showCard();
