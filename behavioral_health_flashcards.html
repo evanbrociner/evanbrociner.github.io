@@ -171,10 +171,10 @@
       }
 
     function loadFlashcards() {
-      fetch('static/csv/behavioral_health.csv')
+      fetch('static/csv/behavioral_health.tsv')
         .then(response => response.text())
         .then(text => {
-          flashcards = parseCSV(text);
+          flashcards = parseTSV(text);
           randomizeFlashcards(); // Call the randomization function
 
           showCard();
