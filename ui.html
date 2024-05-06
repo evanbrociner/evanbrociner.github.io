@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Editor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+     #tableContainer table {
+       width: 100%;
+     } 
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Select HTML File to Load Table:</h3>
+        <input type="file" id="fileInput" accept=".html"> 
+      
+        <div id="tableContainer"></div> 
+      
+        <button id="saveButton" class="btn btn-success">Save Changes</button>
+      
+        <label for="tableSelect">Select a table:</label>
+        <select id="tableSelect"></select>
+      </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        
+        $("#fileInput").change(loadTable);
+        $("#saveButton").click(saveTable);
+      
+        // Add row button
+        $('#tableContainer').after('<button id="addRowBtn" class="btn btn-primary">Add Row</button>');
+        $('#addRowBtn').click(function() {
+          const $table = $('#tableContainer table');
+          addTableRow($table);
+        });
+      });
+      
+      function loadTable() {
+          const file = $("#fileInput")[0].files[0];
+          const reader = new FileReader();
+        
+          reader.onload = function(event) {
+            const externalHTML = event.target.result;
+            const tables = $(externalHTML).find('table'); // Get all tables in the HTML file
+        
+            // Populate the select element with table options
+            const tableSelect = $('#tableSelect');
+            tableSelect.empty();
+            tables.each(function(index) {
+              const tableIndex = index + 1;
+              const option = $('<option>').text(`Table ${tableIndex}`).val(index);
+              tableSelect.append(option);
+            });
+        
+            // Load the first table by default
+            console.log(tables)
+            if (tables.length) {
+              const $externalTable = $(tables[0]);
+              makeTableEditable($externalTable, tables); // Pass the 'tables' array
+              $("#tableContainer").html($externalTable);
+            }
+          };
+        
+          reader.readAsText(file);
+        
+          // Handle table selection change
+          $('#tableSelect').change(function() {
+            const selectedIndex = $(this).val();
+            const $selectedTable = $(tables[selectedIndex]);
+            makeTableEditable($selectedTable, tables); // Pass the 'tables' array
+            $("#tableContainer").html($selectedTable);
+          });
+      }
+      
+      function makeTableEditable($table, tables) { // Add tables parameter
+        $table.find('td').each(function() {
+          $(this).attr('contenteditable', 'true'); 
+        });
+      }
+      
+      function addTableRow($table) {
+          const columns = 2
+          console.log(columns)
+          let newRow = '<tr>';
+          for (let i = 0; i < columns; i++) {
+            newRow += '<td contenteditable="true"></td>';
+          }
+          newRow += '</tr>';
+          $table.append(newRow);
+      }
+      
+      function saveTable() {
+        // Placeholder as in the original code
+        alert("Saving functionality is complex. Explore techniques like iframes, AJAX for communication, or a server-side helper.");
+      }
+</script>
+</body>
+</html>
