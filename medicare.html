@@ -66,9 +66,9 @@
       <h3>By, Evan Brociner</h3>
       <p style="margin-bottom: 20px;">An active collection of my favorite Medicare resources.</p>
 
-      <h3 class="text-center" style="margin-top: 100px;">
+      <h3 class="text-center" style="margin-top: 50px;margin-bottom: 50px">
         <a href="https://forms.gle/PH4vv6ZHEs7hQic49" rel="noopener noreferrer" target="_blank">
-          Subscribe for weekly emails get deep in the weeds of healthcare through workflows and deep dives on our complex healthcare system.</a>
+          Get weekly emails to get deep in the weeds of healthcare through workflows and deep dives on our complex healthcare system.</a>
       </h3>
 
       <h3 style="margin-top: 20px;">Outline</h3>
@@ -81,10 +81,20 @@
           <a href="#senior-care">Senior Care</a>
         </li>
 
+        <li>
+          <a href="#policy">Policy</a>
+        </li>
+
+        <li>
+          <a href="#startup-learning">Startup Learnings</a>
+        </li>
+
       </ul>
       <section id="101">
         <h3 id="101" style="margin-top: 40px;">Medicare 101</h3>
-        <table class="table mx-auto">
+
+        <h4>Medicare Enrollment Periods</h4>
+        <table class="table table-striped" style=''>
           <thead>
             <tr>
               <th scope="col">Term</th>
@@ -92,318 +102,644 @@
             </tr>
           </thead>
           <tbody>
-
-            <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/Medicare_Basics_Infographic.jpg" width="1000"/>
-            <h5 style=" text-align: center;">
-              <a href="https://newsroom.nebraskablue.com/medicare-advantage-101/" rel="noopener noreferrer" target="_blank">Source: Blue Cross and Blue Shield of Nebraska</a>
-            </h5>
-
-            <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/medicare_donut.png" width="1000"/>
-
             <tr>
-              <td>Annual Election Period (AEP)</td>
-              <td class="long-definition">Begins October 15 and ends December 7 each year. During AEP, you can enroll in, disenroll from, or change your Medicare Advantage plan or prescription drug plan. You can also return to Original Medicare. Elections made during AEP are effective January 1 of the following year.</td>
+              <td>AEP (Oct 15 - Dec 7)</td>
+              <td>Change Medicare Advantage/Drug Plan (or switch back to Original Medicare) for next year.</td>
             </tr>
             <tr>
-              <td>Annual Notice of Changes (ANOC)</td>
-              <td>A notice sent each September by Medicare Advantage plans to their members. It details any changes in coverage, costs, or service for the upcoming plan year.</td>
+              <td>ICEP (7 months around your 65th birthday)</td>
+              <td>Sign up for Medicare for the first time.</td>
             </tr>
+            <tr>
+              <td>OEP (Jan 1 - Mar 31)</td>
+              <td>Switch between Medicare Advantage Plans (or go back to Original Medicare) if already enrolled.</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <div style='margin-bottom: 75px;'>
+          <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/medicare_donut.png" width="1000"/>
+        </div>
+        <h4>Medicare Parts and Plans</h4>
+
+        <table class="table table-striped" style=''>
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Medicare Advantage (Part C)</td>
+              <td>Private plan with benefits similar to Original Medicare (A & B), often including extras like drug coverage.</td>
+            </tr>
+            <tr>
+              <td>Part A (Hospital)</td>
+              <td>Covers hospital stays, nursing facilities, hospice, and some home health.</td>
+            </tr>
+            <tr>
+              <td>Part B (Medical)</td>
+              <td>Covers doctor visits, preventive care, outpatient care, and medical supplies.</td>
+            </tr>
+            <tr>
+              <td>Part D (Drug)</td>
+              <td>Optional prescription drug coverage (offered as part of Advantage plans or on its own).</td>
+            </tr>
+            <tr>
+              <td>Original Medicare (Parts A & B)</td>
+              <td>Traditional government-offered insurance.</td>
+            </tr>
+            <tr>
+              <td>Special Needs Plan (SNP)</td>
+              <td>Advantage plan with extra benefits for people with specific needs (chronic illness, Medicaid, or long-term care).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table mx-auto" style="margin-top:20px">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/watch?v=KRzBxPj-eQk" rel="noopener noreferrer" target="_blank">
+                  Traditional Medicare vs Medicare Advantage vs Medicare Part D vs Medicare Supplement Explained</a>
+              </td>
+              <td>
+                Dr. Eric Bricker talks on how traditional Medicare offers broad coverage with no network restrictions, but leaves you responsible for out-of-pocket costs. Medicare Advantage plans often come with lower premiums and extra benefits, but may limit your choice of doctors and have additional approval steps for care.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/Medicare_Basics_Infographic.jpg" width="1000"/>
+
+        <h5 style="text-align: center;margin-bottom: 100px;">
+          <a href="https://newsroom.nebraskablue.com/medicare-advantage-101/" rel="noopener noreferrer" target="_blank">Source: Blue Cross and Blue Shield of Nebraska</a>
+        </h5>
+
+        <h4>Medicare Costs and Coverage</h4>
+        <table class="table table-striped" style='margin-bottom: 75px;'>
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Coinsurance</td>
-              <td>A percentage of medical and drug costs you may pay as your share for services or supplies (e.g., 20% of a prescription drug cost).</td>
+              <td>A percentage of the cost you pay for certain covered services after you've met your deductible.</td>
             </tr>
             <tr>
               <td>Copayment</td>
-              <td>A fixed dollar amount you may pay as your share for services or supplies (e.g., a $10 copay for a doctor visit).</td>
+              <td>A fixed amount you pay for certain covered services, like a doctor visit.</td>
             </tr>
             <tr>
-              <td>Coverage gap ("donut hole")</td>
-              <td class="long-definition">For 2024 plans, begins after you and your drug plan have spent $5,030 on covered drugs. While in the gap, you pay a larger share of drug costs. Members will pay no more than 25% for brand-name or generic drugs until they reach the out-of-pocket spending limit ($8,000 in 2024). From 2024 on, members pay $0 for catastrophic coverage.</td>
+              <td>Coverage Gap ("Donut Hole")</td>
+              <td>The gap in Part D prescription drug coverage where you pay a higher share of the cost for your medications.</td>
             </tr>
             <tr>
               <td>Creditable prescription drug coverage</td>
-              <td>Coverage from another source (e.g., employer benefits) that is at least as good as Medicare Part D.</td>
+              <td>A health plan that meets Medicare's standards for prescription drug coverage. Helps you avoid the donut hole.</td>
             </tr>
             <tr>
               <td>Deductible</td>
-              <td>Amount you pay for medical services or drugs in a plan year before your plan starts to pay for benefits.</td>
-            </tr>
-            <tr>
-              <td>Drug List (Formulary)</td>
-              <td>A list of specific drugs covered by a prescription drug plan, often divided into tiers based on cost-sharing amounts.</td>
+              <td>The amount you must pay for covered services before Medicare starts to pay.</td>
             </tr>
             <tr>
               <td>Evidence of Coverage (EOC)</td>
-              <td>A document detailing your Medicare plan's benefits and costs.</td>
-            </tr>
-            <tr>
-              <td>Health Maintenance Organization (HMO)</td>
-              <td>A type of health insurance plan where a primary care physician coordinates your care using providers in the plan's network.</td>
-            </tr>
-            <tr>
-              <td>Initial Coverage Election Period (ICEP)</td>
-              <td>A 7-month period when a Medicare-eligible person can sign up for Medicare for the first time. It begins 3 months before your 65th birthday, includes your birthday month, and ends 3 months after.</td>
-            </tr>
-            <tr>
-              <td>Medicaid</td>
-              <td>Health coverage for certain low-income people, including pregnant women, the elderly, and those with disabilities. Jointly funded by federal and state dollars.</td>
-            </tr>
-
-            <tr>
-              <td>Medicare Advantage (Medicare Part C)</td>
-              <td class="long-definition">Plans offered by private insurers approved by Medicare. Must offer, at minimum, the same benefits as Original Medicare (Parts A and B). Most also include prescription drug coverage, and many include some coverage for dental, vision and hearing.</td>
-            </tr>
-            <tr>
-              <td>Medicare Part A</td>
-              <td>Part of Original Medicare, helps cover inpatient hospital stays, skilled nursing facility care, hospice care, and some home healthcare.</td>
-            </tr>
-            <tr>
-              <td>Medicare Part B</td>
-              <td>Part of Original Medicare, helps cover doctors' services, preventive services, outpatient care, and medical supplies.</td>
-            </tr>
-            <tr>
-              <td>Medicare Part D</td>
-              <td>Prescription drug insurance sold through private insurance companies. Can be offered as part of a Medicare Advantage plan or as a stand-alone prescription drug plan (PDP).</td>
-            </tr>
-            <tr>
-              <td>Medicare Supplement Insurance (Medigap)</td>
-              <td>Sold by private insurance companies to help cover out-of-pocket costs not paid by Original Medicare, like copays and deductibles. Does not include Part D prescription drug coverage.</td>
-            </tr>
-            <tr>
-              <td>Network</td>
-              <td>A group of healthcare providers who agree to provide care based on a plan's terms. Includes doctors, hospitals, and other healthcare professionals and facilities. You usually save money by using in-network providers.
-              </td>
-            </tr>
-            <tr>
-              <td>Medicare Advantage Open Enrollment Period (OEP)</td>
-              <td>For people enrolled in Medicare Advantage only. Runs from January 1 to March 31 each year. Members can switch to another Medicare Advantage plan or return to Original Medicare.</td>
-            </tr>
-            <tr>
-              <td>Original Medicare (Traditional Medicare)</td>
-              <td>Offered directly by the federal government. Consists of Medicare Part A (hospital) and Part B (medical) coverage.</td>
+              <td>A document from your Medicare plan that shows what services are covered and what you may owe.</td>
             </tr>
             <tr>
               <td>Out-of-pocket costs</td>
-              <td>Costs you pay for medical care, prescriptions, etc. Includes coinsurance, copayments, and deductibles. Medicare Advantage plans have annual maximum out-of-pocket limits. |
-              </tr>
-              <tr>
-                <td>Preferred Provider Organization (PPO)</td>
-                <td>A type of health insurance plan that lets you choose your own doctors and hospitals. Out-of-pocket costs are generally lower if you use in-network providers.</td>
-              </tr>
-              <tr>
-                <td>Premium</td>
-                <td>The monthly amount you pay to Medicare or your private insurer for healthcare coverage.</td>
-              </tr>
-              <tr>
-                <td>Special Needs Plan (SNP)</td>
-                <td class="long-definition">A Medicare Advantage plan that includes Parts A, B and D benefits and may have additional benefits. To qualify, you must have Medicare Parts A and B, and either have a verified chronic illness (C-SNP), receive Medicaid (D-SNP), or live in a long-term care facility (I-SNP).
+              <td>All the costs you pay for your Medicare coverage, including premiums, deductibles, coinsurance, and copays.</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>The monthly payment you make to have Medicare coverage.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Plan Types</h4>
+        <table class="table table-striped" style='margin-bottom: 75px;'>
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HMO</td>
+              <td>Requires a primary care doctor who coordinates care within the plan's network.</td>
+            </tr>
+            <tr>
+              <td>PPO</td>
+              <td>Lets you choose your own doctors and hospitals, but using in-network providers saves money.</td>
+            </tr>
+            <tr>
+              <td>Medigap</td>
+              <td>Sold by private insurers to help cover out-of-pocket costs in Original Medicare (not including drugs).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Duals</h4>
+
+        <table class="table table-striped" style='margin-bottom: 75px;'>
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>C-SNP (Chronic Illness SNP)</td>
+              <td>Designed for people with specific chronic conditions like heart disease, diabetes, or COPD. May offer benefits tailored to these conditions.</td>
+            </tr>
+            <tr>
+              <td>D-SNP (Dual Eligible SNP)</td>
+              <td>For people who qualify for both Medicare and Medicaid. May offer simplified benefits administration and potentially lower out-of-pocket costs.</td>
+            </tr>
+            <tr>
+              <td>I-SNP (Institutional SNP)</td>
+              <td>For individuals residing in long-term care facilities (nursing homes). Often provide coordinated care with facility staff.</td>
+            </tr>
+            <tr>
+              <td>Dual Eligible Plan<br>
+                <span class="text-muted">(May vary by program)</span>
+              </td>
+              <td>Combines Medicare and Medicaid benefits into a single plan. Can simplify coverage and potentially offer additional benefits for eligible individuals.
+                <br>**Note:** Specific details of Dual Eligible Plans can vary depending on the program and location.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Value-Based Care</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shared Savings</td>
+              <td>Bonus earned by ACOs for delivering quality care and reducing Medicare spending.</td>
+            </tr>
+            <tr>
+              <td>ACO (Accountable Care Organization)</td>
+              <td>Network of providers working together to coordinate care for Medicare patients. They are accountable for cost, quality, and patient experience.</td>
+            </tr>
+            <tr>
+              <td>Performance Measures</td>
+              <td>Metrics used to judge ACO success in quality, cost control, and patient experience.</td>
+            </tr>
+            <tr>
+              <td>Fee-for-Service (FFS)</td>
+              <td>Traditional Medicare payment system that reimburses providers based on the number of services delivered. MSSP aims to move away from this.</td>
+            </tr>
+            <tr>
+              <td>Risk Adjustment</td>
+              <td>Accounts for differences in patient health needs to ensure a fair comparison of ACO performance.</td>
+            </tr>
+            <tr>
+              <td>Tracks</td>
+              <td>Different participation levels in the MSSP (Tracks 1-3) with varying risk and reward structures.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/Screenshot 2023-11-13 at 9.01.12 PM.png" width="800"/>
+
+      </section>
+      <section id="senior-care">
+        <h3 id="senior-care" style="margin-top: 40px;">Senior Care</h3>
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <img alt="..." class="rounded mx-auto d-block" height="400" src="static/img/medicare_care_gaps.jpg" width="800"/>
+
+            <tr>
+              <td>
+                <a href="https://medium.com/@daniel.kaplan19/venturing-in-senior-care-predictions-and-observations-for-2024-and-beyond-a34ea0764cc7" rel="noopener noreferrer" target="_blank">
+                  Venturing in Senior Care: Observations and Predictions for 2024 and Beyond</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    Daniel Kaplan writes how senior living and healthcare are merging, affordability remains a major challenge, and new care models are emerging to address these issues.</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>
+                    <b>Merging of Senior Living and Healthcare:</b>
+                    Senior living facilities are increasingly providing healthcare services due to the rising acuity of residents. This trend is expected to continue as the population ages.</li>
+                  <li>
+                    <b>Affordability Crisis:</b>
+                    The article highlights the challenge of many seniors not being able to afford assisted living, nursing homes, or even basic care. This is a major issue that needs solutions.</li>
+                  <li>
+                    <b>New Care Models:</b>
+                    The emergence of new models like disease-specific care and wrap-around care models offer promise for improving the quality of care for seniors while potentially reducing costs.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://kffhealthnews.org/dying-broke/" rel="noopener noreferrer" target="_blank">
+                  Dying Broke: A KFF Health News-New York Times Project</a>
+              </td>
+              <td>
+                <p>
+                  KFF Health News and The New York Times examine how the immense financial costs of long-term care drain older Americans and their families.
+
                 </td>
               </tr>
+            </tr>
 
-            </tbody>
-          </table>
+            <tr>
+              <td>
+                <a href="https://www.nytimes.com/interactive/2023/09/06/opinion/seniors-old-age-america.html?campaign_id=39&emc=edit_ty_20230906&instance_id=102036&nl=opinion-today&regi_id=59179832&segment_id=143859&te=1&user_id=a7111df6bec10ecb56e5b56d631c6b76" rel="noopener noreferrer" target="_blank">
+                  America's Seniors and the Challenges of Old Age</a>
+              </td>
+              <td>
+                <p>
+                  In this article the NYTimes writes that the US is aging rapidly and needs to prepare for the social and economic consequences, including potential labor shortages, strain on social programs, and the need for more elder care.
 
-          https://www.youtube.com/watch?v=KRzBxPj-eQk
-
-          <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/Screenshot 2023-11-13 at 9.01.12 PM.png" width="800"/>
-
-        </section>
-        <section id="senior-care">
-          <h3 id="senior-care" style="margin-top: 40px;">Senior Care</h3>
-          <table class="table mx-auto">
-            <thead>
-              <tr>
-                <th scope="col">Resource</th>
-                <th scope="col">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              <img alt="..." class="rounded mx-auto d-block" height="400" src="static/img/medicare_care_gaps.jpg" width="800"/>
-
-              <tr>
-                <td>
-                  <a href="https://medium.com/@daniel.kaplan19/venturing-in-senior-care-predictions-and-observations-for-2024-and-beyond-a34ea0764cc7" rel="noopener noreferrer" target="_blank">
-                    Venturing in Senior Care: Observations and Predictions for 2024 and Beyond</a>
                 </td>
-                <td>
-                  <p>
-                    <b>
-                      Daniel Kaplan writes how senior living and healthcare are merging, affordability remains a major challenge, and new care models are emerging to address these issues.</b>
-                  </p>
+              </tr>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.nytimes.com/2023/11/02/realestate/more-american-seniors-live-alone.html" rel="noopener noreferrer" target="_blank">
+                  More American Seniors Live Alone
+                </a>
+              </td>
+              <td>
+                <p>
+                  People over 60 are more likely to live alone in the United States and Europe than in other regions of the world.
+
+                </td>
+              </tr>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.nytimes.com/2024/03/30/health/seniors-alcohol-consumption.html" rel="noopener noreferrer" target="_blank">
+                  Why Are Older Americans Drinking So Much?
+                </a>
+              </td>
+              <td>
+                <p>
+                  The pandemic played a role in increased consumption, but alcohol use among people 65 and older was climbing even before 2020.
+
+                </td>
+              </tr>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/watch?v=2xlol-SNQRU" rel="noopener noreferrer" target="_blank">
+                  Long-Term Care: Last Week Tonight with John Oliver
+                </a>
+              </td>
+              <td>
+                <p>
+                  <b>John Oliver explains the industry behind nursing homes and assisted living facilities, and why long-term care needs fixing.</b>
                   <h5>Key Points</h5>
+
                   <ul>
                     <li>
-                      <b>Merging of Senior Living and Healthcare:</b>
-                      Senior living facilities are increasingly providing healthcare services due to the rising acuity of residents. This trend is expected to continue as the population ages.</li>
+                      <strong>Failing Nursing Home Industry:</strong>
+                      The nursing home industry is failing to provide adequate care for its residents. This is caused by understaffing, low wages for nursing assistants, and a focus on profit over quality care. Residents are often neglected and may even be subjected to unnecessary medical treatments.</li>
                     <li>
-                      <b>Affordability Crisis:</b>
-                      The article highlights the challenge of many seniors not being able to afford assisted living, nursing homes, or even basic care. This is a major issue that needs solutions.</li>
+                      <strong>Problematic Assisted Living Facilities (ALFs):</strong>
+                      Assisted living facilities (ALFs) are a less regulated alternative to nursing homes, but they also have problems. Many ALFs are not equipped to care for dementia patients, and there have been cases of residents being neglected or even abused.</li>
                     <li>
-                      <b>New Care Models:</b>
-                      The emergence of new models like disease-specific care and wrap-around care models offer promise for improving the quality of care for seniors while potentially reducing costs.</li>
+                      <strong>Need for Home-Based Care:</strong>
+                      There is a growing need for home-based care for the elderly and disabled. This would allow people to stay in their homes for as long as possible, but it requires reform at the national level to make it a viable option for more people.
+                    </li>
                   </ul>
+
                 </td>
               </tr>
+            </tr>
 
-              <tr>
-                <td>
-                  <a href="https://kffhealthnews.org/dying-broke/" rel="noopener noreferrer" target="_blank">
-                    Dying Broke: A KFF Health News-New York Times Project</a>
+            <tr>
+              <td>
+                <a href="https://www.nytimes.com/2023/08/16/opinion/health-care-life-expectancy-poverty.html" rel="noopener noreferrer" target="_blank">
+                  How Do We Fix the Scandal That Is American Health Care?
+
+                </a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    Nicholas Kristof argues that the U.S. has a healthcare crisis despite advanced technology, and improving health requires addressing access, behavior, and social determinants.</b>
+
+                  <h5>Key Points</h5>
+
+                  <ul>
+                    <li>Poor health outcomes in the US compared to other wealthy nations, despite advanced medical technology. (e.g. avoidable diabetic amputations)</li>
+                    <li>Contributing factors: lack of healthcare access, unhealthy behaviors, social determinants of health (poverty, education).</li>
+                    <li>Solutions: expand healthcare access, promote healthy behaviors, address social determinants of health (e.g. Delta Health Alliance program).</li>
+                  </ul>
+
                 </td>
-                <td>
-                  <p>
-                    KFF Health News and The New York Times examine how the immense financial costs of long-term care drain older Americans and their families.
-
-                  </td>
-                </tr>
               </tr>
+            </tr>
 
-              <tr>
-                <td>
-                  <a href="https://www.nytimes.com/interactive/2023/09/06/opinion/seniors-old-age-america.html?campaign_id=39&emc=edit_ty_20230906&instance_id=102036&nl=opinion-today&regi_id=59179832&segment_id=143859&te=1&user_id=a7111df6bec10ecb56e5b56d631c6b76" rel="noopener noreferrer" target="_blank">
-                    America's Seniors and the Challenges of Old Age</a>
-                </td>
-                <td>
-                  <p>
-                    In this article the NYTimes writes that the US is aging rapidly and needs to prepare for the social and economic consequences, including potential labor shortages, strain on social programs, and the need for more elder care.
+          </tbody>
+        </table>
+      </section>
 
-                  </td>
-                </tr>
-              </tr>
+      <section id="patient-perspective">
+        <h3 id="patient-perspective" style="margin-top: 40px;">Patient Persecptives</h3>
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
 
-              <tr>
-                <td>
-                  <a href="https://www.nytimes.com/2023/11/02/realestate/more-american-seniors-live-alone.html" rel="noopener noreferrer" target="_blank">
-                    More American Seniors Live Alone
-                  </a>
-                </td>
-                <td>
-                  <p>
-                    People over 60 are more likely to live alone in the United States and Europe than in other regions of the world.
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/watch?v=OtKvQrpZh8k" rel="noopener noreferrer" target="_blank">
+                  Healthcare is Great on Medicare</a>
+              </td>
+              <td>
+                <p>
+                  <b>
 
-                  </td>
-                </tr>
-              </tr>
-
-              <tr>
-                <td>
-                  <a href="https://www.nytimes.com/2024/03/30/health/seniors-alcohol-consumption.html" rel="noopener noreferrer" target="_blank">
-                    Why Are Older Americans Drinking So Much?
-                  </a>
-                </td>
-                <td>
-                  <p>
-                    The pandemic played a role in increased consumption, but alcohol use among people 65 and older was climbing even before 2020.
-
-                  </td>
-                </tr>
-              </tr>
-
-              <tr>
-                <td>
-                  <a href="https://www.youtube.com/watch?v=2xlol-SNQRU" rel="noopener noreferrer" target="_blank">
-                    Long-Term Care: Last Week Tonight with John Oliver
-                  </a>
-                </td>
-                <td>
-                  <p>
-                    John Oliver explains the industry behind nursing homes and assisted living facilities, and why long-term care needs fixing.
-                  </td>
-                </tr>
-              </tr>
-
-              <tr>
-                <td>
-                  <a href="https://www.nytimes.com/2023/08/16/opinion/health-care-life-expectancy-poverty.html" rel="noopener noreferrer" target="_blank">
-                    How Do We Fix the Scandal That Is American Health Care?
-
-                  </a>
-                </td>
-                <td>
-                  <p>
-                    Nicholas Kristof argues that the U.S. has a healthcare crisis despite advanced technology, and improving health requires addressing access, behavior, and social determinants.
-
-                    <h5>Key Points</h5>
-
+                    Dr. Eric Bricker highlights that while Medicare beneficiaries enjoy high satisfaction with their healthcare plans, the program faces financial challenges.</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>
+                    <strong>High Satisfaction among Medicare Beneficiaries:</strong>
+                    The video highlights a study showing that over 90% of seniors are happy with their Medicare plans. It emphasizes the ease of access to specialists and short waiting times for appointments.</li>
+                  <li>
+                    <strong>Traditional Medicare vs. Medicare Advantage:</strong>
                     <ul>
-                      <li>Poor health outcomes in the US compared to other wealthy nations, despite advanced medical technology. (e.g. avoidable diabetic amputations)</li>
-                      <li>Contributing factors: lack of healthcare access, unhealthy behaviors, social determinants of health (poverty, education).</li>
-                      <li>Solutions: expand healthcare access, promote healthy behaviors, address social determinants of health (e.g. Delta Health Alliance program).</li>
+                      <li>
+                        <strong>Traditional Medicare:</strong>
+                        Offers more freedom in choosing doctors but may have higher out-of-pocket costs.</li>
+                      <li>
+                        <strong>Medicare Advantage Plans:</strong>
+                        Typically have lower out-of-pocket costs but require referrals from a primary care physician and may limit choice of doctors.</li>
                     </ul>
+                  </li>
+                  <li>
+                    <strong>Uncertainty about Medicare Funding:</strong>
+                    While Medicare provides excellent benefits, the video warns that the program faces financial challenges. The Medicare Part A trust fund that pays for hospital care is projected to become insolvent in 2026.
+                  </li>
+                </ul>
+              </td>
+            </tr>
 
-                  </td>
-                </tr>
-              </tr>
-
-            </tbody>
-          </table>
-        </section>
-
-        <section id="patient-perspective">
-          <h3 id="patient-perspective" style="margin-top: 40px;">Patient Persecptives</h3>
-          <table class="table mx-auto">
-            <thead>
-              <tr>
-                <th scope="col">Resource</th>
-                <th scope="col">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              <tr>
-                <td>
-                  <a href="https://www.youtube.com/watch?v=OtKvQrpZh8k" rel="noopener noreferrer" target="_blank">
-                    Healthcare is Great on Medicare</a>
+            <tr>
+              <td>
+                <a href="https://www.reddit.com/r/medicare/top/?t=all" rel="noopener noreferrer" target="_blank">
+                  r/medicare
+                </a>
+              </td>
+              <td>
+                <p>
+                  Read how Medicare patients understand the complex system.
                 </td>
-                <td>
-                  <p>
-                    <b>
-                      Daniel Kaplan writes how senior living and healthcare are merging, affordability remains a major challenge, and new care models are emerging to address these issues.</b>
+              </tr>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="policy">
+        <h3 id="policy" style="margin-top: 40px;">Policy</h3>
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <a href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2814988" rel="noopener noreferrer" target="_blank">
+                  Medicare Part D Coverage of Drugs Selected for the Drug Price Negotiation Program</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    In a study by Patterson et al., high coverage of drugs selected for Medicare price negotiation was observed in 2019 and 2023, but concerns remain about potential limitations on future access due to utilization management practices.</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>The Inflation Reduction Act created a program to negotiate prices for certain Medicare drugs and requires coverage by Medicare plans upon a fair price agreement.</li>
+                  <li>Concerns exist regarding potential limitations on patient access to these drugs despite mandated coverage. These limitations could include prior authorization requirements or placement on higher cost tiers by insurance companies.</li>
+                  <li>The study investigates coverage of these drugs in 2019 and 2023 to assess pre-negotiation program accessibility and establish a benchmark for future monitoring.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.aafp.org/family-physician/practice-and-career/delivery-payment-models/cms-primary-cares-initiative.html" rel="noopener noreferrer" target="_blank">
+                  Center for Medicare and Medicaid Innovation Primary Care Models</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    The Center for Medicare and Medicaid Innovation offers four primary care models to incentivize quality care delivery, with a focus on expanding access and rewarding value-based practices (Center for Medicare and Medicaid Innovation).</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>
+                    <strong>ACO Primary Care Flex Model (ACO PC Flex)</strong>
+                    <ul>
+                      <li>Provides upfront and monthly payments to ACOs for better care delivery.</li>
+                      <li>Focuses on expanding access, improving care approaches, and reducing health outcome disparities.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Making Care Primary (MCP)</strong>
+                    <ul>
+                      <li>Offers three tracks for practices to enter value-based payment arrangements.</li>
+                      <li>Aims to improve access to coordinated and accountable primary care, particularly for underserved practices.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Primary Care First (PCF)</strong>
+                    <ul>
+                      <li>Shifts payment structure from fee-for-service to prospective payments with performance bonuses.</li>
+                      <li>Focuses on providing flexibility for innovative care delivery based on patient needs.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>ACO Realizing Equity, Access, and Community Health (ACO REACH)</strong>
+                    <ul>
+                      <li>Aims to promote health equity, provider leadership, and serve underserved communities.</li>
+                      <li>Offers two risk-sharing options with financial incentives for ACOs.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://www.aafp.org/family-physician/practice-and-career/delivery-payment-models/cms-primary-cares-initiative.html" rel="noopener noreferrer" target="_blank">
+                  FAQs on Medicare Financing and Trust Fund Solvency</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    The KFF explains that the Medicare Hospital Insurance trust fund is projected to be depleted by 2028, raising concerns about future program financing.</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>
+                    <strong>Medicare Part A Trust Fund Nearing Depletion:</strong>
+                    The Hospital Insurance (HI) trust fund, financing Medicare Part A benefits, is projected to be depleted by 2028. This doesn't mean Medicare ceases to operate, but there will be a shortfall between spending and incoming revenue.</li>
+                  <li>
+                    <strong>Factors Affecting Solvency:</strong>
+                    Several factors affect HI trust fund solvency, including economic growth, healthcare spending trends, and demographics (aging population). Recent economic changes due to the pandemic have impacted projections, highlighting the sensitivity of the depletion date.</li>
+                  <li>
+                    <strong>Long-Term Outlook:</strong>
+                    Medicare faces financial pressures due to rising healthcare costs and an aging population. Long-term solutions may involve reducing payments to providers, modifying benefits, or increasing revenue through tax hikes.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="https://dembones.substack.com/p/making-care-primary" rel="noopener noreferrer" target="_blank">
+                  Pondering CMS' Ambitious "Making Care Primary" Model</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    Ben Schwartz argues that while Medicare Advantage offers benefits, it has limitations, and explores how a different model, Making Care Primary (MCP), could address those limitations by improving care coordination and potentially offering more integrated specialist care.</b>
+                </p>
+                <h5>Key Points</h5>
+                <ul>
+                  <li>
+                    <strong>Medicare Advantage Limitations:</strong>
+                    The article argues that Medicare Advantage (MA), despite its supposed benefits like capitation and value-based care, has limitations. These limitations include potential overpayments, cherry-picking healthy patients, and squeezing specialists with lower pay.
+                  </li>
+                  <li>
+                    <strong>"Making Care Primary" (MCP) as an Improvement:</strong>
+                    The article introduces MCP as a potential improvement over MA. MCP focuses on better coordination between primary and specialist care and creates a pathway for integrating specialist care within advanced primary care models.
+                  </li>
+                  <li>
+                    <strong>Potential of MCP:</strong>
+                    The article explores how MCP could address specialist care limitations by creating incentives for Advanced Primary Care (APC) practices to manage specialist care in-house. This could involve hiring specialists, partnering with next-generation specialists, or developing microcenters focused on specific conditions.
+                  </li>
+                </ul>
+
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section id="startup-learning">
+        <h3 id="startup-learning" style="margin-top: 40px;">Startup Learnings</h3>
+        <table class="table mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Resource</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <a href="https://medium.com/wharton-pulse-podcast/farzad-mostashari-aledade-on-the-power-of-primary-care-889b950603ed" rel="noopener noreferrer" target="_blank">
+                  Farzad Mostashari, Aledade, on the power of primary care</a>
+              </td>
+              <td>
+                <p>
+                  <b>
+                    Alex Wess, published in The Pulse by Wharton Digital Health, chats with Dr. Farzad Mostashari about how Aledade believes independent primary care physicians are best positioned to benefit from value-based care.
                   </p>
                   <h5>Key Points</h5>
                   <ul>
                     <li>
-                      <b>Merging of Senior Living and Healthcare:</b>
-                      Senior living facilities are increasingly providing healthcare services due to the rising acuity of residents. This trend is expected to continue as the population ages.</li>
+                      <b>Focus on Independent Primary Care:
+                      </b>
+                      Aledade partners with existing independent primary care practices to help them transition to value-based care. They believe independent practices have the most to gain from value-based care because they influence a large portion of healthcare costs while accounting for a small percentage themselves.</li>
                     <li>
-                      <b>Affordability Crisis:</b>
-                      The article highlights the challenge of many seniors not being able to afford assisted living, nursing homes, or even basic care. This is a major issue that needs solutions.</li>
+                      <b>Technology and Evidence-Based Approach:
+                      </b>Aledade uses a technology platform and data analysis to guide practice workflows and implement interventions to reduce healthcare costs and improve outcomes. They heavily rely on evidence-based practices and constantly test new interventions before large-scale implementation.
+                    </li>
                     <li>
-                      <b>New Care Models:</b>
-                      The emergence of new models like disease-specific care and wrap-around care models offer promise for improving the quality of care for seniors while potentially reducing costs.</li>
+                      <b>Profitability and Growth: Aledade is one
+                      </b>of the rare profitable healthcare tech companies. They recently raised $123 million to invest in new interventions and expand their platform. They prioritize long-term success and mission over an IPO and are in a good position to choose when and if to go public.
+                    </li>
                   </ul>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <a href="https://www.reddit.com/r/medicare/top/?t=all" rel="noopener noreferrer" target="_blank">
-                    r/medicare
-                  </a>
+                  <a href="https://www.youtube.com/watch?v=FpEpp_U-4_A" rel="noopener noreferrer" target="_blank">
+                    Dr. Chris Chen Speaks at the Global Value-Based Healthcare Symposium</a>
                 </td>
                 <td>
                   <p>
-                    Read how Medicare patients understand the complex system.
+                    <b>
+                      Dr. Chris Chen spokes about ChenMed's model of medicine is a pure value-based care model.
+                    </p>
+                    <h5>Key Points</h5>
+                    <ul>
+                      <li>Chen Med's care model focuses on value-based care for high-risk populations, targeting Medicare Advantage patients and taking full capitation to reduce hospitalization rates and improve outcomes.</li>
+                      <li>Traditional fee-for-service healthcare incentivizes volume over value, rewarding doctors for seeing more patients and performing more procedures, not better outcomes, and disincentivizes preventative care.</li>
+                      <li>Large healthcare systems are slow to adopt disruptive innovations like Chen Med's model due to volume incentives and established systems. Chen Med fills a market gap by offering a more patient-centered approach.</li>
+                    </ul>
                   </td>
                 </tr>
-              </tr>
 
-            </tbody>
-          </table>
-        </section>
+              </tbody>
+            </table>
+          </section>
 
-      </div>
-    </body>
-    <footer class="footer mt-auto py-3">
-      <div class="container d-flex justify-content-between" style="margin-top: 250px;">
-        <a href="https://www.linkedin.com/in/evan-brociner/" rel="noopener noreferrer" target="_blank">
-          LinkedIn
-        </a>
-      </div>
-    </footer>
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </div>
+      </body>
+      <footer class="footer mt-auto py-3">
+        <div class="container d-flex justify-content-between" style="margin-top: 250px;">
+          <a href="https://www.linkedin.com/in/evan-brociner/" rel="noopener noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        </div>
+      </footer>
+      <!-- Bootstrap JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  </html>
+    </html>
