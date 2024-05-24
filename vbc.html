@@ -9,7 +9,12 @@
     <title>VBC Resources</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="grid.css" rel="stylesheet"/>
+
+    
+    <script src="static/js/scroll.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Deep Dives in Healthcare</a>
       <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
@@ -24,42 +29,14 @@
         </ul>
       </div>
     </nav>
-    <style>
-      body {
-        background-color: #FAFAF4;
-        font-size: 1.2rem;
-      }
-
-      /* Style for all tables, except those with 'unique-table' class */
-      table:not(.unique-table) {
-        table-layout: fixed;
-        width: 100%;
-      }
-
-      table:not(.unique-table) tr th:nth-child(2) {
-        width: 65%;
-      }
-
-      table:not(.unique-table) tr td:first-child {
-        font-weight: bold;
-      }
-
-      .unique-table {
-        table-layout: fixed;
-      }
-
-      a {
-        color: #008080;
-      }
-
-      li,
-      p {
-        color: #333333;
-      }
-    </style>
+  
   </head>
 
   <body>
+
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
     <div class="container">
       <h1 style="margin-top: 20px;">VBC Resources</h1>
       <h3>By, Evan Brociner</h3>
