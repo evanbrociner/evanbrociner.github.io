@@ -5,83 +5,78 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="Medicaid Resources For Startups" name="description"/>
-    <title>Medicaid Resources For Startups</title>
+    <title>How Healthcare Works</title>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="static/css/style.css">
 
-    <script src="static/js/scroll.js"></script>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Deep Dives in Healthcare</a>
-      <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
-              <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </head>
 
-  <body>
+  <body class="m-3" data-bs-spy="scroll" data-bs-target="#navlist">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="list-group">
 
-    <div id="progressBarContainer">
-      <div id="progressBar"></div>
-    </div>
-
-    <div class="container">
-      <h1 style="margin-top: 20px;">Medicaid Resources For Startups</h1>
-      <p style="margin-bottom: 20px;">An active collection of my favorite Medicaid resources.</p>
-      <h3 class="text-center sticky-heading" style="margin-top: 50px;margin-bottom: 50px">
-        <span>Sign up for weekly emails!</span>
-      </h3>
-      <p class="text-center">
-        <a href="" rel="noopener noreferrer" target="_blank">
-          Get deep into the weeds of healthcare through workflows and deep dives on our complex healthcare system, presented in easy-to-understand and digestible formats
-        </a>
-      </p>
-      <h3 style="margin-top: 20px;">Outline</h3>
-      <ul>
-        <li>
-          <a href="#101">Medicaid 101</a>
-        </li>
-        <li>
-          <a href="#managed-care">Managed Care</a>
-        </li>
-        <li>
-          <a href="#duals">Duals</a>
-        </li>
-        <li>
-          <a href="#waiver-1115">1115 Waiver</a>
-        </li>
-        <li>
-          <a href="#social-care">Social Care</a>
-        </li>
-        <li>
-          <a href="#fqhc">FQHC/Community Health Center</a>
-        </li>
-        <li>
-          <a href="#patient-perspective">Learning the Patient Perspective</a>
-        </li>
-        <li>
-          <a href="#trends">Trends</a>
-        </li>
-        <li>
-          <a href="#lessons">Lessons From Founders</a>
-        </li>
-        <li>
-          <a href="#people">Podcasts/Channels/Newsletters to Follow</a>
-        </li>
-        <li>
-          <a href="#investors-focusing-on-medicaid">Investors Focusing on Medicaid</a>
-        </li>
       </ul>
+
+      <a href="index.html">
+        <h4 class="text-success">
+          How Healthcare Works
+        </h4>
+      </a>
+
+      <a class="list-group-item list-group-item-action " href="#101">
+        Medicaid 101
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#managed-care">
+        Managed Care
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="duals">
+        Duals
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#waiver-1115">
+        1115 Waiver
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#social-care">
+        Social Care
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#fqhc">
+        FQHC/Community Health Center
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#patient-perspective">
+        Learning the Patient Perspective
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#trends">
+        Trends
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#lessons">
+        Lessons From Founders
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#people">
+        Podcasts/Channels/Newsletters to Follow
+      </a>
+
+      <a class="list-group-item list-group-item-action" href="#investors-focusing-on-medicaid">
+        Investors Focusing on Medicaid
+      </a>
+
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="50" tabindex="0">
+
       <section id="101">
         <h3 id="101" style="margin-top: 40px;">Medicaid 101</h3>
         <table class="table mx-auto">
@@ -134,7 +129,7 @@
             </tr>
           </tbody>
         </table>
-        <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/Screenshot 2023-11-13 at 9.01.12 PM.png" width="800"/>
+        <img alt="..." class="rounded mx-auto d-block" height="600" src="static/img/medicaid/funds_workflow.png" width="800"/>
         <h4 id="101" style="margin-top: 40px;">Breakdown (2019)</h4>
         <table class="table mx-auto unique-table">
           <thead>
@@ -1083,16 +1078,22 @@
         </table>
       </section>
     </div>
-  </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container d-flex justify-content-between" style="margin-top: 250px;">
-      <a href="https://www.linkedin.com/in/evan-brociner/" rel="noopener noreferrer" target="_blank">
-        LinkedIn
+  </div>
+</body>
+
+<footer class="footer mt-auto py-3 text-center">
+  <div class="divider"></div>
+  <div class="container pt-4">
+    <section class="mb-4">
+      <a data-mdb-ripple-init="data-mdb-ripple-init" class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/company/howhealthcareworks" role="button" data-mdb-ripple-color="dark">
+        <i class="fab fa-linkedin-in"></i>
       </a>
-    </div>
-  </footer>
-  <!-- Bootstrap JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </section>
+  </div>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
