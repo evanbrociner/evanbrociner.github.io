@@ -1,5 +1,6 @@
 body {
     background-color: #FAFAF4;
+    position: relative;
     font-size: 1.2rem;
   }
 
@@ -45,5 +46,3 @@ body {
     height: 100%;
     background-color: #008080;
   }
-
-  
