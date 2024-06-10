@@ -1,7 +1,9 @@
 body {
     background-color: #FAFAF4;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 2;
+
   }
 
   /* Style for all tables, except those with 'unique-table' class */
@@ -56,6 +58,9 @@ body {
 
  .footer {
     border-top: 1px solid #dee2e6;
+
+    height: 100px; /* Adjust the height as needed */
+    text-center;
   }
 
   
