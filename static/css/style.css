@@ -1,86 +1,143 @@
 body {
-    background-color: #FAFAF4;
-    position: relative;
-    font-size: 1rem;
-    line-height: 2;
 
-  }
+  background-color: #FAFAF4;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #333; /* Darker text for better contrast */
+	font-family: Georgia,Times,Times New Roman,serif; 
 
-  /* Style for all tables, except those with 'unique-table' class */
-  table:not(.unique-table) {
-    table-layout: fixed;
-    width: 100%;
-  }
 
-  table:not(.unique-table) tr th:nth-child(2) {
-    width: 65%;
-  }
+}
 
-  table:not(.unique-table) tr td:first-child {
-    font-weight: bold;
-  }
+/* Style for all tables, except those with 'unique-table' class */
+table:not(.unique-table) {
+  table-layout: fixed;
+  width: 100%;
+}
 
-  .unique-table {
-    table-layout: fixed;
-  }
+table:not(.unique-table) tr th:nth-child(2) {
+  width: 65%;
+}
 
-  a {
-    color: #008080;
-  }
+table:not(.unique-table) tr td:first-child {
+  font-weight: bold;
+}
 
-  li,
-  p {
-    color: #333333;
-  }
+.unique-table {
+  table-layout: fixed;
+}
 
-  #progressBarContainer {
-    position: fixed;
-    width: 100%;
-    height: 5px;
-    background-color: #e0e0df;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
+a {
+  color: #008080;
+}
 
-  #progressBar {
-    width: 0;
-    height: 100%;
-    background-color: #008080;
-  }
+li,
+p {
+  color: #333333;
+}
 
-  .list-group {
-    position: sticky;
-    top: 10px;
-  }
+#progressBarContainer {
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0df;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
-  
+#progressBar {
+  width: 0;
+  height: 100%;
+  background-color: #008080;
+}
 
- .footer {
-    border-top: 1px solid #dee2e6;
+.list-group {
+  position: sticky;
+  top: 10px;
+}
 
-    height: 100px; /* Adjust the height as needed */
-    text-center;
-  }
 
-  .content {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    overflow: auto;
-    /* Add this line */
-  }
+.footer {
+  border-top: 1px solid #dee2e6;
+  height: 100px; /* Adjust the height as needed */
+  text-center;
+}
 
-  h1,
-  h2 {
-    color: #333;
-  }
 
-  p {
-    margin-bottom: 15px;
-  }
-  .image-container img {
-    margin-top: 25px; /* Adjust the margin-bottom value as needed */
-    margin-bottom: 25px; /* Adjust the margin-bottom value as needed */
+.content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #008080;
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Add smooth color transition on hover */
+}
+
+a:hover {
+  color: #27ae60; /* Change color on hover */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Consistent spacing below images */
+  border-radius: 8px; /* Slightly round image corners */
+}
+
+.image-container img {
+  margin-top: 25px; /* Adjust the margin-bottom value as needed */
+  margin-bottom: 25px; /* Adjust the margin-bottom value as needed */
+}
+
+.btn-primary {
+background-color: #008080;
+border-color: #008080;
+}
+
+.btn-primary:hover {
+background-color: #27ae60;
+border-color: #27ae60;
+}
+
+/* Style the image container */
+.image-container {
+text-align: center; /* Center the image and caption */
+}
+
+.image-container figcaption {
+font-style: italic;
+font-size: 0.9rem;
+color: #666;
+}
+
+.navbar .container {
+  position: relative;
+}
+.navbar h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  transition: top 0.3s;
+}
+.navbar.hidden {
+  top: -70px; /* Adjust based on your navbar height */
 }
