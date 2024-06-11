@@ -63,4 +63,24 @@ body {
     text-center;
   }
 
-  
+  .content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: auto;
+    /* Add this line */
+  }
+
+  h1,
+  h2 {
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+  .image-container img {
+    margin-top: 25px; /* Adjust the margin-bottom value as needed */
+    margin-bottom: 25px; /* Adjust the margin-bottom value as needed */
+}
