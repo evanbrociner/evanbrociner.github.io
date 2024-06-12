@@ -141,3 +141,15 @@ color: #666;
 .navbar.hidden {
   top: -70px; /* Adjust based on your navbar height */
 }
+
+.button-container {
+  margin-bottom: 30px; /* Adjust the value as needed */
+}
+
+.footer {
+  padding-top: 20px; /* Adjust the value as needed */
+}
+
+.card-title {
+  text-align: center;
+}
