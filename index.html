@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Medicaid, Medicare, and Value-Based Care. Discover the intricacies of the healthcare system and explore comprehensive guides and resources.">
-
     <title>How Healthcare Works</title>
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- Custom CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -23,42 +28,64 @@
       }
     </script>
 
+    <!-- Internal Styles -->
     <style>
       .card {
         border: none;
-        /* Remove card border */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Subtle box shadow */
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        /* Hover effects */
       }
 
       .card:hover {
         transform: translateY(-5px);
-        /* Elevate on hover */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
       }
 
-      .card-img-top {
-        height: 220px;
-        object-fit: cover;
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+      }
 
+      .card-link:hover .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .card-body {
+        text-align: center;
       }
     </style>
-
   </head>
 
   <body>
 
     <div class="container">
-
       <main>
-        <iframe src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca" data-test-id="beehiiv-embed" width="100%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+        <header class="text-center my-5">
+          <h1 class="display-4">How Healthcare Works</h1>
+          <p class="lead">Exploring Medicaid, Medicare, and Value-Based Care</p>
+          <iframe src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca?slim=true" data-test-id="beehiiv-embed" height="52" width="50%" <!-- Adjust width as needed --> frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
 
-        <p class="lead">Directories on the most complicated healthcare topics</p>
+        </header>
+        <div class="my-5">
+          <a href="https://how-healthcare-works.beehiiv.com" class="card-link" aria-label="Read articles">
+            <div class="card h-100 d-flex align-items-center justify-content-center shadow-sm" style="border-radius: 15px;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Articles</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <p class="lead">Directories on where to start to learn the most complicated healthcare topics</p>
 
         <div class="row row-cols-1 row-cols-md-3 g-4">
-
           <div class="col">
             <a href="medicaid.html" class="card-link">
               <div class="card h-100">
@@ -68,19 +95,15 @@
               </div>
             </a>
           </div>
-
           <div class="col">
             <a href="medicare.html" class="card-link">
-
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Medicare</h5>
                 </div>
               </div>
             </a>
-
           </div>
-
           <div class="col">
             <a href="vbc.html" class="card-link">
               <div class="card h-100">
@@ -89,23 +112,18 @@
                 </div>
               </div>
             </a>
-
           </div>
-
         </div>
+
         <div class="my-5">
           <p class="lead">Mapping the entire healthcare system with pain points</p>
-
           <div class="card">
-
             <a href="https://www.figma.com/board/gvrtGmKZm3dTiit2Q8QLR8/How-Healthcare-Works?node-id=0-1&t=HmCzvJiVI4rULnyZ-1" class="card-link">
-
               <img src="static/img/workflow.png" class="card-img-top" alt="Workflow">
               <div class="card-body">
                 <h5 class="card-title">Workflow</h5>
               </div>
             </a>
-
           </div>
         </div>
 
@@ -124,6 +142,7 @@
 
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
   </body>
