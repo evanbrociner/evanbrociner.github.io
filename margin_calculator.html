@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Metrics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <style>
+      /* Make the table text smaller */
+      #operatingCostsTable .table {
+        font-size: 1rem;
+        /* Adjust the size as needed */
+      }
+
+      /* Set the width of the Category column */
+      #operatingCostsTable .table td:nth-child(1),
+      #operatingCostsTable .table th:nth-child(1) {
+        width: 50%;
+        /* Adjust the width as needed */
+      }
+
+      /* Set the width for Monthly Cost and Annual Cost columns */
+      #operatingCostsTable .table td:nth-child(2),
+      #operatingCostsTable .table td:nth-child(3),
+      #operatingCostsTable .table th:nth-child(2),
+      #operatingCostsTable .table th:nth-child(3) {
+        width: 25%;
+        /* Adjust the width as needed */
+      }
+
+      /* Optional: Add some padding to make it more readable */
+      #operatingCostsTable .table td,
+      #operatingCostsTable .table th {
+        padding: 0.5rem;
+        /* Adjust the padding as needed */
+        text-align: left;
+        /* Ensure text is left-aligned for better readability */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Healthcare Metrics Calculator</h1>
+      <form id="metricsForm">
+        <div class="form-group">
+          <label for="patientPool">Patient Pool</label>
+          <select id="patientPool" class="form-control">
+            <option value="medicaid">Medicaid</option>
+            <option value="medicare">Medicare</option>
+            <option value="commercial">Commercial</option>
+          </select>
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="careModel">Care Model</label>
+          <select id="careModel" class="form-control">
+            <option value="ffs">Fee-for-Service (FFS)</option>
+            <option value="vbc">Value-Based Care (VBC)</option>
+            <option value="dpc">Direct Primary Care (DPC)</option>
+          </select>
+        </div> -->
+        
+        <div class="form-group">
+          <label for="numPatients">Number of Patients</label>
+          <input type="range" id="numPatients" class="form-control-range" min="0" max="5000" step="10" value="1000">
+          <output id="numPatientsDisplay">1000</output>
+        </div>
+        <div class="form-group">
+          <label for="isHighRisk">High Risk</label>
+          <select id="isHighRisk" class="form-control">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </form>
+      <div id="result"></div>
+      <canvas id="metricsChart" width="400" height="200"></canvas>
+      <div id="operatingCostsTable" class="mt-4"></div>
+    </div>
+
+    <script>
+      let chart;
+
+      function formatNumber(number) {
+        return Number(number).toLocaleString(); // Format number with commas
+      }
+
+      function calculateMetrics() {
+        const patientPool = document
+          .getElementById('patientPool')
+          .value;
+        const numPatients = document
+          .getElementById('numPatients')
+          .value;
+        const isHighRisk = document
+          .getElementById('isHighRisk')
+          .value === 'yes';
+
+        if (!patientPool || !numPatients) {
+          alert('Please fill in all fields');
+          return;
+        }
+
+        let highRiskPMPM;
+        let lowRiskPMPM;
+        let operatingCostPerPatient;
+
+        switch (patientPool) {
+          case 'medicaid':
+            highRiskPMPM = 1500;
+            lowRiskPMPM = 200;
+            operatingCostPerPatient = 150;
+            break;
+          case 'medicare':
+            highRiskPMPM = 700;
+            lowRiskPMPM = 200;
+            operatingCostPerPatient = 200;
+            break;
+          case 'commercial':
+            highRiskPMPM = 1000;
+            lowRiskPMPM = 400;
+            operatingCostPerPatient = 250;
+            break;
+          default:
+            alert('Invalid patient pool selected');
+            return;
+        }
+
+        const PMPM = isHighRisk
+          ? highRiskPMPM
+          : lowRiskPMPM;
+        const totalRevenue = numPatients * PMPM;
+        const patientsPerClinician = 1500;
+        const numClinicians = Math.ceil(numPatients / patientsPerClinician);
+        const clinicianCostPerYear = 250000;
+        const totalClinicianCost = numClinicians * clinicianCostPerYear;
+
+        // Operating expenses
+        const headcountCostPerMonth = 113750;
+        const rentPerMonth = 240000;
+        const emrTechPerMonth = 1000;
+        const insurancePerMonth = 3333.33;
+        const clinicBuildUpkeepPerMonth = 50000;
+
+        const totalMonthlyOperatingCost = headcountCostPerMonth + rentPerMonth + emrTechPerMonth + insurancePerMonth + clinicBuildUpkeepPerMonth;
+        const totalAnnualOperatingCost = totalMonthlyOperatingCost * 12;
+
+        const totalOperatingCost = (numPatients * operatingCostPerPatient) + totalClinicianCost + totalMonthlyOperatingCost;
+        const margin = totalRevenue - totalOperatingCost;
+
+        // Determine the color for the margin based on its value
+        const marginColor = margin >= 0
+          ? 'green'
+          : 'red';
+
+        // Display results
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+                <div class="card result-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Metrics</h5>
+                        <div class="card-text">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">Total Revenue</h6>
+                                            <p class="card-text">$${formatNumber(totalRevenue.toFixed(2))}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">PMPM</h6>
+                                            <p class="card-text">$${formatNumber(PMPM.toFixed(2))}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">Total Operating Cost</h6>
+                                            <p class="card-text">$${formatNumber(totalOperatingCost.toFixed(2))}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">Margin</h6>
+                                            <p class="card-text" style="color: ${marginColor};">$${formatNumber(margin.toFixed(2))}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">Number of Clinicians Needed</h6>
+                                            <p class="card-text">${numClinicians}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle mb-2 text-muted">Total Clinician Cost</h6>
+                                            <p class="card-text">$${formatNumber(totalClinicianCost.toFixed(2))}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+        // Create or update the bar chart
+        const ctx = document
+          .getElementById('metricsChart')
+          .getContext('2d');
+
+        if (chart) {
+          chart.destroy(); // Destroy the old chart instance if it exists
+        }
+
+        chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Metrics'],
+            datasets: [
+              {
+                label: 'Total Revenue',
+                data: [totalRevenue],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+              }, {
+                label: 'Operating Cost',
+                data: [totalOperatingCost],
+                backgroundColor: totalOperatingCost < totalRevenue
+                  ? 'rgba(255, 159, 64, 0.2)'
+                  : 'rgba(255, 99, 132, 0.2)',
+                borderColor: totalOperatingCost < totalRevenue
+                  ? 'rgba(255, 159, 64, 1)'
+                  : 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+              }, {
+                label: 'Margin',
+                data: [margin],
+                backgroundColor: margin >= 0
+                  ? 'rgba(75, 192, 75, 0.2)'
+                  : 'rgba(255, 99, 99, 0.2)',
+                borderColor: margin >= 0
+                  ? 'rgba(75, 192, 75, 1)'
+                  : 'rgba(255, 99, 99, 1)',
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top'
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    let label = context.dataset.label || '';
+                    if (label) {
+                      label += ': ';
+                    }
+                    if (context.parsed.y !== null) {
+                      label += '$' + formatNumber(context.parsed.y.toFixed(2));
+                    }
+                    return label;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                stacked: false
+              },
+              y: {
+                stacked: false,
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        // Update the operating costs table
+        const tableDiv = document.getElementById('operatingCostsTable');
+        tableDiv.innerHTML = `
+           <div class="card">
+               <div class="card-body">
+                   <h5 class="card-title">Operating Costs Breakdown</h5>
+                   <table class="table table-striped">
+                       <thead>
+                           <tr>
+                               <th>Category</th>
+                               <th>Monthly Cost</th>
+                               <th>Annual Cost</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>Headcount (2 PCPs; 11 total staff)</td>
+                               <td>$${formatNumber(headcountCostPerMonth.toFixed(2))}</td>
+                               <td>$${formatNumber((headcountCostPerMonth * 12).toFixed(2))}</td>
+                           </tr>
+                           <tr>
+                               <td>Rent (6,000 sq ft at $40/sq ft)</td>
+                               <td>$${formatNumber(rentPerMonth.toFixed(2))}</td>
+                               <td>$${formatNumber((rentPerMonth * 12).toFixed(2))}</td>
+                           </tr>
+                           <tr>
+                               <td>EMR/Tech ($500 per physician)</td>
+                               <td>$${formatNumber(emrTechPerMonth.toFixed(2))}</td>
+                               <td>$${formatNumber((emrTechPerMonth * 12).toFixed(2))}</td>
+                           </tr>
+                           <tr>
+                               <td>Insurance (for providers)</td>
+                               <td>$${formatNumber(insurancePerMonth.toFixed(2))}</td>
+                               <td>$${formatNumber((insurancePerMonth * 12).toFixed(2))}</td>
+                           </tr>
+                           <tr>
+                               <td>Clinic Build/Upkeep / General (Assumes $100 per sq ft)</td>
+                               <td>$${formatNumber(clinicBuildUpkeepPerMonth.toFixed(2))}</td>
+                               <td>$${formatNumber((clinicBuildUpkeepPerMonth * 12).toFixed(2))}</td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+       `;
+      }
+
+      // Update the number of patients display based on slider
+      document
+        .getElementById('numPatients')
+        .addEventListener('input', function () {
+          document
+            .getElementById('numPatientsDisplay')
+            .innerText = this.value;
+          calculateMetrics(); // Recalculate metrics when slider value changes
+        });
+
+      // Add event listener for dropdowns and inputs
+      document
+        .getElementById('metricsForm')
+        .addEventListener('change', calculateMetrics);
+
+      // Initial calculation
+      calculateMetrics();
+    </script>
+  </body>
+
+</html>
