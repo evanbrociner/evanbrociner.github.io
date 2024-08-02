@@ -52,8 +52,8 @@
           <label for="patientPool">Patient Pool</label>
           <select id="patientPool" class="form-control">
             <option value="Medicaid">Medicaid</option>
-            <option value="Medicare">Medicare</option>
-            <option value="Commercial">Commercial</option>
+            <!-- <option value="Medicare">Medicare</option>
+            <option value="Commercial">Commercial</option> -->
           </select>
         </div>
         <div class="form-group">
@@ -215,7 +215,7 @@
         resultDiv.innerHTML = `
         <div class="card result-card">
           <div class="card-body">
-            <h5 class="card-title">Metrics</h5>
+            <h5 class="card-title">Annual Metrics</h5>
             <div class="card-text">
               <div class="row">
                 <div class="col-md-6">
@@ -276,7 +276,6 @@
             <tr>
               <td>Headcount
 
-                $${formatNumber(headcountCostPerMonth.toFixed(2))}
                 <br>
                 <br>
                 *To be added more granular breakdown 
