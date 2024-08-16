@@ -1,50 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
     <head>
         <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport"
-                content="width=device-width, initial-scale=1.0" />
-            <meta name="description"
-                content="Learn about Medicaid, Medicare, and Value-Based Care. Discover the intricacies of the healthcare system and explore comprehensive guides and resources." />
+            <meta charset="utf-8" />
+            <meta content="width=device-width, initial-scale=1.0"
+                name="viewport" />
+            <meta
+                content="Learn about Medicaid, Medicare, and Value-Based Care. Discover the intricacies of the healthcare system and explore comprehensive guides and resources."
+                name="description" />
             <title>How Healthcare Works</title>
-
-            <link rel="icon" type="image/png"
-                href="static/img/logo-color.png" />
-
+            <link href="static/img/logo-color.png" rel="icon"
+                type="image/png" />
             <!-- Bootstrap CSS -->
             <link
                 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
                 rel="stylesheet" />
-
             <!-- Font Awesome -->
-            <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
+            <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+                rel="stylesheet" />
             <!-- Custom CSS -->
             <link href="static/css/style.css" rel="stylesheet" />
-
             <style>
             .carousel-control-next,
             .carousel-control-prev /*, .carousel-indicators */ {
                 filter: invert(100%);
             }
+
+                /* Custom styles if needed */
+                .iframe-container {
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+                .btn-primary {
+                    width: 250px; /* Adjust width as needed */
+                    border-radius: .25rem;
+                    background-color: #007bff;
+                    border: 1px solid #007bff;
+                }
         </style>
-
         </head>
-
         <body class="m-3" data-bs-spy="scroll" data-bs-target="#list-example">
-
-            <iframe
+            <iframe data-test-id="beehiiv-embed" frameborder="0" height="320"
+                scrolling="no"
                 src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca"
-                data-test-id="beehiiv-embed" width="100%" height="320"
-                frameborder="0" scrolling="no"
-                style="border-radius: .25rem; border: .125rem solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
-
+                style="border-radius: .25rem; border: .125rem solid #e5e7eb; margin: 0; background-color: transparent;"
+                width="100%"></iframe>
+            <!-- Home button -->
+            <a class="btn btn-primary" href="index.html">
+                <i class="fa fa-home"></i> Home
+            </a>
             <div class="row">
                 <div class="col-sm-2">
-                    <div id="list-example" class="list-group">
+                    <div class="list-group" id="list-example">
                         <a class="list-group-item list-group-item-action"
                             href="index.html">
                             <h4 class="text-success">How Healthcare Works</h4>
@@ -56,53 +65,42 @@
                             Costs</a>
                     </div>
                 </div>
-
-                <div class="col-sm-8 ">
-                    <div data-bs-spy="scroll" data-bs-target="#list-example"
-                        data-bs-offset="50" tabindex="0">
-
-                        <div id="carouselExampleControls"
-                            class="carousel slide"
-                            data-interval="false">
+                <div class="col-sm-8">
+                    <div data-bs-offset="50" data-bs-spy="scroll"
+                        data-bs-target="#list-example" tabindex="0">
+                        <div class="carousel slide" data-interval="false"
+                            id="carouselExampleControls">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100"
-                                        src="static/img/pricing/high_us_health_care_spending_where_is_it_all_going_exhibit_1.png"
-                                        alt="First slide">
+                                    <img alt="First slide" class="d-block w-100"
+                                        src="static/img/pricing/high_us_health_care_spending_where_is_it_all_going_exhibit_1.png" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100"
-                                        src="static/img/pricing/us-per-capita-healthcare-spending-is-over-twice-the-average-of-other-wealthy-countries.jpg"
-                                        alt="Second slide">
+                                    <img alt="Second slide"
+                                        class="d-block w-100"
+                                        src="static/img/pricing/us-per-capita-healthcare-spending-is-over-twice-the-average-of-other-wealthy-countries.jpg" />
                                 </div>
-
                                 <div class="carousel-item">
-                                    <img class="d-block w-100"
-                                        src="static/img/pricing/healthcare-costs-in-the-united-states-have-increased-drastically-over-the-past-several-decades_1.jpg"
-                                        alt="Second slide">
+                                    <img alt="Third slide" class="d-block w-100"
+                                        src="static/img/pricing/healthcare-costs-in-the-united-states-have-increased-drastically-over-the-past-several-decades_1.jpg" />
                                 </div>
-
                                 <!-- Add more carousel items here if needed -->
                             </div>
                             <a class="carousel-control-prev"
-                                href="#carouselExampleControls"
-                                role="button" data-slide="prev">
-                                <span
-                                    class="carousel-control-prev-icon"
-                                    aria-hidden="true"></span>
-                                <span
-                                    class="sr-only">Previous</span>
+                                data-bs-slide="prev"
+                                href="#carouselExampleControls" role="button">
+                                <span aria-hidden="true"
+                                    class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Previous</span>
                             </a>
                             <a class="carousel-control-next"
-                                href="#carouselExampleControls"
-                                role="button" data-slide="next">
-                                <span
-                                    class="carousel-control-next-icon"
-                                    aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
+                                data-bs-slide="next"
+                                href="#carouselExampleControls" role="button">
+                                <span aria-hidden="true"
+                                    class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Next</span>
                             </a>
                         </div>
-
                         <section id="increase">
                             <h3 id="increase" style="margin-top: 2.5rem;">Why
                                 Spending Is High</h3>
@@ -113,9 +111,75 @@
                                         <th scope="col">Description</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.halletecco.com/blog/american-exceptionalism-healthcare"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                American Exceptionalism:
+                                                Healthcare
+                                                Edition
 
-                                    <tr>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            Halle Tecco does a great job at
+                                            showing
+                                            health care costs.
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.youtube.com/watch?v=wmZtBW54GNI"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                Corrupt Middlemen Are The Real
+                                                Reason Drug Prices Keep
+                                                Increasing
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li>Pharmacy Benefit Managers
+                                                    (PBMs)
+                                                    are middlemen hired by
+                                                    insurance
+                                                    companies to negotiate drug
+                                                    prices and manage
+                                                    prescription
+                                                    benefits. They often receive
+                                                    rebates from pharmaceutical
+                                                    companies in exchange for
+                                                    favorable placement of drugs
+                                                    on
+                                                    formularies.</li>
+                                                <li>PBMs engage in practices
+                                                    that
+                                                    drive up drug costs, such as
+                                                    creating fake prices and
+                                                    charging patients more than
+                                                    the
+                                                    actual cost of drugs. They
+                                                    also
+                                                    use tactics like retroactive
+                                                    audits and clawbacks to harm
+                                                    independent pharmacies.</li>
+                                                <li>The PBM industry is highly
+                                                    concentrated, with three
+                                                    major
+                                                    PBMs controlling a large
+                                                    portion
+                                                    of the market. This lack of
+                                                    competition allows PBMs to
+                                                    engage in anti-competitive
+                                                    practices and further
+                                                    inflate
+                                                    drug prices.</li>
+                                            </ul>
+                                        </td>
+                                    </tr><tr>
                                         <td>
                                             <a
                                                 href="https://www.youtube.com/watch?v=o_QdZhFOKr4"
@@ -193,62 +257,110 @@
                                                 </li>
                                             </ul>
                                         </td>
-                                    </tr>
-
-                                    <tr>
+                                    </tr><tr>
                                         <td>
                                             <a
-                                                href="https://www.youtube.com/watch?v=wmZtBW54GNI"
+                                                href="https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going"
                                                 rel="noopener noreferrer"
                                                 target="_blank">
-                                                Corrupt Middlemen Are The Real
-                                                Reason Drug Prices Keep
-                                                Increasing
+                                                High U.S. Health Care Spending:
+                                                Where Is It All Going?
+
+                                            </a>
+                                        </td>
+                                        <td>
+                                            Administrative costs, prescription
+                                            drugs, and physician and nurse wages
+                                            may
+                                            be contributing factors to excess
+                                            health
+                                            spending in the United States,
+                                            compared
+                                            with peer nations
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.washingtonpost.com/opinions/2022/11/29/us-health-care-expensive-indispensable-nation/"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                In health care, America is the
+                                                world’s indispensable nation
                                             </a>
                                         </td>
                                         <td>
                                             <h5>Key Points</h5>
                                             <ul>
-                                                <li>Pharmacy Benefit Managers
-                                                    (PBMs)
-                                                    are middlemen hired by
-                                                    insurance
-                                                    companies to negotiate drug
-                                                    prices and manage
-                                                    prescription
-                                                    benefits. They often receive
-                                                    rebates from pharmaceutical
-                                                    companies in exchange for
-                                                    favorable placement of drugs
-                                                    on
-                                                    formularies.</li>
-                                                <li>PBMs engage in practices
-                                                    that
-                                                    drive up drug costs, such as
-                                                    creating fake prices and
-                                                    charging patients more than
-                                                    the
-                                                    actual cost of drugs. They
-                                                    also
-                                                    use tactics like retroactive
-                                                    audits and clawbacks to harm
-                                                    independent pharmacies.</li>
-                                                <li>The PBM industry is highly
-                                                    concentrated, with three
-                                                    major
-                                                    PBMs controlling a large
-                                                    portion
-                                                    of the market. This lack of
-                                                    competition allows PBMs to
-                                                    engage in anti-competitive
-                                                    practices and further
-                                                    inflate
-                                                    drug prices.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
+                                                <ul>
+                                                    <li><strong>U.S. Health
+                                                            System Subsidizes
+                                                            Global
+                                                            Innovation</strong>:
+                                                        The U.S. health-care
+                                                        system, with its lack of
+                                                        price controls and
+                                                        profit-driven structure,
+                                                        allows other countries
+                                                        to offer
+                                                        price-controlled
+                                                        universal care by
+                                                        transferring the risk
+                                                        and cost of medical
+                                                        innovation to Americans.
+                                                        This system results in
+                                                        higher prices in the
+                                                        U.S., while other
+                                                        countries benefit from
+                                                        lower costs without
+                                                        compromising on
+                                                        quality.</li>
+                                                    <li><strong>Significant U.S.
+                                                            Spending Dominates
+                                                            Global Health
+                                                            Economy</strong>:
+                                                        The United States, with
+                                                        only 4% of the world’s
+                                                        population, accounts for
+                                                        almost half of the
+                                                        global $8 trillion
+                                                        healthcare economy. This
+                                                        massive spending,
+                                                        particularly in
+                                                        pharmaceuticals and
+                                                        high-tech medical
+                                                        devices, drives global
+                                                        health-care
+                                                        advancements, with the
+                                                        U.S. market providing
+                                                        the bulk of profits that
+                                                        incentivize
+                                                        innovation.</li>
+                                                    <li><strong>Lack of
+                                                            Competition in U.S.
+                                                            Health Care Drives
+                                                            Up Costs</strong>:
+                                                        Unlike other industries,
+                                                        competition does not
+                                                        effectively lower prices
+                                                        in U.S. healthcare due
+                                                        to the third-party
+                                                        payment system.
+                                                        Hospitals and doctors
+                                                        avoid competing on
+                                                        price, focusing instead
+                                                        on innovation. The
+                                                        article suggests that
+                                                        introducing
+                                                        consumer-driven
+                                                        competition could lead
+                                                        to more efficient and
+                                                        cost-effective
+                                                        healthcare, but the
+                                                        current structure
+                                                        prevents this.</li>
+                                                </ul>
+                                            </ul></td>
+                                    </tr><tr>
                                         <td>
                                             <a
                                                 href="https://www.healthtechstack.io/p/part-i-health-plan-or-health-insurance"
@@ -314,135 +426,8 @@
                                                     make informed decisions.
                                                 </li>
                                             </ul>
-
                                         </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://www.halletecco.com/blog/american-exceptionalism-healthcare"
-                                                rel="noopener noreferrer"
-                                                target="_blank">
-                                                American Exceptionalism:
-                                                Healthcare
-                                                Edition
-
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Halle Tecco does a great job at
-                                            showing
-                                            health care costs.
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going"
-                                                rel="noopener noreferrer"
-                                                target="_blank">
-                                                High U.S. Health Care Spending:
-                                                Where Is It All Going?
-
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Administrative costs, prescription
-                                            drugs, and physician and nurse wages
-                                            may
-                                            be contributing factors to excess
-                                            health
-                                            spending in the United States,
-                                            compared
-                                            with peer nations
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://www.cbo.gov/publication/60326#:~:text=Consolidation%20can%20affect%20the%20federal,services%20to%20more%20costly%20settings."
-                                                rel="noopener noreferrer"
-                                                target="_blank">
-                                                Testimony on Hospital and
-                                                Physician
-                                                Consolidation and Its Impact on
-                                                the
-                                                Federal Budget
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h5>Key Points</h5>
-                                            <ul>
-                                                <ul>
-                                                    <li><strong>Impact on
-                                                            Federal
-                                                            Healthcare
-                                                            Spending:</strong>
-                                                        Provider consolidation
-                                                        can
-                                                        influence federal
-                                                        healthcare
-                                                        spending by potentially
-                                                        increasing costs.
-                                                        Consolidated providers
-                                                        may
-                                                        charge higher prices for
-                                                        services due to enhanced
-                                                        negotiating power,
-                                                        leading
-                                                        to greater expenditures
-                                                        for
-                                                        government-funded
-                                                        programs
-                                                        like Medicare and
-                                                        Medicaid.</li>
-                                                    <li><strong>Service Settings
-                                                            and
-                                                            Utilization:</strong>
-                                                        Consolidation can lead
-                                                        to a
-                                                        shift in the delivery of
-                                                        services from lower-cost
-                                                        settings, such as
-                                                        outpatient
-                                                        facilities, to more
-                                                        expensive ones, like
-                                                        hospital-based settings.
-                                                        This shift can result in
-                                                        higher overall costs for
-                                                        healthcare
-                                                        services.</li>
-                                                    <li><strong>Market Power and
-                                                            Competition:</strong>
-                                                        The consolidation of
-                                                        healthcare providers
-                                                        often
-                                                        reduces market
-                                                        competition,
-                                                        which can affect pricing
-                                                        and
-                                                        service quality. With
-                                                        fewer
-                                                        independent providers,
-                                                        consolidated entities
-                                                        may
-                                                        exercise greater market
-                                                        power, potentially
-                                                        leading
-                                                        to increased prices and
-                                                        decreased incentives for
-                                                        cost control and quality
-                                                        improvement.</li>
-                                                </ul>
-
-                                            </td>
-                                        </tr>
-                                    </tr>
-
-                                    <tr>
+                                    </tr><tr>
                                         <td>
                                             <a
                                                 href="https://www.healthtechstack.io/p/part-iii-why-health-care-costs-keep"
@@ -593,11 +578,62 @@
                                                         </ul>
                                                     </li>
                                                 </ul>
+                                            </ul></td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.thirdway.org/report/tale-of-two-hospitals-why-some-hospitals-succeed-and-others-do-not"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                Tale of Two Hospitals: Why Some
+                                                Hospitals Succeed and Others Do
+                                                Not
 
-                                            </td>
-                                        </tr>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li><strong>Single-payer and
+                                                        multi-payer models both
+                                                        reduce administrative
+                                                        burden (BIR)
+                                                        costs</strong>: The
+                                                    study found that both
+                                                    single-payer
+                                                    (Medicare-for-All style) and
+                                                    multi-payer systems can
+                                                    significantly reduce
+                                                    administrative burden (BIR)
+                                                    costs compared to the
+                                                    current system.</li>
+                                                <li><strong>Standardizing
+                                                        contracts offers
+                                                        substantial cost
+                                                        savings</strong>:
+                                                    Implementing standardized
+                                                    contracts across payers and
+                                                    providers was found to
+                                                    generate even larger savings
+                                                    in BIR costs than
+                                                    transitioning to a
+                                                    single-payer system, with
+                                                    less variability in
+                                                    results.</li>
+                                                <li><strong>Multi-payer system
+                                                        can achieve significant
+                                                        cost
+                                                        reductions</strong>: The
+                                                    research suggests that it is
+                                                    possible to meaningfully
+                                                    reduce administrative burden
+                                                    costs without completely
+                                                    overhauling the healthcare
+                                                    system and moving to a
+                                                    single-payer model.</li>
+                                            </ul>
+                                        </td>
                                     </tr>
-
                                     <tr>
                                         <td>
                                             <a
@@ -675,18 +711,85 @@
                                                         cost control and quality
                                                         improvement.</li>
                                                 </ul>
-
-                                            </td>
-                                        </tr>
-                                    </tr>
-
-                                </tbody>
+                                            </ul></td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.axios.com/2022/02/25/employer-health-coverage-hospital-doctor-drug-prices"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                The problem with getting health
+                                                coverage through our jobs
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <ul>
+                                                    <li><strong>Healthcare Costs
+                                                            Continue to
+                                                            Soar: </strong>
+                                                        Despite the pandemic
+                                                        disrupting
+                                                        healthcare, the
+                                                        underlying issue of
+                                                        exorbitant costs for
+                                                        employer-based
+                                                        health insurance
+                                                        persists. Spending
+                                                        on these plans has
+                                                        outpaced Medicare
+                                                        and Medicaid
+                                                        spending in recent
+                                                        years.
+                                                    </li>
+                                                    <li><strong>Price
+                                                            Discrepancies
+                                                            Between Insurers and
+                                                            Medicare: </strong>
+                                                        Hospitals and other
+                                                        healthcare providers
+                                                        charge significantly
+                                                        different prices to
+                                                        different insurers.
+                                                        For instance, the
+                                                        cost of hip and knee
+                                                        replacement surgery
+                                                        can vary widely
+                                                        between insurers,
+                                                        with Medicare paying
+                                                        a fraction of what
+                                                        private insurers
+                                                        do.
+                                                    </li>
+                                                    <li><strong>Healthcare
+                                                            Providers Prioritize
+                                                            Profit Over
+                                                            Patients: </strong>
+                                                        The argument that
+                                                        healthcare providers
+                                                        need to charge
+                                                        higher prices to
+                                                        offset low Medicare
+                                                        and Medicaid rates
+                                                        is contradicted by
+                                                        evidence. Research
+                                                        indicates that
+                                                        pricing is primarily
+                                                        driven by market
+                                                        power rather than
+                                                        the need to recoup
+                                                        losses from
+                                                        government
+                                                        programs.
+                                                    </li>
+                                                </ul>
+                                            </ul></td>
+                                    </tr></tbody>
                             </table>
                         </section>
-
                         <section id="Helping">
-                            <h3 id="Helping"
-                                style="margin-top: 2.5rem;">What
+                            <h3 id="Helping" style="margin-top: 2.5rem;">What
                                 Has
                                 Worked To Decrease Costs</h3>
                             <table class="table mx-auto">
@@ -696,8 +799,365 @@
                                         <th scope="col">Description</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody><tr>
+                                        <td>
+                                            <a
+                                                href="https://onepercentsteps.com"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                1% Steps for Health Care Reform
+                                                Project
+
+                                            </a>
+                                        </td>
+                                        <td>
+                                            The goal of the 1% Steps for Health
+                                            Care Reform Project is to shift the
+                                            way we think about health care
+                                            spending in the US and offer a
+                                            roadmap to policy makers of tangible
+                                            steps we as a country can take to
+                                            lower the cost of health care in the
+                                            US. We want to leverage leading
+                                            scholars’ work to identify discrete
+                                            problems in the US health system and
+                                            offer evidence-based steps for
+                                            reform. We will continually update
+                                            the project with new proposals that
+                                            are based on the latest academic
+                                            research.
+
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.youtube.com/watch?v=6mkLuY8rKLU"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                4 Step Plan to Lower
+                                                Hospital
+                                                Healthcare Costs
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li>
+                                                    <strong>Hospitals
+                                                        overcharge
+                                                        commercial
+                                                        insurance:</strong>
+                                                    The
+                                                    current system allows
+                                                    hospitals
+                                                    to charge commercial
+                                                    insurance
+                                                    companies much higher
+                                                    rates
+                                                    than
+                                                    they charge Medicare and
+                                                    Medicaid. This allows
+                                                    hospitals
+                                                    to cross-subsidize the
+                                                    cost
+                                                    of
+                                                    treating Medicare and
+                                                    Medicaid
+                                                    patients.
+                                                </li>
+                                                <li>
+                                                    <strong>Hospitals are
+                                                        inefficient:</strong>
+                                                    The
+                                                    video highlights that
+                                                    hospitals
+                                                    are inefficient and
+                                                    waste a
+                                                    lot
+                                                    of money. For example,
+                                                    they
+                                                    often have duplicate
+                                                    services,
+                                                    unnecessary tests, and
+                                                    overpriced supplies.
+                                                </li>
+                                                <li>
+                                                    <strong>Ways to reduce
+                                                        healthcare
+                                                        costs:</strong>
+                                                    The video outlines
+                                                    several
+                                                    ways
+                                                    to reduce healthcare
+                                                    costs,
+                                                    such
+                                                    as standardizing care
+                                                    protocols,
+                                                    reducing waste, and
+                                                    negotiating
+                                                    better prices with
+                                                    suppliers.
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://relentlesshealthvalue.com/episode/encore-ep391-a-case-study-for-anyone-trying-to-level-up-primary-care-that-im-gonna-call-how-margin-shoves-mission-off-the-bus-with-scott-conard-md"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                A Case Study for Anyone
+                                                Trying
+                                                to
+                                                Level Up Primary Care That
+                                                I'm
+                                                Gonna
+                                                Call “How Margin Shoves
+                                                Mission
+                                                Off
+                                                the Bus”
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li>
+                                                    <strong>High-Value
+                                                        Primary
+                                                        Care
+                                                        is Possible and
+                                                        Profitable:</strong>
+                                                    Dr. Scott Conard
+                                                    successfully
+                                                    implemented a risk-based
+                                                    primary
+                                                    care model that improved
+                                                    patient
+                                                    outcomes and increased
+                                                    revenue.
+                                                    This demonstrates that
+                                                    delivering high-quality,
+                                                    preventive care can be
+                                                    financially sustainable
+                                                    within a
+                                                    fee-for-service
+                                                    system.</li>
+                                                <li>
+                                                    <strong>Systemic
+                                                        Barriers to
+                                                        High-Value
+                                                        Care:</strong>
+                                                    Despite its success, Dr.
+                                                    Conard's practice was
+                                                    acquired
+                                                    by a larger health
+                                                    system
+                                                    that
+                                                    ultimately dismantled it
+                                                    to
+                                                    protect its revenue from
+                                                    hospitalizations. This
+                                                    highlights the conflict
+                                                    between
+                                                    the interests of
+                                                    providers
+                                                    focused on patient
+                                                    well-being
+                                                    and those of healthcare
+                                                    organizations
+                                                    prioritizing
+                                                    financial gain.</li>
+                                                <li>
+                                                    <strong>The Importance
+                                                        of
+                                                        Leadership and
+                                                        Change
+                                                        Management:</strong>
+                                                    Implementing a
+                                                    successful
+                                                    primary care model
+                                                    requires
+                                                    strong leadership and
+                                                    effective
+                                                    change management. Dr.
+                                                    Conard
+                                                    emphasizes the need for
+                                                    shared
+                                                    vision, clear
+                                                    communication,
+                                                    and
+                                                    employee engagement to
+                                                    drive
+                                                    transformation within
+                                                    healthcare
+                                                    organizations.</li>
+                                            </ul>
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://relentlesshealthvalue.com/episode/encore-ep363-how-to-cut-healthcare-admin-burden-in-half-with-david-scheinker-phd"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                Encore! EP363: How to Cut
+                                                Healthcare Admin Burden in Half,
+                                                With David Scheinker, PhD
+
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li><strong>Profit from
+                                                        Transactional
+                                                        Waste:</strong> Some
+                                                    organizations, particularly
+                                                    Revenue Cycle Management
+                                                    (RCM) companies, may profit
+                                                    from the inefficiencies and
+                                                    transactional waste in
+                                                    healthcare. This issue is
+                                                    compounded when these
+                                                    companies are part of
+                                                    larger, vertically
+                                                    integrated systems with
+                                                    payers, creating a conflict
+                                                    of interest where waste
+                                                    benefits one party
+                                                    financially.</li>
+                                                <li><strong>Challenges with
+                                                        Legacy Systems:</strong>
+                                                    The persistence of outdated
+                                                    technology and data systems
+                                                    in healthcare contributes to
+                                                    inefficiencies and high
+                                                    costs. The substantial
+                                                    investment in these legacy
+                                                    systems often makes it
+                                                    difficult to adopt new, more
+                                                    efficient technologies.</li>
+                                                <li><strong>Regulatory and Legal
+                                                        Barriers:</strong>
+                                                    Healthcare is burdened by
+                                                    complex regulations and
+                                                    state laws that can hinder
+                                                    collaboration. Regulations
+                                                    from CMS and varying state
+                                                    laws introduce layers of
+                                                    complexity that can obstruct
+                                                    efforts to streamline
+                                                    processes and improve
+                                                    efficiency.</li>
+                                            </ul>
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a
+                                                href="https://www.youtube.com/watch?v=ZNvJJmFGWfo"
+                                                rel="noopener noreferrer"
+                                                target="_blank">
+                                                Full-Risk Primary Care
+                                                Described
+                                                in 'The Calling' by Drs.
+                                                Chris
+                                                and Gordon Chen
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <h5>Key Points</h5>
+                                            <ul>
+                                                <li>
+                                                    <strong>Small patient
+                                                        panel
+                                                        size:</strong>
+                                                    ChenMed,
+                                                    a full-risk primary care
+                                                    practice, has been
+                                                    highly
+                                                    successful in keeping
+                                                    Medicare Advantage
+                                                    patients
+                                                    healthy and prolonging
+                                                    their
+                                                    lives. A key factor in
+                                                    their
+                                                    success is maintaining a
+                                                    small patient panel size
+                                                    of
+                                                    450 patients per doctor,
+                                                    which allows for
+                                                    frequent
+                                                    patient visits and
+                                                    strong
+                                                    doctor-patient
+                                                    relationships.
+                                                </li>
+                                                <li>
+                                                    <strong>Frequent patient
+                                                        visits:</strong>
+                                                    ChenMed's model
+                                                    emphasizes
+                                                    monthly check-ins with
+                                                    patients, even when they
+                                                    are
+                                                    doing well. These
+                                                    frequent
+                                                    interactions help build
+                                                    trust between doctors
+                                                    and
+                                                    patients, increasing the
+                                                    likelihood of patients
+                                                    seeking care from their
+                                                    primary care physician
+                                                    rather than going to the
+                                                    emergency room. Regular
+                                                    visits also allow for
+                                                    better
+                                                    accountability and
+                                                    monitoring of patient
+                                                    behavior and medication
+                                                    adherence, leading to
+                                                    improved health
+                                                    outcomes.
+                                                </li>
+                                                <li>
+                                                    <strong>Challenges for
+                                                        retail-based primary
+                                                        care:</strong> The
+                                                    retailization of primary
+                                                    care, driven by
+                                                    companies
+                                                    like Walmart and Amazon,
+                                                    may
+                                                    not be successful
+                                                    without a
+                                                    focus on patient
+                                                    relationships. Their
+                                                    success
+                                                    in improving patient
+                                                    health
+                                                    outcomes will depend on
+                                                    their ability to
+                                                    replicate
+                                                    ChenMed's model of small
+                                                    patient panels and
+                                                    frequent
+                                                    visits. Without a strong
+                                                    focus on building trust
+                                                    and
+                                                    accountability with
+                                                    patients, these
+                                                    retail-based
+                                                    primary care practices
+                                                    may
+                                                    struggle to achieve the
+                                                    same
+                                                    level of success as
+                                                    ChenMed.
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr><tr>
                                         <td>
                                             <a
                                                 href="https://www.youtube.com/watch?v=yZaELrrRPos"
@@ -771,9 +1231,7 @@
                                                 </li>
                                             </ul>
                                         </td>
-                                    </tr>
-
-                                    <tr>
+                                    </tr><tr>
                                         <td>
                                             <a
                                                 href="https://www.healthtechstack.io/p/part-ii-how-to-reduce-health-care"
@@ -894,313 +1352,119 @@
                                                 </li>
                                             </ul>
                                         </td>
-                                    </tr>
-
-                                    <tr>
+                                    </tr><tr>
                                         <td>
                                             <a
-                                                href="https://relentlesshealthvalue.com/episode/encore-ep391-a-case-study-for-anyone-trying-to-level-up-primary-care-that-im-gonna-call-how-margin-shoves-mission-off-the-bus-with-scott-conard-md"
+                                                href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1475-6773.13649"
                                                 rel="noopener noreferrer"
                                                 target="_blank">
-                                                A Case Study for Anyone
-                                                Trying
-                                                to
-                                                Level Up Primary Care That
-                                                I'm
-                                                Gonna
-                                                Call “How Margin Shoves
-                                                Mission
-                                                Off
-                                                the Bus”
+                                                Reducing administrative costs in
+                                                US health care: Assessing single
+                                                payer and its alternatives
+
                                             </a>
                                         </td>
                                         <td>
                                             <h5>Key Points</h5>
                                             <ul>
-                                                <li>
-                                                    <strong>High-Value
-                                                        Primary
-                                                        Care
-                                                        is Possible and
-                                                        Profitable:</strong>
-                                                    Dr. Scott Conard
-                                                    successfully
-                                                    implemented a risk-based
-                                                    primary
-                                                    care model that improved
-                                                    patient
-                                                    outcomes and increased
-                                                    revenue.
-                                                    This demonstrates that
-                                                    delivering high-quality,
-                                                    preventive care can be
-                                                    financially sustainable
-                                                    within a
-                                                    fee-for-service
-                                                    system.</li>
-                                                <li>
-                                                    <strong>Systemic
-                                                        Barriers to
-                                                        High-Value
-                                                        Care:</strong>
-                                                    Despite its success, Dr.
-                                                    Conard's practice was
-                                                    acquired
-                                                    by a larger health
-                                                    system
-                                                    that
-                                                    ultimately dismantled it
-                                                    to
-                                                    protect its revenue from
-                                                    hospitalizations. This
-                                                    highlights the conflict
-                                                    between
-                                                    the interests of
-                                                    providers
-                                                    focused on patient
-                                                    well-being
-                                                    and those of healthcare
-                                                    organizations
-                                                    prioritizing
-                                                    financial gain.</li>
-                                                <li>
-                                                    <strong>The Importance
-                                                        of
-                                                        Leadership and
-                                                        Change
-                                                        Management:</strong>
-                                                    Implementing a
-                                                    successful
-                                                    primary care model
-                                                    requires
-                                                    strong leadership and
-                                                    effective
-                                                    change management. Dr.
-                                                    Conard
-                                                    emphasizes the need for
-                                                    shared
-                                                    vision, clear
-                                                    communication,
-                                                    and
-                                                    employee engagement to
-                                                    drive
-                                                    transformation within
-                                                    healthcare
-                                                    organizations.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
+                                                <ul>
+                                                    <li><strong>Single-payer and
+                                                            multi-payer models
+                                                            both reduce
+                                                            administrative
+                                                            burden (BIR)
+                                                            costs</strong>: The
+                                                        study found that both
+                                                        single-payer
+                                                        (Medicare-for-All style)
+                                                        and multi-payer systems
+                                                        can significantly reduce
+                                                        administrative burden
+                                                        (BIR) costs compared to
+                                                        the current system.</li>
+                                                    <li><strong>Standardizing
+                                                            contracts offers
+                                                            substantial cost
+                                                            savings</strong>:
+                                                        Implementing
+                                                        standardized contracts
+                                                        across payers and
+                                                        providers was found to
+                                                        generate even larger
+                                                        savings in BIR costs
+                                                        than transitioning to a
+                                                        single-payer system,
+                                                        with less variability in
+                                                        results.</li>
+                                                    <li><strong>Multi-payer
+                                                            system can achieve
+                                                            significant cost
+                                                            reductions</strong>:
+                                                        The research suggests
+                                                        that it is possible to
+                                                        meaningfully reduce
+                                                        administrative burden
+                                                        costs without completely
+                                                        overhauling the
+                                                        healthcare system and
+                                                        moving to a single-payer
+                                                        model.</li>
+                                                </ul>
+                                            </ul></td>
+                                    </tr><tr>
                                         <td>
                                             <a
-                                                href="https://www.youtube.com/watch?v=6mkLuY8rKLU"
+                                                href="https://olearykm.medium.com/the-cost-equation-for-new-primary-care-models-in-existing-frameworks-part-i-a31109f4dcbb"
                                                 rel="noopener noreferrer"
                                                 target="_blank">
-                                                4 Step Plan to Lower
-                                                Hospital
-                                                Healthcare Costs
+                                                The Cost Equation for New
+                                                Primary Care Models in Existing
+                                                Frameworks (Part I)
+
                                             </a>
                                         </td>
                                         <td>
-                                            <h5>Key Points</h5>
-
-                                            <ul>
-                                                <li>
-                                                    <strong>Hospitals
-                                                        overcharge
-                                                        commercial
-                                                        insurance:</strong>
-                                                    The
-                                                    current system allows
-                                                    hospitals
-                                                    to charge commercial
-                                                    insurance
-                                                    companies much higher
-                                                    rates
-                                                    than
-                                                    they charge Medicare and
-                                                    Medicaid. This allows
-                                                    hospitals
-                                                    to cross-subsidize the
-                                                    cost
-                                                    of
-                                                    treating Medicare and
-                                                    Medicaid
-                                                    patients.
-                                                </li>
-                                                <li>
-                                                    <strong>Hospitals are
-                                                        inefficient:</strong>
-                                                    The
-                                                    video highlights that
-                                                    hospitals
-                                                    are inefficient and
-                                                    waste a
-                                                    lot
-                                                    of money. For example,
-                                                    they
-                                                    often have duplicate
-                                                    services,
-                                                    unnecessary tests, and
-                                                    overpriced supplies.
-                                                </li>
-                                                <li>
-                                                    <strong>Ways to reduce
-                                                        healthcare
-                                                        costs:</strong>
-                                                    The video outlines
-                                                    several
-                                                    ways
-                                                    to reduce healthcare
-                                                    costs,
-                                                    such
-                                                    as standardizing care
-                                                    protocols,
-                                                    reducing waste, and
-                                                    negotiating
-                                                    better prices with
-                                                    suppliers.
-                                                </li>
-                                            </ul>
-
+                                            Traditional primary care
+                                            costs $25 PMPM, new models cost
+                                            somewhere around $50 — $75 PMPM. For
+                                            insurers or employers to be
+                                            interested they probably have to at
+                                            least breakeven or demonstrate cost
+                                            savings, so they need to demonstrate
+                                            $25 — $50 PMPM of cost savings to
+                                            break even, which is a large
+                                            challenge. Part I of this goes
+                                            through the cost structure
+                                            differences; Part II outlines the
+                                            challenges in demonstrating cost
+                                            savings &amp; some thoughts on
+                                            moving
+                                            forward.
                                         </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://www.youtube.com/watch?v=ZNvJJmFGWfo"
-                                                rel="noopener noreferrer"
-                                                target="_blank">
-                                                Full-Risk Primary Care
-                                                Described
-                                                in 'The Calling' by Drs.
-                                                Chris
-                                                and Gordon Chen
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h5>Key Points</h5>
-                                            <ul>
-                                                <li>
-                                                    <strong>Small patient
-                                                        panel
-                                                        size:</strong>
-                                                    ChenMed,
-                                                    a full-risk primary care
-                                                    practice, has been
-                                                    highly
-                                                    successful in keeping
-                                                    Medicare Advantage
-                                                    patients
-                                                    healthy and prolonging
-                                                    their
-                                                    lives. A key factor in
-                                                    their
-                                                    success is maintaining a
-                                                    small patient panel size
-                                                    of
-                                                    450 patients per doctor,
-                                                    which allows for
-                                                    frequent
-                                                    patient visits and
-                                                    strong
-                                                    doctor-patient
-                                                    relationships.
-                                                </li>
-                                                <li>
-                                                    <strong>Frequent patient
-                                                        visits:</strong>
-                                                    ChenMed's model
-                                                    emphasizes
-                                                    monthly check-ins with
-                                                    patients, even when they
-                                                    are
-                                                    doing well. These
-                                                    frequent
-                                                    interactions help build
-                                                    trust between doctors
-                                                    and
-                                                    patients, increasing the
-                                                    likelihood of patients
-                                                    seeking care from their
-                                                    primary care physician
-                                                    rather than going to the
-                                                    emergency room. Regular
-                                                    visits also allow for
-                                                    better
-                                                    accountability and
-                                                    monitoring of patient
-                                                    behavior and medication
-                                                    adherence, leading to
-                                                    improved health
-                                                    outcomes.
-                                                </li>
-                                                <li>
-                                                    <strong>Challenges for
-                                                        retail-based primary
-                                                        care:</strong> The
-                                                    retailization of primary
-                                                    care, driven by
-                                                    companies
-                                                    like Walmart and Amazon,
-                                                    may
-                                                    not be successful
-                                                    without a
-                                                    focus on patient
-                                                    relationships. Their
-                                                    success
-                                                    in improving patient
-                                                    health
-                                                    outcomes will depend on
-                                                    their ability to
-                                                    replicate
-                                                    ChenMed's model of small
-                                                    patient panels and
-                                                    frequent
-                                                    visits. Without a strong
-                                                    focus on building trust
-                                                    and
-                                                    accountability with
-                                                    patients, these
-                                                    retail-based
-                                                    primary care practices
-                                                    may
-                                                    struggle to achieve the
-                                                    same
-                                                    level of success as
-                                                    ChenMed.
-                                                </li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                    </tr></tbody>
                             </table>
                         </section>
-
                     </div>
                 </div>
             </div>
-
             <footer class="footer mt-auto py-3 text-center">
                 <div class="divider"></div>
                 <div class="container pt-4">
                     <section class="mb-4">
-                        <a data-mdb-ripple-init="data-mdb-ripple-init"
+                        <a
                             class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            data-mdb-ripple-color="dark"
+                            data-mdb-ripple-init="data-mdb-ripple-init"
                             href="https://www.linkedin.com/company/howhealthcareworks"
-                            role="button" data-mdb-ripple-color="dark">
+                            role="button">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </section>
                 </div>
             </footer>
-        </div>
 
-        <!-- Bootstrap JS -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-
-</html>
+            <!-- Bootstrap JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+    </head></html>

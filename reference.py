@@ -50,7 +50,7 @@ def update_references(html_file):
 
 
 update_references(
-    "/Users/evan.brociner/Desktop/evanbrociner.github.io/medicaid/managed_care.html"
+    "/Users/evan.brociner/Desktop/evanbrociner.github.io/medicaid/health_care_costs.html"
 )
 
 print("Updated HTML written to your_html_file_updated.html")
