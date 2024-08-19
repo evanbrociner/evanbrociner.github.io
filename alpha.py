@@ -51,9 +51,7 @@ def sort_table_by_first_td(html_code):
 # ----- Example Usage -----
 
 # Get the path to your HTML script file (if applicable)
-html_file_path = (
-    "/Users/evan.brociner/Desktop/evanbrociner.github.io/health_care_costs.html"
-)
+html_file_path = "/Users/evan.brociner/Desktop/evanbrociner.github.io/costs.html"
 
 # Read the HTML code (either from the file or use your sample HTML string directly)
 if html_file_path:
