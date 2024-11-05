@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map with Filters and Zip Code Search</title>
+
+        <!-- Leaflet CSS and JS -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+        <!-- PapaParse to handle CSV parsing -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+        <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Container for filters and zip code input */
+        .filter-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filter-container label, .filter-container input, .filter-container select, .filter-container button {
+            margin-right: 10px;
+        }
+
+        .filter-container input {
+            padding: 5px;
+            width: 120px;
+        }
+
+        .filter-container button {
+            padding: 5px 10px;
+        }
+
+        /* Map container should take the remaining height */
+        #map {
+            flex: 1;
+        }
+    </style>
+    </head>
+    <body>
+
+        <!-- Filters and zip code input at the top -->
+        <div class="filter-container">
+            <label for="score-filter">Filter by Score:</label>
+            <select id="score-filter">
+                <option value="all">All Scores</option>
+                <option value="top">Top 25%</option>
+                <option value="bottom">Bottom 75%</option>
+            </select>
+
+            <label for="specialty-filter">Filter by Specialty:</label>
+            <select id="specialty-filter">
+                <option value="all">All Specialties</option>
+            </select>
+
+            <!-- Zip code input and button -->
+            <input type="text" id="zip-code" placeholder="Enter Zip Code">
+            <button id="zip-submit">Go</button>
+        </div>
+
+        <!-- Map will take up the remaining space -->
+        <div id="map"></div>
+
+        <script>
+    // Initialize the map
+    var map = L.map('map').setView([37.7749, -122.4194], 13);
+
+    // Add a tile layer to the map (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Load CSV data using PapaParse
+    Papa.parse('providers.csv', {
+        download: true,
+        header: true,
+        complete: function(results) {
+            var data = results.data;
+
+            // Store all unique specialties to populate the specialty dropdown
+            var specialties = new Set();
+            data.forEach(row => specialties.add(row.specialty));
+
+            // Populate the specialty dropdown
+            var specialtySelect = document.getElementById('specialty-filter');
+            specialties.forEach(specialty => {
+                var option = document.createElement('option');
+                option.value = specialty;
+                option.textContent = specialty;
+                specialtySelect.appendChild(option);
+            });
+
+            // Function to create markers based on filtered data
+            function createMarkers(filteredData) {
+                // Clear existing layers
+                map.eachLayer(layer => {
+                    if (layer instanceof L.Marker) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                // Add markers to the map
+                filteredData.forEach(row => {
+                    var marker = L.marker([row.latitude_biz, row.longitude_biz])
+                        .bindTooltip(`Provider: ${row.name}<br>Score: ${row.final_score}<br>Specialty: ${row.specialty}`);
+                    marker.addTo(map);
+                });
+            }
+
+            // Function to filter the data based on user selection
+            function filterData() {
+                var scoreFilter = document.getElementById('score-filter').value;
+                var specialtyFilter = document.getElementById('specialty-filter').value;
+
+                var score_75th_percentile = calculate75thPercentile(data);
+
+                var filteredData = data.filter(row => {
+                    var score = parseFloat(row.final_score);
+                    var passesScoreFilter = (scoreFilter === 'all') ||
+                        (scoreFilter === 'top' && score >= score_75th_percentile) ||
+                        (scoreFilter === 'bottom' && score < score_75th_percentile);
+
+                    var passesSpecialtyFilter = (specialtyFilter === 'all') || (row.specialty === specialtyFilter);
+
+                    return passesScoreFilter && passesSpecialtyFilter;
+                });
+
+                createMarkers(filteredData);
+            }
+
+            // Calculate the 75th percentile for the score
+            function calculate75thPercentile(data) {
+                var scores = data.map(row => parseFloat(row.final_score));
+                scores.sort((a, b) => a - b);
+                var index = Math.floor(0.75 * scores.length);
+                return scores[index];
+            }
+
+            // Attach filter logic to dropdown change events
+            document.getElementById('score-filter').addEventListener('change', filterData);
+            document.getElementById('specialty-filter').addEventListener('change', filterData);
+
+            // Initial marker display (show all data)
+            createMarkers(data);
+        }
+    });
+
+    // Function to search and center map by zip code
+    function searchByZipCode(zipCode) {
+        var url = `https://nominatim.openstreetmap.org/search?format=json&postalcode=${zipCode}&country=USA`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    var lat = data[0].lat;
+                    var lon = data[0].lon;
+                    map.setView([lat, lon], 13);  // Center the map on the zip code location
+                } else {
+                    alert("Zip code not found.");
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Handle the zip code form submission
+    document.getElementById('zip-submit').addEventListener('click', function() {
+        var zipCode = document.getElementById('zip-code').value;
+        if (zipCode) {
+            searchByZipCode(zipCode);
+        } else {
+            alert("Please enter a zip code.");
+        }
+    });
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+name,latitude_biz,longitude_biz,final_score,specialty
+Provider 1,37.7749,-122.4194,85,Cardiology
+Provider 2,37.7750,-122.4183,70,Neurology
+Provider 3,37.7760,-122.4170,95,Cardiology
+Provider 4,37.7730,-122.4200,60,Pediatrics
