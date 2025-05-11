@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "101": {
+      "title": "Medicaid 101",
+      "terms": [
+        {
+          "term": "CBO",
+          "description": "A non-profit organization that provides services and support to a specific community, often focusing on social and health needs."
+        },
+        {
+          "term": "CHW",
+          "description": "A frontline public health professional who serves as a trusted link between healthcare providers and a community, often focusing on outreach and health education."
+        }
+      ],
+      "breakdown": {
+        "title": "Breakdown (2019)",
+        "groups": [
+          {
+            "name": "Seniors",
+            "cost": "122304815900",
+            "costPercentage": "21.23",
+            "population": "8527000",
+            "populationPercentage": "9.71",
+            "costRatio": "14342.34",
+            "weightCostPopulation": "0.2555"
+          }
+        ]
+      }
+    },
+    "managedCare": {
+      "title": "Managed Care",
+      "description": "Medicaid managed care should focus on developing predictive models...",
+      "resources": [
+        {
+          "title": "Active Redesign of a Medicaid Care Management Strategy",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5906722/pdf/pop.2017.0122.pdf",
+          "description": "Care management of high-cost/high-needs patients is an increasingly common strategy..."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Value-Based Care - Healthcare Research & Resources</title>
+  <meta name="description"
+    content="Understanding value-based care models, implementation strategies, and outcomes in healthcare">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../static/css/style.css" rel="stylesheet">
+  <link href="../static/css/topics.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Reading Progress -->
+  <div class="reading-progress">
+    <div class="reading-progress-bar" id="readingProgress"></div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://linkedin.com/in/evan-brociner" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/evanbrociner" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:evan@brociner.com"><i class="far fa-envelope"></i></a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="logo">Value-Based Care</h1>
+      <p class="tagline">Understanding Value-Based Healthcare Models</p>
+    </div>
+  </header>
+
+  <div class="topic-container">
+    <div class="row">
+      <!-- Topic Navigation -->
+      <div class="col-md-3">
+        <nav class="topic-nav">
+          <h4 class="mb-3">Quick Navigation</h4>
+          <ul class="topic-nav-list">
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="../index.html">
+                <i class="fas fa-home me-2"></i>Main Page
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#basics">
+                <i class="fas fa-book-open me-2"></i>VBC Basics
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#models">
+                <i class="fas fa-project-diagram me-2"></i>Care Models
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#implementation">
+                <i class="fas fa-cogs me-2"></i>Implementation
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#success-stories">
+                <i class="fas fa-star me-2"></i>Success Stories
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#challenges">
+                <i class="fas fa-exclamation-triangle me-2"></i>Challenges
+              </a>
+            </li>
+            <li class="topic-nav-item">
+              <a class="topic-nav-link" href="#resources">
+                <i class="fas fa-book me-2"></i>Resources
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <!-- Basics Section -->
+        <section id="basics" class="topic-section">
+          <h2 class="topic-section-header">Value-Based Care Basics</h2>
+          <div class="topic-card">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Term</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fee-for-service</td>
+                  <td>Negotiated or pre-specified unit prices for services, without any regard to quality or value.</td>
+                </tr>
+                <tr>
+                  <td>Value-based payment</td>
+                  <td>Payment (fee-for-service or otherwise) with some linkage to quality, value, or infrastructure.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Alternative payment models (APMs)</td>
+                  <td>Advanced forms of value-based payment, in which providers take on substantial financial risk to
+                    deliver high-quality care at lower cost.</td>
+                </tr>
+                <tr>
+                  <td>Accountable Care Organizations (ACOs)</td>
+                  <td>An APM in which groups of doctors, hospitals, and other health care providers are responsible for
+                    total cost of care for a population of Medicare beneficiaries. If total spending is below a pre-set
+                    benchmark and quality remains stable, providers share in the savings. In some tracks, ACOs may pay
+                    losses to Medicare if spending exceeds benchmarks.</td>
+                </tr>
+                <tr>
+                  <td>Types of Risk</td>
+                  <td>In VBC, different types of risk include financial risk (cost of care responsibility), clinical
+                    risk (quality of care responsibility), and operational risk (efficiency and processes involved with
+                    delivering care).</td>
+                </tr>
+                <tr>
+                  <td>Upside Risk</td>
+                  <td>The potential for a healthcare provider to earn additional revenue if they exceed cost and quality
+                    targets established in a VBC arrangement.</td>
+                </tr>
+                <tr>
+                  <td>Downside Risk</td>
+                  <td>The possibility of a healthcare provider facing financial losses if they fail to meet the cost and
+                    quality targets outlined in a VBC arrangement.</td>
+                </tr>
+                <tr>
+                  <td>Full Risk</td>
+                  <td>In a VBC model, this means the provider assumes complete financial responsibility for both the
+                    cost and quality of care for a defined population of patients.</td>
+                </tr>
+                <tr>
+                  <td>Benchmarking</td>
+                  <td>The process of comparing a provider's performance (in areas like cost and quality) to established
+                    standards, often based on industry averages or best practices.</td>
+                </tr>
+                <tr>
+                  <td>Quality Metrics</td>
+                  <td>Specific, measurable indicators that track and assess the quality of healthcare services provided.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Time Measurement</td>
+                  <td>An essential aspect of VBC tracking performance over time to measure improvement, adherence to
+                    care plans, and identify potential areas for intervention.</td>
+                </tr>
+                <tr>
+                  <td>Risk Adjustment</td>
+                  <td>A methodology that accounts for the varying health conditions and needs of patients, ensuring fair
+                    comparisons and compensation in a VBC model.</td>
+                </tr>
+                <tr>
+                  <td>Capitation</td>
+                  <td>A fixed, per-member, per-month payment model used in VBC, where providers receive a set payment to
+                    cover the care of a patient regardless of the actual services the patient needs.</td>
+                </tr>
+                <table class="table mx-auto" style="margin-top:60px">
+                  <thead>
+                    <tr>
+                      <th scope="col">Resource</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://www.youtube.com/watch?v=ztJn1HeZHQU" rel="noopener noreferrer" target="_blank">
+                          Patient Must Come First in Value Based Care</a>
+                      </td>
+                      <td>
+                        Dr. Eric Bricker talks on the most important point of VBC.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tbody>
+            </table>
+            <img class="rounded mx-auto d-block" height="600" src="static/img/vbc/vbc_model.png" width="800" />
+            <div class="text-center">
+              <p>
+                Source:
+                <a href="https://bhmpc.com/2016/12/payers-providers-value-based-care-reimbursement/"
+                  rel="noopener noreferrer" target="_blank">BHM Healthcare Solutions</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Models Section -->
+        <section id="models" class="topic-section">
+          <h2 class="topic-section-header">Care Models</h2>
+          <div class="topic-card">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Term</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ACO REACH</td>
+                  <td>The Accountable Care Organization Realizing Equity, Access, and Community Health (ACO REACH) model
+                    is a value-based care initiative from CMS focused on improving care for Medicare beneficiaries and
+                    promoting health equity.</td>
+                </tr>
+                <tr>
+                  <td>Comprehensive Payment for Primary Care</td>
+                  <td>A primary care APM in which practices receive care management fees, performance-based incentive
+                    payments, and, in some cases, lump sum quarterly payments for total allowed charges.
+                  </td>
+                </tr>
+                <tr>
+                  <td>MSSP</td>
+                  <td>The Medicare Shared Savings Program (MSSP) is a value-based care program that incentivizes
+                    Accountable Care Organizations (ACOs) to provide coordinated, high-quality care to Medicare patients
+                    while controlling costs.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Medicaid Managed Care</td>
+                  <td>A healthcare delivery system where Medicaid beneficiaries receive their health benefits through
+                    contracted managed care plans.</td>
+                </tr>
+                <tr>
+                  <td>Medicare Advantage</td>
+                  <td>Medicare Advantage (Part C) plans are an alternative to Original Medicare (Parts A and B), offered
+                    by private insurance companies and providing additional benefits like vision, dental, and
+                    prescription drug coverage.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+
+              <table class="table table-striped" style="margin-top:60px">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="https://www.healthmanagement.com/wp-content/uploads/HMA_VBP-Entity-Landscape-Report_1.31.2024-updated.pdf"
+                        rel="noopener noreferrer" target="_blank">
+                        Analyzing the Expanded Landscape of Value-Based Entities</a>
+                    </td>
+                    <td>
+                      Implications and opportunities of enablers for the CMS Innovation Center and the broader value
+                      movement. This report has really great figures.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://vitalsignshealth.substack.com/p/taking-on-risk" rel="noopener noreferrer"
+                        target="_blank">
+                        Taking On Risk</a>
+                    </td>
+                    <td>
+                      <p>
+                        <b>Jacob Effron writes about how risk-based healthcare businesses are gaining momentum due to
+                          their potential to improve patient outcomes, lower costs, and attract investment, with success
+                          most likely for companies that focus on high-cost patients and long-term care
+                          relationships.</b>
+                      </p>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Risk-based business models are gaining popularity:
+                          </strong>Startups offering higher-touch care models that better manage chronic conditions are
+                          increasingly interested in taking on financial risk, as opposed to traditional fee-for-service
+                          payment models.
+                        </li>
+                        <li>
+                          <strong>Drivers of risk-based model adoption:</strong>
+                          The success of existing examples, favorable government policies, increasing interest from
+                          private payers, and strong public market valuations are fueling growth in the risk-based
+                          healthcare space.
+                        </li>
+                        <li>
+                          <strong>Factors that influence success in risk-based models:</strong>
+                          Businesses focused on high-cost patients (like those with chronic kidney disease), and those
+                          who can maintain long-term patient relationships are more likely to succeed, especially if
+                          they have a strong primary care presence for the patient.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.healthtechstack.io/p/value-based-payment-models-a-cure"
+                        rel="noopener noreferrer" target="_blank">
+                        Value Based Payment Models - a cure-all?</a>
+                    </td>
+                    <td>
+                      <p>
+                        <b>Health Tech Stack goes through challenges providers may face when introducing value based
+                          payment models.</b>
+                      </p>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Value-based payment models aim to shift the focus from quantity of care to quality of care,
+                          but may not always reduce administrative burdens for providers.</li>
+                        <li>Successful implementation of value-based payments requires upfront investments in IT
+                          infrastructure and analytics to effectively track patient outcomes and design cost-saving
+                          interventions.</li>
+                        <li>Value-based care models may be less attractive to hospitals and specialists who rely on
+                          revenue from high-cost procedures and emergency services.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://theprescription.substack.com/p/value-based-care-the-devil-is-in"
+                        rel="noopener noreferrer" target="_blank">
+                        Value-Based Care: The Devil is in the Details</a>
+                    </td>
+                    <td>
+                      <p>
+                        <b>Maitreyee Joshi talks about how value based care models aim to shift healthcare focus from
+                          volume of services to quality of patient outcomes, but their success hinges on careful design
+                          to ensure accurate metrics, prevent unintended consequences, and avoid providers gaming the
+                          system.
+                        </b>
+                      </p>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Defining quality metrics is key. How do we measure "value" in healthcare? Current metrics
+                          like readmission rates are important, but it's vital to find ones that directly measure
+                          quality of life improvements and aren't easily manipulated.</li>
+                        <li>Overtreatment risk exists. Even in some value-based models like bundled payments, potential
+                          remains for providers to incentivize unnecessary procedures for financial gain. New quality
+                          metrics focused on "appropriate use" may be needed.</li>
+                        <li>Value-based care can incentivize innovation. As providers take on more responsibility for
+                          patient outcomes, this model can fuel advancements in precision medicine, personalized
+                          treatments, and rethinking long-held medical practices to improve quality and reduce costs.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.halletecco.com/blog/value-based-care" rel="noopener noreferrer"
+                        target="_blank">
+                        What Is Value-Based Care (VBC) and Why Does It Matter to Digital Health Startups?</a>
+                    </td>
+                    <td>
+                      Halle Tecco, as always, provides an expert view of healthcare and in this case specifically VBC.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="- https://www.youtube.com/watch?v=YcmfzS24NYY" rel="noopener noreferrer" target="_blank">
+                        XPC Interview: Eric Bricker, MD - AHealthcareZ</a>
+                    </td>
+                    <td>Dr. Kenneth Qiu sits with the legendary Dr. Eric Bricker in Dallas to discuss primary care.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+        <!-- Success Stories Section -->
+        <section id="success-stories" class="topic-section">
+          <h2 class="topic-section-header">Success Stories</h2>
+          <div class="topic-card">
+            <p>Success stories content goes here...</p>
+          </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="topic-section">
+          <h2 class="topic-section-header">Challenges & Solutions</h2>
+          <div class="topic-card">
+            <p>Challenges content goes here...</p>
+          </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="topic-section">
+          <h2 class="topic-section-header">Additional Resources</h2>
+          <div class="topic-card">
+            <p>Resources content goes here...</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="social-links-footer">
+            <a href="https://linkedin.com/in/evan-brociner" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <p class="mt-3">Stay informed about healthcare innovation</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Topic Page JS -->
+  <script src="../static/js/topics.js"></script>
+</body>
+
+</html>
