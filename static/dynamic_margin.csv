@@ -1,9 +1,0 @@
-Plan,CareModelType,RiskLevel,Category,Value
-Medicaid,VBC,HighRisk,PMPM,1500
-Medicaid,VBC,LowRisk,PMPM,20
-Medicaid,VBC,HighRisk,PatientsPerClinician,400
-Medicaid,VBC,LowRisk,PatientsPerClinician,2000
-Medicaid,DPC,HighRisk,PMPM,100
-Medicaid,DPC,LowRisk,PMPM,75
-Medicaid,DPC,HighRisk,PatientsPerClinician,350
-Medicaid,DPC,LowRisk,PatientsPerClinician,1300

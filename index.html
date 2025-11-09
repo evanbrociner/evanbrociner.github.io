@@ -1,176 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Brociner - Data Scientist & Policy Analyst</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Evan Brociner</h1>
+        </div>
+    </header>
 
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Learn about Medicaid, Medicare, and Value-Based Care. Discover the intricacies of the healthcare system and explore comprehensive guides and resources."/>
-    <title>How Healthcare Works</title>
-
-    <link rel="icon" type="image/png" href="static/img/logo-color.png"/>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-
-    <!-- Custom CSS -->
-    <link href="static/css/style.css" rel="stylesheet"/>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "How Healthcare Works",
-        "url": "https://www.howhealthcareworks.com",
-        "sameAs": ["https://www.linkedin.com/company/howhealthcareworks"],
-        "logo": "https://www.howhealthcareworks.com/static/img/logo.png"
-      }
-    </script>
-
-    <!-- Internal Styles -->
-    <style>
-      .card {
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .card-link {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .card-link:hover .card {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-
-      .card-body {
-        text-align: center;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <main>
-        <header class="text-center my-5">
-          <h1 class="display-4">How Healthcare Works</h1>
-          <p class="lead">Exploring Medicaid, Medicare, and Value-Based Care</p>
-          <iframe src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca?slim=true" data-test-id="beehiiv-embed" height="52" width="50%" frameborder="0" scrolling="no" style="
-              margin: 0;
-              border-radius: 0px !important;
-              background-color: transparent;
-            "></iframe>
-        </header>
-        <div class="my-5">
-          <a href="https://how-healthcare-works.beehiiv.com" class="card-link" aria-label="Read articles">
-            <div class="card h-100 d-flex align-items-center justify-content-center shadow-sm" style="border-radius: 15px">
-              <div class="card-body text-center">
-                <h5 class="card-title">Articles</h5>
-              </div>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <img src="https://via.placeholder.com/200x200?text=Evan+Brociner" alt="Evan Brociner" class="profile-photo">
+                <h1>Evan Brociner</h1>
+                <p class="tagline">Data scientist analyzing North Carolina policy through evidence and research.</p>
             </div>
-          </a>
+        </section>
+
+        <section id="introduction" class="introduction-section">
+            <div class="container">
+                <h2>Welcome to My Policy Research Hub</h2>
+                <p>
+                    Hi, I'm Evan Brociner, a data scientist passionate about leveraging evidence and research to inform public policy. My journey has taken me through the intricate world of healthcare data, where I've witnessed firsthand the power of rigorous analysis to drive meaningful change. This site is a reflection of my commitment to understanding complex societal challenges, particularly within North Carolina, through the lens of data.
+                </p>
+                <p>
+                    With a background rooted in both quantitative analysis and a deep interest in public welfare, I aim to bridge the gap between raw data and actionable insights. Here, you'll find my ongoing work—a dynamic repository of research, analysis, and continuous learning. It's a space where I explore critical policy areas, dissect data, and present findings that I hope contribute to more informed decision-making.
+                </p>
+                <p>
+                    Consider this site a living document, constantly evolving as I delve into new datasets, refine methodologies, and uncover fresh perspectives. It's not just a static portfolio, but an active exploration of how data science can illuminate pathways to a more equitable and efficient society. Join me as I build this resource, piece by piece, driven by curiosity and a dedication to evidence-based policy.
+                </p>
+            </div>
+        </section>
+
+        <section id="navigation-cards" class="navigation-cards-section">
+            <div class="container">
+                <h2>Explore My Work</h2>
+                <div class="cards-grid">
+                    <a href="data.html" class="card data-analysis-card">
+                        <div class="card-icon">📊</div>
+                        <h3>MY ANALYSIS</h3>
+                        <p>Original data analysis and findings on North Carolina policy, organized by topic.</p>
+                    </a>
+                    <a href="evidence.html" class="card evidence-library-card">
+                        <div class="card-icon">📚</div>
+                        <h3>EVIDENCE LIBRARY</h3>
+                        <p>Curated research and proven models from around the world, synthesizing what works.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="living-resource" class="living-resource-section">
+            <div class="container">
+                <p>This is a living, growing resource that I build over time – not a static portfolio. Expect new insights and evidence regularly!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Sign up for my newsletter to get the latest research and analysis.</p>
+                    <!-- Placeholder for newsletter signup form -->
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <h3>Connect With Me</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                        <li><a href="#" target="_blank">Twitter</a></li>
+                        <li><a target="_blank" href="https://github.com/evanbrociner">GitHub</a></li>
+                        <!-- Add more social links as needed -->
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:evan.brociner@example.com">evan.brociner@example.com</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Evan Brociner. All rights reserved.</p>
+            </div>
         </div>
-
-        <p class="lead">
-          Primers on the most complicated healthcare topics
-        </p>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <a href="medicaid.html" class="card-link">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Medicaid</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="medicare.html" class="card-link">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Medicare</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="vbc.html" class="card-link">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Value Based Care</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col">
-            <a href="costs.html" class="card-link">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Costs</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col">
-            <a href="single_payer.html" class="card-link">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Single-Payer</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        </div>
-
-        <div class="my-5">
-          <p class="lead">
-            Mapping the entire healthcare system with pain points
-          </p>
-          <div class="card">
-            <a href="https://www.figma.com/board/gvrtGmKZm3dTiit2Q8QLR8/How-Healthcare-Works?node-id=0-1&t=HmCzvJiVI4rULnyZ-1" class="card-link">
-              <img src="static/img/workflow.png" class="card-img-top" alt="Workflow"/>
-              <div class="card-body">
-                <h5 class="card-title">Workflow</h5>
-              </div>
-            </a>
-          </div>
-        </div>
-      </main>
-
-      <footer class="footer mt-auto py-3 text-center">
-        <div class="divider"></div>
-        <div class="container pt-4">
-          <section class="mb-4">
-            <a data-mdb-ripple-init="data-mdb-ripple-init" class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/company/howhealthcareworks" role="button" data-mdb-ripple-color="dark">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </section>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-
+    </footer>
+</body>
 </html>
