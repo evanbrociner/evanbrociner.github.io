@@ -1,97 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evan Brociner - Data Scientist & Policy Analyst</title>
-    <link rel="stylesheet" href="static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Brociner - Data Scientist & Policy Researcher</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f5f0e8;
+      color: #2c3e50;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 6rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-size: 1rem;
+      transition: color 0.3s;
+      font-weight: 400;
+    }
+
+    nav a:hover {
+      color: #ff6b35;
+    }
+
+    .logo {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.6rem;
+      font-style: italic;
+      color: #ff6b35;
+      font-weight: normal;
+    }
+
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .subtitle-small {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 5.5rem;
+      font-weight: normal;
+      color: #1a237e;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      position: relative;
+      z-index: 10;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff6b35;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+      position: relative;
+      z-index: 10;
+      font-weight: 500;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+    }
+
+    .floating-card {
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .floating-card:hover {
+      transform: scale(1.05) rotate(0deg) !important;
+      z-index: 100;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    .card1 {
+      top: 8%;
+      left: 5%;
+      transform: rotate(-8deg);
+    }
+
+    .card1 .card-image {
+      background: white;
+    }
+
+    .card2 {
+      top: 10%;
+      right: 3%;
+      transform: rotate(6deg);
+    }
+
+    .card2 .card-image {
+      background: white;
+    }
+
+    .card3 {
+      bottom: 8%;
+      left: 4%;
+      transform: rotate(4deg);
+    }
+
+    .card3 .card-image {
+      background: white;
+    }
+
+    .card4 {
+      bottom: 10%;
+      right: 5%;
+      transform: rotate(-5deg);
+    }
+
+    .card4 .card-image {
+      background: white;
+    }
+
+    @media (max-width: 1200px) {
+      .floating-card {
+        width: 250px;
+        height: 170px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .work-section {
+      max-width: 1400px;
+      margin: 6rem auto;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 3.5rem;
+      font-weight: normal;
+      color: #1a237e;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 4rem;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      background: #f0ebe3;
+      border-radius: 24px;
+      padding: 0;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .work-image {
+      width: 100%;
+      height: 320px;
+      border-radius: 24px 24px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+    }
+
+    .work-image-content {
+      filter: brightness(1.2);
+    }
+
+    .work-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2rem;
+      font-weight: normal;
+      color: #2c3e50;
+      margin: 2rem 2rem 1rem 2rem;
+    }
+
+    .work-description {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.7;
+      margin: 0 2rem 2rem 2rem;
+    }
+
+    .work-tag {
+      display: inline-block;
+      background: #2c3e50;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin: 0 2rem 2rem 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      .hero {
+        margin: 3rem auto;
+        min-height: 60vh;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .work-section {
+        margin: 3rem auto;
+        padding: 2rem 1rem;
+      }
+
+      .work-image {
+        height: 240px;
+        font-size: 4rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>Evan Brociner</h1>
+  <nav>
+    <a href="#analysis">Analysis</a>
+    <div class="logo">Evan Brociner</div>
+    <a href="#evidence">Evidence Library</a>
+  </nav>
+
+  <main class="hero">
+    <div class="floating-card card1">
+      <div class="card-image">🏥</div>
+    </div>
+
+    <div class="floating-card card2">
+      <div class="card-image">🗳️</div>
+    </div>
+
+    <div class="floating-card card3">
+      <div class="card-image">🎯</div>
+    </div>
+
+    <div class="floating-card card4">
+      <div class="card-image">🔬</div>
+    </div>
+
+    <p class="subtitle-small">This is Evan Brociner</p>
+    <h1>Data Scientist &<br>Policy Researcher</h1>
+    <p class="tagline">Building evidence-based solutions on how to make communities stronger</p>
+    <a href="#data" class="cta-button">Explore the Data →</a>
+  </main>
+
+  <section class="work-section">
+    <h2 class="section-title">Work in action</h2>
+    <p class="section-subtitle">Crafting evidence-based policy solutions for North Carolina.</p>
+
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-image" style="background: white;">
+          <div class="work-image-content">📚</div>
         </div>
-    </header>
+        <h3 class="work-title">Resource Library</h3>
+        <p class="work-description">A comprehensive collection of datasets, research papers, and policy briefs providing
+          real-time insights into North Carolina's healthcare, education, and economic trends for policymakers and
+          researchers.</p>
+        <span class="work-tag">Data & Research</span>
+      </div>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <img src="https://via.placeholder.com/200x200?text=Evan+Brociner" alt="Evan Brociner" class="profile-photo">
-                <h1>Evan Brociner</h1>
-                <p class="tagline">Data scientist analyzing North Carolina policy through evidence and research.</p>
-            </div>
-        </section>
-
-        <section id="introduction" class="introduction-section">
-            <div class="container">
-                <h2>Welcome to My Policy Research Hub</h2>
-                <p>
-                    Hi, I'm Evan Brociner, a data scientist passionate about leveraging evidence and research to inform public policy. My journey has taken me through the intricate world of healthcare data, where I've witnessed firsthand the power of rigorous analysis to drive meaningful change. This site is a reflection of my commitment to understanding complex societal challenges, particularly within North Carolina, through the lens of data.
-                </p>
-                <p>
-                    With a background rooted in both quantitative analysis and a deep interest in public welfare, I aim to bridge the gap between raw data and actionable insights. Here, you'll find my ongoing work—a dynamic repository of research, analysis, and continuous learning. It's a space where I explore critical policy areas, dissect data, and present findings that I hope contribute to more informed decision-making.
-                </p>
-                <p>
-                    Consider this site a living document, constantly evolving as I delve into new datasets, refine methodologies, and uncover fresh perspectives. It's not just a static portfolio, but an active exploration of how data science can illuminate pathways to a more equitable and efficient society. Join me as I build this resource, piece by piece, driven by curiosity and a dedication to evidence-based policy.
-                </p>
-            </div>
-        </section>
-
-        <section id="navigation-cards" class="navigation-cards-section">
-            <div class="container">
-                <h2>Explore My Work</h2>
-                <div class="cards-grid">
-                    <a href="data.html" class="card data-analysis-card">
-                        <div class="card-icon">📊</div>
-                        <h3>MY ANALYSIS</h3>
-                        <p>Original data analysis and findings on North Carolina policy, organized by topic.</p>
-                    </a>
-                    <a href="evidence.html" class="card evidence-library-card">
-                        <div class="card-icon">📚</div>
-                        <h3>EVIDENCE LIBRARY</h3>
-                        <p>Curated research and proven models from around the world, synthesizing what works.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="living-resource" class="living-resource-section">
-            <div class="container">
-                <p>This is a living, growing resource that I build over time – not a static portfolio. Expect new insights and evidence regularly!</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="newsletter">
-                    <h3>Stay Updated</h3>
-                    <p>Sign up for my newsletter to get the latest research and analysis.</p>
-                    <!-- Placeholder for newsletter signup form -->
-                    <form action="#" method="POST">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-                <div class="social-links">
-                    <h3>Connect With Me</h3>
-                    <ul>
-                        <li><a href="#" target="_blank">LinkedIn</a></li>
-                        <li><a href="#" target="_blank">Twitter</a></li>
-                        <li><a target="_blank" href="https://github.com/evanbrociner">GitHub</a></li>
-                        <!-- Add more social links as needed -->
-                    </ul>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact</h3>
-                    <p>Email: <a href="mailto:evan.brociner@example.com">evan.brociner@example.com</a></p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Evan Brociner. All rights reserved.</p>
-            </div>
+      <div class="work-card">
+        <div class="work-image" style="background: white;">
+          <div class="work-image-content">📊</div>
         </div>
-    </footer>
+        <h3 class="work-title">Analysis</h3>
+        <p class="work-description">Interactive data visualizations and statistical analyses examining the impact of
+          policy decisions across North Carolina counties, helping stakeholders make informed, evidence-based decisions.
+        </p>
+        <span class="work-tag">Analytics & Insights</span>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
