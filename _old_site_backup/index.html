@@ -14,10 +14,26 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f5f0e8;
       color: #2c3e50;
       line-height: 1.6;
       overflow-x: hidden;
+      background: linear-gradient(-45deg, #f5f0e8, #f7e4d6, #f5f0e8, #fff);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     nav {
@@ -67,6 +83,9 @@
       color: #666;
       margin-bottom: 1.5rem;
       letter-spacing: 0.5px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 0.2s;
     }
 
     h1 {
@@ -79,6 +98,9 @@
       font-style: italic;
       position: relative;
       z-index: 10;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 0.5s;
     }
 
     .tagline {
@@ -88,6 +110,9 @@
       max-width: 600px;
       position: relative;
       z-index: 10;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 0.8s;
     }
 
     .cta-button {
@@ -103,11 +128,25 @@
       position: relative;
       z-index: 10;
       font-weight: 500;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 1.1s;
     }
 
     .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+    }
+
+    .cta-button:active {
+      transform: scale(0.97);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .floating-card {
@@ -119,6 +158,21 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floaty 6s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% {
+        transform: translateY(0) rotate(var(--angle));
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(calc(var(--angle) + 2deg));
+      }
+
+      100% {
+        transform: translateY(0) rotate(var(--angle));
+      }
     }
 
     .floating-card:hover {
@@ -134,47 +188,39 @@
       align-items: center;
       justify-content: center;
       font-size: 4rem;
-      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .floating-card:hover .card-image {
+      transform: scale(1.2) rotate(5deg);
     }
 
     .card1 {
       top: 8%;
       left: 5%;
-      transform: rotate(-8deg);
-    }
-
-    .card1 .card-image {
-      background: white;
+      --angle: -8deg;
+      animation-delay: 0s;
     }
 
     .card2 {
       top: 10%;
       right: 3%;
-      transform: rotate(6deg);
-    }
-
-    .card2 .card-image {
-      background: white;
+      --angle: 6deg;
+      animation-delay: 1s;
     }
 
     .card3 {
       bottom: 8%;
       left: 4%;
-      transform: rotate(4deg);
-    }
-
-    .card3 .card-image {
-      background: white;
+      --angle: 4deg;
+      animation-delay: 2s;
     }
 
     .card4 {
       bottom: 10%;
       right: 5%;
-      transform: rotate(-5deg);
-    }
-
-    .card4 .card-image {
-      background: white;
+      --angle: -5deg;
+      animation-delay: 3s;
     }
 
     @media (max-width: 1200px) {
@@ -223,7 +269,9 @@
       border-radius: 24px;
       padding: 0;
       text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      opacity: 0;
+      transform: translateY(40px);
     }
 
     .work-card:hover {
@@ -239,10 +287,6 @@
       align-items: center;
       justify-content: center;
       font-size: 6rem;
-    }
-
-    .work-image-content {
-      filter: brightness(1.2);
     }
 
     .work-title {
@@ -325,15 +369,12 @@
     <div class="floating-card card1">
       <div class="card-image">🏥</div>
     </div>
-
     <div class="floating-card card2">
       <div class="card-image">🗳️</div>
     </div>
-
     <div class="floating-card card3">
       <div class="card-image">🎯</div>
     </div>
-
     <div class="floating-card card4">
       <div class="card-image">🔬</div>
     </div>
@@ -351,7 +392,7 @@
     <div class="work-grid">
       <div class="work-card">
         <div class="work-image" style="background: white;">
-          <div class="work-image-content">📚</div>
+          <div>📚</div>
         </div>
         <h3 class="work-title">Resource Library</h3>
         <p class="work-description">A comprehensive collection of datasets, research papers, and policy briefs providing
@@ -362,7 +403,7 @@
 
       <div class="work-card">
         <div class="work-image" style="background: white;">
-          <div class="work-image-content">📊</div>
+          <div>📊</div>
         </div>
         <h3 class="work-title">Analysis</h3>
         <p class="work-description">Interactive data visualizations and statistical analyses examining the impact of
@@ -372,6 +413,21 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Scroll animation for work cards
+    const elements = document.querySelectorAll('.work-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
 </body>
 
 </html>

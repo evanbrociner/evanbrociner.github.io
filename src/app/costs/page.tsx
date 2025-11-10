@@ -1,0 +1,517 @@
+"use client"; // This component will use client-side features like Bootstrap JS
+
+import { useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function CostsPage(): JSX.Element {
+  useEffect(() => {
+    // Dynamically import Bootstrap JS
+
+  }, []);
+
+  return (
+    <>
+      {/* Head content will be handled by layout.tsx or metadata export */}
+      <iframe
+        data-test-id="beehiiv-embed"
+        frameBorder="0"
+        height="320"
+        scrolling="no"
+        src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca"
+        style={{ borderRadius: '.25rem', border: '.125rem solid #e5e7eb', margin: 0, backgroundColor: 'transparent' }}
+        width="100%"
+      ></iframe>
+
+      {/* Home button */}
+      <Link href="/" className="btn btn-primary">
+          <i className="fa fa-home"></i> Home
+      </Link>
+
+      <div className="row">
+        <div className="col-sm-2">
+          <div className="list-group" id="list-example">
+            <Link href="/" className="list-group-item list-group-item-action">
+              <h4 className="text-success">How Healthcare Works</h4>
+            </Link>
+            <a className="list-group-item list-group-item-action" href="#increase">Why Spending Is High</a>
+            <a className="list-group-item list-group-item-action" href="#Helping">What Has Worked To Decrease Costs</a>
+          </div>
+        </div>
+        <div className="col-sm-8">
+          <div data-bs-offset="50" data-bs-spy="scroll" data-bs-target="#list-example" tabIndex={0}>
+            <div className="carousel slide" data-interval="false" id="carouselExampleControls">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <Image alt="First slide" className="d-block w-100" src="/img/pricing/high_us_health_care_spending_where_is_it_all_going_exhibit_1.png" width={1000} height={500} />
+                </div>
+                <div className="carousel-item">
+                  <Image alt="Second slide" className="d-block w-100" src="/img/pricing/us-per-capita-healthcare-spending-is-over-twice-the-average-of-other-wealthy-countries.jpg" width={1000} height={500} />
+                </div>
+                <div className="carousel-item">
+                  <Image alt="Third slide" className="d-block w-100" src="/img/pricing/healthcare-costs-in-the-united-states-have-increased-drastically-over-the-past-several-decades_1.jpg" width={1000} height={500} />
+                </div>
+                {/* Add more carousel items here if needed */}
+              </div>
+              <a className="carousel-control-prev" data-bs-slide="prev" href="#carouselExampleControls" role="button">
+                <span aria-hidden="true" className="carousel-control-prev-icon"></span>
+                <span className="visually-hidden">Previous</span>
+              </a>
+              <a className="carousel-control-next" data-bs-slide="next" href="#carouselExampleControls" role="button">
+                <span aria-hidden="true" className="carousel-control-next-icon"></span>
+                <span className="visually-hidden">Next</span>
+              </a>
+            </div>
+            <section id="increase">
+              <h3 id="increase" style={{ marginTop: '2.5rem' }}>Why Spending Is High</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Table rows will go here */}
+                  <tr>
+                    <td>
+                      <a href="https://www.halletecco.com/blog/american-exceptionalism-healthcare" rel="noopener noreferrer" target="_blank">
+                        American Exceptionalism: Healthcare Edition
+                      </a>
+                    </td>
+                    <td>
+                      Halle Tecco does a great job at showing health care costs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=twIP7EruFhE" rel="noopener noreferrer" target="_blank">
+                        High Cost Healthcare Claimants
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>High cost claimants are the number one cause of high healthcare costs. The 80/20 rule highlights that 80% of claim costs are driven by just 20% of claimants, often exceeding $25,000 annually. Additionally, the top 5% of claimants account for 50% of claim costs, typically exceeding $100,000 collectively.</li>
+                        <li>High cost claimants fall into three diagnostic categories: musculoskeletal, cardiovascular, and cancer.Musculoskeletal includes injuries and poisoning, while cardiovascular encompasses heart attacks, congestive heart failure,peripheral vascular disease, cerebrovascular disease, diabetes, and renal disease. Cancer primarily focuses on breast, lung,colon, and prostate cancers.</li>
+                        <li>High cost claimants are heterogeneous, with two-thirds being new each year. The video categorizes high cost claimants into three groups: 'old' claimants who remain high cost from the previous year, 'new part one' claimants with almost zero prior claims but suddenly incur significant costs (often due to major surgeries or unexpected diagnoses), and 'new part two' claimants with gradually increasing costs due to chronic conditions like diabetes progressing to kidney failure.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.halletecco.com/blog/american-exceptionalism-healthcare" rel="noopener noreferrer" target="_blank">
+                        American Exceptionalism: Healthcare Edition
+                      </a>
+                    </td>
+                    <td>
+                      Halle Tecco does a great job at showing health care costs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=wmZtBW54GNI" rel="noopener noreferrer" target="_blank">
+                        Corrupt Middlemen Are The Real Reason Drug Prices Keep Increasing
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Pharmacy Benefit Managers (PBMs) are middlemen hired by insurance companies to negotiate drug prices and manage prescription benefits. They often receive rebates from pharmaceutical companies in exchange for favorable placement of drugs on formularies.</li>
+                        <li>PBMs engage in practices that drive up drug costs, such as creating fake prices and charging patients more than the actual cost of drugs. They also use tactics like retroactive audits and clawbacks to harm independent pharmacies.</li>
+                        <li>The PBM industry is highly concentrated, with three major PBMs controlling a large portion of the market. This lack of competition allows PBMs to engage in anti-competitive practices and further inflate drug prices.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=o_QdZhFOKr4" rel="noopener noreferrer" target="_blank">
+                        Healthcare Costs in America: Hospitals, Doctors, Medications and More
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Rapid and unsustainable rise in healthcare costs:</strong> Healthcare costs are increasing at a rate of about 7% per year, which is significantly higher than the overall inflation rate. This rapid increase causes healthcare costs to double approximately every 10 years, making it increasingly difficult for individuals and employers to afford healthcare.
+                        </li>
+                        <li>
+                          <strong>High-cost patients drive a large portion of healthcare spending:</strong> A small percentage of the population drives a large portion of healthcare costs. Approximately 20% of the population accounts for 80% of healthcare costs, and within that group, just 5% of the population accounts for over 50% of healthcare spending. This highlights the need for targeted interventions to address the needs of this high-cost population.
+                        </li>
+                        <li>
+                          <strong>Hospitals contribute significantly to rising healthcare costs:</strong> Hospitals utilize various strategies to increase their revenue, contributing to rising healthcare costs. These strategies include merging with other hospitals to reduce competition and increase pricing power, acquiring physician practices to capture more patient volume, and utilizing a fee-for-service payment model that incentivizes providing more services rather than focusing on patient outcomes.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going" rel="noopener noreferrer" target="_blank">
+                        High U.S. Health Care Spending: Where Is It All Going?
+                      </a>
+                    </td>
+                    <td>
+                      Administrative costs, prescription drugs, and physician and nurse wages may be contributing factors to excess health spending in the United States, compared with peer nations
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.washingtonpost.com/opinions/2022/11/29/us-health-care-expensive-indispensable-nation/" rel="noopener noreferrer" target="_blank">
+                        In health care, America is the world’s indispensable nation
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <ul>
+                          <li><strong>U.S. Health System Subsidizes Global Innovation</strong>: The U.S. health-care system, with its lack of price controls and profit-driven structure, allows other countries to offer price-controlled universal care by transferring the risk and cost of medical innovation to Americans. This system results in higher prices in the U.S., while other countries benefit from lower costs without compromising on quality.</li>
+                          <li><strong>Significant U.S. Spending Dominates Global Health Economy</strong>: The United States, with only 4% of the world’s population, accounts for almost half of the global $8 trillion healthcare economy. This massive spending, particularly in pharmaceuticals and high-tech medical devices, drives global health-care advancements, with the U.S. market providing the bulk of profits that incentivize innovation.</li>
+                          <li><strong>Lack of Competition in U.S. Health Care Drives Up Costs</strong>: Unlike other industries, competition does not effectively lower prices in U.S. healthcare due to the third-party payment system. Hospitals and doctors avoid competing on price, focusing instead on innovation. The article suggests that introducing consumer-driven competition could lead to more efficient and cost-effective healthcare, but the current structure prevents this.</li>
+                        </ul>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.healthtechstack.io/p/part-i-health-plan-or-health-insurance" rel="noopener noreferrer" target="_blank">
+                        Part I: Why they call it health plan not health insurance!
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Health Plans vs. Health Insurance:</strong> The article distinguishes between the financing and insurance aspects of healthcare. Health plans often combine these two functions, whereas in other industries, they are typically separate. Health plans finance predictable care (like check-ups) while insuring against unpredictable, high-cost events (like major surgeries).
+                        </li>
+                        <li>
+                          <strong>Employer Roles in Healthcare:</strong> Employers play a crucial role in financing and managing healthcare costs. They can choose from various models, including fully insured plans, self-insured plans, and level-funded plans. Each model involves different levels of risk and responsibility for the employer.
+                        </li>
+                        <li>
+                          <strong>The Complexities of the Healthcare Industry:</strong> The healthcare industry is intricate, with numerous stakeholders and components. From third-party administrators (TPAs) to pharmacy benefit managers (PBMs) and a growing array of point solutions, navigating the landscape is challenging. Employers often rely on brokers and consultants to help them make informed decisions.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.healthtechstack.io/p/part-iii-why-health-care-costs-keep" rel="noopener noreferrer" target="_blank">
+                        Part III: Why health care costs keep rising?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <ul>
+                          <li>Misaligned Incentives Drive Up Costs
+                            <ul>
+                              <li>The article highlights that various stakeholders in the healthcare system have incentives that contribute to rising costs. These include:</li>
+                              <ul>
+                                <li>Employers: Over-purchasing insurance to appear competitive.</li>
+                                <li>Brokers: Prioritizing client retention over cost reduction and benefiting from kickbacks.</li>
+                                <li>Vendors: Profiting from increased utilization rather than cost reduction.</li>
+                                <li>Payers and Providers: Negotiating for higher rates and maximizing revenue rather than focusing on cost-efficiency.</li>
+                              </ul>
+                            </ul>
+                          </li>
+                          <li>Information Asymmetry and Lack of Transparency Contribute to Rising Costs
+                            <ul>
+                              <li>The article emphasizes the importance of data transparency and access for controlling costs. Key points include:</li>
+                              <ul>
+                                <li>Limited access to claims data: Employers often lack the necessary information to analyze spending and identify cost-saving opportunities.</li>
+                                <li>Complexity of the healthcare system: Making it difficult to identify and implement effective cost-reduction strategies.</li>
+                              </ul>
+                            </ul>
+                          </li>
+                          <li>Inertia and Risk Aversion Hinder Cost-Saving Initiatives
+                            <ul>
+                              <li>The article discusses the challenges in implementing changes to address rising healthcare costs:</li>
+                              <ul>
+                                <li>Patient and employer engagement: Overcoming resistance to change and encouraging active participation in cost-saving measures.</li>
+                                <li>Risk aversion: Employers often hesitate to make significant changes to their health plans due to fear of negative consequences.</li>
+                              </ul>
+                            </ul>
+                          </li>
+                        </ul>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.thirdway.org/report/tale-of-two-hospitals-why-some-hospitals-succeed-and-others-do-not" rel="noopener noreferrer" target="_blank">
+                        Tale of Two Hospitals: Why Some Hospitals Succeed and Others Do Not
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Single-payer and multi-payer models both reduce administrative burden (BIR) costs</strong>: The study found that both single-payer (Medicare-for-All style) and multi-payer systems can significantly reduce administrative burden (BIR) costs compared to the current system.</li>
+                        <li><strong>Standardizing contracts offers substantial cost savings</strong>: Implementing standardized contracts across payers and providers was found to generate even larger savings in BIR costs than transitioning to a single-payer system, with less variability in results.</li>
+                        <li><strong>Multi-payer system can achieve significant cost reductions</strong>: The research suggests that it is possible to meaningfully reduce administrative burden costs without completely overhauling the healthcare system and moving to a single-payer model.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.cbo.gov/publication/60326#:~:text=Consolidation%20can%20affect%20the%20federal,services%20to%20more%20costly%20settings." rel="noopener noreferrer" target="_blank">
+                        Testimony on Hospital and Physician Consolidation and Its Impact on the Federal Budget
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <ul>
+                          <li><strong>Impact on Federal Healthcare Spending:</strong> Provider consolidation can influence federal healthcare spending by potentially increasing costs. Consolidated providers may charge higher prices for services due to enhanced negotiating power, leading to greater expenditures for government-funded programs like Medicare and Medicaid.</li>
+                          <li><strong>Service Settings and Utilization:</strong> Consolidation can lead to a shift in the delivery of services from lower-cost settings, such as outpatient facilities, to more expensive ones, like hospital-based settings. This shift can result in higher overall costs for healthcare services.</li>
+                          <li><strong>Market Power and Competition:</strong> The consolidation of healthcare providers often reduces market competition, which can affect pricing and service quality. With fewer independent providers, consolidated entities may exercise greater market power, potentially leading to increased prices and decreased incentives for cost control and quality improvement.</li>
+                        </ul>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.axios.com/2022/02/25/employer-health-coverage-hospital-doctor-drug-prices" rel="noopener noreferrer" target="_blank">
+                        The problem with getting health coverage through our jobs
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <ul>
+                          <li><strong>Healthcare Costs Continue to Soar: </strong> Despite the pandemic disrupting healthcare, the underlying issue of exorbitant costs for employer-based health insurance persists. Spending on these plans has outpaced Medicare and Medicaid spending in recent years.
+                          </li>
+                          <li><strong>Price Discrepancies Between Insurers and Medicare: </strong> Hospitals and other healthcare providers charge significantly different prices to different insurers. For instance, the cost of hip and knee replacement surgery can vary widely between insurers, with Medicare paying a fraction of what private insurers do.
+                          </li>
+                          <li><strong>Healthcare Providers Prioritize Profit Over Patients: </strong> The argument that healthcare providers need to charge higher prices to offset low Medicare and Medicaid rates is contradicted by evidence. Research indicates that pricing is primarily driven by market power rather than the need to recoup losses from government programs.
+                          </li>
+                        </ul>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section id="Helping">
+              <h3 id="Helping" style={{ marginTop: '2.5rem' }}>What Has Worked To Decrease Costs</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="https://onepercentsteps.com" rel="noopener noreferrer" target="_blank">
+                        1% Steps for Health Care Reform Project
+                      </a>
+                    </td>
+                    <td>
+                      The goal of the 1% Steps for Health Care Reform Project is to shift the way we think about health care spending in the US and offer a roadmap to policy makers of tangible steps we as a country can take to lower the cost of health care in the US. We want to leverage leading scholars’ work to identify discrete problems in the US health system and offer evidence-based steps for reform. We will continually update the project with new proposals that are based on the latest academic research.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=6mkLuY8rKLU" rel="noopener noreferrer" target="_blank">
+                        4 Step Plan to Lower Hospital Healthcare Costs
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Hospitals overcharge commercial insurance:</strong> The current system allows hospitals to charge commercial insurance companies much higher rates than they charge Medicare and Medicaid. This allows hospitals to cross-subsidize the cost of treating Medicare and Medicaid patients.
+                        </li>
+                        <li>
+                          <strong>Hospitals are inefficient:</strong> The video highlights that hospitals are inefficient and waste a lot of money. For example, they often have duplicate services, unnecessary tests, and overpriced supplies.
+                        </li>
+                        <li>
+                          <strong>Ways to reduce healthcare costs:</strong> The video outlines several ways to reduce healthcare costs, such as standardizing care protocols, reducing waste, and negotiating better prices with suppliers.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://relentlesshealthvalue.com/episode/encore-ep391-a-case-study-for-anyone-trying-to-level-up-primary-care-that-im-gonna-call-how-margin-shoves-mission-off-the-bus-with-scott-conard-md" rel="noopener noreferrer" target="_blank">
+                        A Case Study for Anyone Trying to Level Up Primary Care That I'm Gonna Call “How Margin Shoves Mission Off the Bus”
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>High-Value Primary Care is Possible and Profitable:</strong> Dr. Scott Conard successfully implemented a risk-based primary care model that improved patient outcomes and increased revenue. This demonstrates that delivering high-quality, preventive care can be financially sustainable within a fee-for-service system.
+                        </li>
+                        <li>
+                          <strong>Systemic Barriers to High-Value Care:</strong> Despite its success, Dr. Conard's practice was acquired by a larger health system that ultimately dismantled it to protect its revenue from hospitalizations. This highlights the conflict between the interests of providers focused on patient well-being and those of healthcare organizations prioritizing financial gain.
+                        </li>
+                        <li>
+                          <strong>The Importance of Leadership and Change Management:</strong> Implementing a successful primary care model requires strong leadership and effective change management. Dr. Conard emphasizes the need for shared vision, clear communication, and employee engagement to drive transformation within healthcare organizations.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://relentlesshealthvalue.com/episode/encore-ep363-how-to-cut-healthcare-admin-burden-in-half-with-david-scheinker-phd" rel="noopener noreferrer" target="_blank">
+                        Encore! EP363: How to Cut Healthcare Admin Burden in Half, With David Scheinker, PhD
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Profit from Transactional Waste:</strong> Some organizations, particularly Revenue Cycle Management (RCM) companies, may profit from the inefficiencies and transactional waste in healthcare. This issue is compounded when these companies are part of larger, vertically integrated systems with payers, creating a conflict of interest where waste benefits one party financially.</li>
+                        <li><strong>Challenges with Legacy Systems:</strong> The persistence of outdated technology and data systems in healthcare contributes to inefficiencies and high costs. The substantial investment in these legacy systems often makes it difficult to adopt new, more efficient technologies.</li>
+                        <li><strong>Regulatory and Legal Barriers:</strong> Healthcare is burdened by complex regulations and state laws that can hinder collaboration. Regulations from CMS and varying state laws introduce layers of complexity that can obstruct efforts to streamline processes and improve efficiency.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=ZNvJJmFGWfo" rel="noopener noreferrer" target="_blank">
+                        Full-Risk Primary Care Described in 'The Calling' by Drs. Chris and Gordon Chen
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Small patient panel size:</strong> ChenMed, a full-risk primary care practice, has been highly successful in keeping Medicare Advantage patients healthy and prolonging their lives. A key factor in their success is maintaining a small patient panel size of 450 patients per doctor, which allows for frequent patient visits and strong doctor-patient relationships.
+                        </li>
+                        <li>
+                          <strong>Frequent patient visits:</strong> ChenMed's model emphasizes monthly check-ins with patients, even when they are doing well. These frequent interactions help build trust between doctors and patients, increasing the likelihood of patients seeking care from their primary care physician rather than going to the emergency room. Regular visits also allow for better accountability and monitoring of patient behavior and medication adherence, leading to improved health outcomes.
+                        </li>
+                        <li>
+                          <strong>Challenges for retail-based primary care:</strong> The retailization of primary care, driven by companies like Walmart and Amazon, may not be successful without a focus on patient relationships. Their success in improving patient health outcomes will depend on their ability to replicate ChenMed's model of small patient panels and frequent visits. Without a strong focus on building trust and accountability with patients, these retail-based primary care practices may struggle to achieve the same level of success as ChenMed.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=yZaELrrRPos" rel="noopener noreferrer" target="_blank">
+                        Get Serious About Healthcare Costs
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>
+                          <strong>Identifying low-value specialists for high-cost claimants:</strong> Focusing on the small percentage of high-cost claimants and identifying specialists who provide low-value care for these individuals is crucial for effectively managing and reducing healthcare expenses.
+                        </li>
+                        <li>
+                          <strong>Data analysis is essential:</strong> By analyzing detailed claims data for high-cost claimants, including information about the specialist, facility, allowed amount, and diagnosis codes, employers can identify patterns of low-value care and pinpoint the specific specialists involved.
+                        </li>
+                        <li>
+                          <strong>Steering members away from low-value specialists:</strong> Once low-value specialists have been identified, employers can implement strategies to steer members towards higher-value providers. This can be done through various methods such as primary care management, plan design, navigation services, or centers of excellence.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.healthtechstack.io/p/part-ii-how-to-reduce-health-care" rel="noopener noreferrer" target="_blank">
+                        Part II: How to reduce health care costs?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Healthcare Costs are Primarily Driven by Price Increases, Not Utilization</strong>
+                          <p>Contrary to popular belief, the article highlights that the primary factor contributing to rising healthcare costs is the increasing price of medical procedures and services, rather than an increase in the frequency of these services (utilization). This finding challenges the traditional focus on reducing unnecessary procedures and emphasizes the importance of negotiating better rates with providers.</p>
+                        </li>
+                        <li><strong>Risk Management is Crucial for Cost Reduction</strong>
+                          <p>Effectively managing risk is essential for controlling healthcare costs. Employers can reduce their risk premiums by improving the accuracy of their claims predictions and pooling risk with other employers. This involves leveraging data analytics, implementing risk management strategies, and exploring alternative risk financing options like captives and MEWAs.</p>
+                        </li>
+                        <li><strong>A Multifaceted Approach is Necessary to Reduce Costs</strong>
+                          <p>Reducing healthcare costs requires a comprehensive strategy that addresses various cost drivers. The article outlines several approaches, including:</p>
+                          <ul>
+                            <li><strong>Price negotiation:</strong> Obtaining better rates from providers through strategies like bundled payments and reference-based pricing.</li>
+                            <li><strong>Shifting costs:</strong> Redistributing costs between employers, employees, and providers through mechanisms like high-deductible health plans and value-based care arrangements.</li>
+                            <li><strong>Utilization management:</strong> Implementing strategies to reduce unnecessary procedures and improve care coordination.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2822220?widget=personalizedcontent&amp;previousarticle=0#google_vignette" rel="noopener noreferrer" target="_blank">
+                        Potential US Health Care Savings Based on Clinician Views of Feasible Site-of-Care Shifts
+                      </a>
+                    </td>
+                    <td>
+                      In this survey study of 1069 clinicians surveyed in 2021 and historical claims data from 2019, 10.3 percentage points of commercial and 10.9 percentage points of Medicare volume could be shifted from the hospital to alternative sites using today’s technology without compromising clinical outcomes. Based on observed reimbursement rates, this would be associated with savings of $113.8 billion (3.2%) to $147.7 billion (4.1%) in 2019 dollars annually for the overall US health care system.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.youtube.com/watch?v=KEtJOzfRyFg" rel="noopener noreferrer" target="_blank">
+                        Secret to Primary Care Profitability and Scale
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Fee-for-service is unprofitable for primary care. The value created by primary care through screenings, prevention, and chronic disease management is not captured through fee-for-service revenue.</li>
+                        <li>There are two main models for profitable primary care:
+                          <ul>
+                            <li>Recurring revenue model: This includes Medicare Advantage plans, direct primary care practices, and employer-based onsite clinics, where patients pay a subscription fee.</li>
+                            <li>High-margin service enticement model: This model is used by hospitals, where primary care acts as a referral source for high-margin services like cancer surgery and orthopedic care.</li>
+                          </ul>
+                        </li>
+                        <li>Fee-for-service primary care is not scalable. Unlike other service-based businesses like pest control, which have successful scaling models, fee-for-service primary care has not been able to achieve large-scale profitability.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1475-6773.13649" rel="noopener noreferrer" target="_blank">
+                        Reducing administrative costs in US health care: Assessing single payer and its alternatives
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Single-payer and multi-payer models both reduce administrative burden (BIR) costs</strong>: The study found that both single-payer (Medicare-for-All style) and multi-payer systems can significantly reduce administrative burden (BIR) costs compared to the current system.</li>
+                        <li><strong>Standardizing contracts offers substantial cost savings</strong>: Implementing standardized contracts across payers and providers was found to generate even larger savings in BIR costs than transitioning to a single-payer system, with less variability in results.</li>
+                        <li><strong>Multi-payer system can achieve significant cost reductions</strong>: The research suggests that it is possible to meaningfully reduce administrative burden costs without completely overhauling the healthcare system and moving to a single-payer model.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://olearykm.medium.com/the-cost-equation-for-new-primary-care-models-in-existing-frameworks-part-i-a31109f4dcbb" rel="noopener noreferrer" target="_blank">
+                        The Cost Equation for New Primary Care Models in Existing Frameworks (Part I)
+                      </a>
+                    </td>
+                    <td>
+                      Traditional primary care costs $25 PMPM, new models cost somewhere around $50 — $75 PMPM. For insurers or employers to be interested they probably have to at least breakeven or demonstrate cost savings, so they need to demonstrate $25 — $50 PMPM of cost savings to break even, which is a large challenge. Part I of this goes through the cost structure differences; Part II outlines the challenges in demonstrating cost savings &amp; some thoughts on moving forward.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer className="footer mt-auto py-3 text-center">
+        <div className="divider"></div>
+        <div className="container pt-4">
+          <section className="mb-4">
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              data-mdb-ripple-color="dark"
+              data-mdb-ripple-init="data-mdb-ripple-init"
+              href="https://www.linkedin.com/company/howhealthcareworks"
+              role="button"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+          </section>
+        </div>
+      </footer>
+    </>
+  );
+}

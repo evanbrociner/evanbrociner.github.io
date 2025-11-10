@@ -1,0 +1,733 @@
+"use client";
+
+import { useEffect } from 'react';
+import Link from 'next/link';
+
+
+
+export default function SinglePayerPage(): JSX.Element {
+  useEffect(() => {
+    // Dynamically import Bootstrap JS
+
+  }, []);
+
+  return (
+    <>
+      <iframe data-test-id="beehiiv-embed" frameBorder="0" height="320"
+        scrolling="no"
+        src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca"
+        style={{ borderRadius: '.25rem', border: '.125rem solid #e5e7eb', margin: 0, backgroundColor: 'transparent' }}
+        width="100%"></iframe>
+      {/* Home button */}
+      <Link className="btn btn-primary" href="/">
+        <i className="fa fa-home"></i> Home
+      </Link>
+      <div className="row">
+        <div className="col-sm-2">
+          <div className="list-group" id="list-example">
+            <Link className="list-group-item list-group-item-action" href="/">
+              <h4 className="text-success">How Healthcare Works</h4>
+            </Link>
+            <a className="list-group-item list-group-item-action"
+              href="#101">101 - American Single-Payer
+              System</a>
+            <a className="list-group-item list-group-item-action"
+              href="#201">201 -
+              American Single-Payer
+              System</a>
+          </div>
+        </div>
+        <div className="col-sm-8">
+          <div data-bs-offset="50" data-bs-spy="scroll"
+            data-bs-target="#list-example" tabIndex={0}>
+            <section id="101">
+              <h3 id="101" style={{ marginTop: '2.5rem' }}>101 -
+                American Single-Payer
+                System</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody><tr>
+                  <td>
+                    <a
+                      href="https://www.youtube.com/watch?v=PuqYC-1abVM&amp;list=PLHbYC-VUZ3Eu3s2Au916Wmmp5jo8oEzjD"
+                      rel="noopener noreferrer"
+                      target="_blank">
+                      Medicare For All: What Does it
+                      Actually Mean?
+                    </a>
+                  </td>
+                  <td>
+                    <h5>Key Points</h5>
+                    <ul>
+                      <li>There are many different
+                        proposals for Medicare For
+                        All, and they vary in a
+                        number of ways, including
+                        whether they would provide
+                        universal coverage, how they
+                        would be financed, and what
+                        benefits they would
+                        offer.</li>
+                      <li>Some Medicare For All plans
+                        would eliminate
+                        employer-based health
+                        insurance, while others
+                        would allow it to
+                        continue.</li>
+                      <li>Medicare For All plans could
+                        be financed through taxes,
+                        premiums, or a combination
+                        of the two.</li>
+                    </ul>
+                  </td>
+                </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=rZIF3LAIQWE"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Medicare for All Could Save the
+                        US $2 Trillion
+                      </a>
+                    </td>
+                    <td>
+                      A recent study said that single
+                      payer Medicare for everybody would
+                      cost the government A lot of money.
+                      But it would also $2 trillion less
+                      than the way we do things now.
+
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=J4zx8LRBB-Y"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Medicare for All and
+                        Administrative Costs
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>There are many different
+                          proposals for Medicare For
+                          All, and they vary in a
+                          number of ways, including
+                          whether they would provide
+                          universal coverage, how they
+                          would be financed, and what
+                          benefits they would
+                          offer.</li>
+                        <li>Some Medicare For All plans
+                          would eliminate
+                          employer-based health
+                          insurance, while others
+                          would allow it to
+                          continue.</li>
+                        <li>Medicare For All plans could
+                          be financed through taxes,
+                          premiums, or a combination
+                          of the two.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=7Z2XRg3dy9k"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Medicare for All: Last Week
+                        Tonight with John Oliver (HBO)
+                      </a>
+                    </td>
+                    <td>
+                      <p>
+
+                        As presidential candidates
+                        continue to discuss Medicare for
+                        All, John Oliver explores how
+                        much it might cost, what it will
+                        change, and who it will help.
+
+                      </p>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=VmmirkyZBxY"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Would Universal Healthcare
+                        Really Work in the U.S.?
+                      </a>
+                    </td>
+                    <td>
+                      Pretty much every rich, developed
+                      nation on the planet has universal
+                      healthcare, EXCEPT for the U.S.
+                      Should we join them, or does our
+                      current healthcare system have
+                      advantages that we don’t want to
+                      lose?
+                    </td>
+                  </tr></tbody>
+              </table>
+            </section>
+            <section id="201">
+              <h3 id="201" style={{ marginTop: '2.5rem' }}>201 -
+                American Single-Payer
+                System</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody><tr>
+                  <td>
+                    <a
+                      href="https://www.urban.org/sites/default/files/2019/10/15/from_incremental_to_comprehensive_health_insurance_reform-how_various_reform_options_compare_on_coverage_and_costs.pdf"
+                      rel="noopener noreferrer"
+                      target="_blank">
+                      From Incremental to
+                      Comprehensive
+                      Health Insurance Reform: How
+                      Various
+                      Reform Options Compare on
+                      Coverage
+                      and Costs
+                    </a>
+                  </td>
+                  <td>
+                    <h5>Key Points</h5>
+                    <ul>
+                      <li><strong>Coverage
+                        Variations:</strong> The
+                        report analyzes eight
+                        different health care reform
+                        proposals, from incremental
+                        improvements to the ACA to
+                        single-payer systems,
+                        showing their impact on
+                        uninsured rates and health
+                        insurance coverage
+                        distribution.</li>
+                      <li><strong>Cost
+                        Implications:</strong>
+                        The financial effects of
+                        these reforms vary, with
+                        incremental reforms
+                        requiring moderate increases
+                        in federal spending, while
+                        single-payer options
+                        significantly reduce
+                        household and employer
+                        spending but greatly
+                        increase government
+                        costs.</li>
+                      <li><strong>Universal
+                        Coverage:</strong> The
+                        most comprehensive reforms,
+                        including single-payer
+                        models, are the only ones
+                        that achieve universal
+                        health care coverage for all
+                        legally present
+                        residents.</li>
+                    </ul>
+                  </td>
+                </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=Tgdx99-_rAo"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Healthcare Debate: Should the
+                        U.S. adopt a single-payer
+                        healthcare system?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>The Affordable Care Act
+                          (ACA) has helped to reduce
+                          the number of uninsured
+                          Americans, but it is still a
+                          complex and fragmented
+                          system.</li>
+                        <li>A single-payer healthcare
+                          system could save the U.S.
+                          money over time.</li>
+                        <li>There are a number of
+                          different ways to transition
+                          to a single-payer
+                          system.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=Tgdx99-_rAo"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        In Pursuit of a Single-Payer
+                        Plan: Lessons Learned
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>The challenges of
+                          implementing a single-payer
+                          healthcare system in
+                          Vermont.</li>
+                        <li>The lessons learned from
+                          Vermont's experience.</li>
+                        <li>The future of single-payer
+                          healthcare in the United
+                          States.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.washingtonpost.com/news/wonk/wp/2014/01/16/is-the-u-s-too-corrupt-for-single-payer-health-care/"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Is the U.S. too corrupt for
+                        single-payer health care?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Government
+                          Corruption and Special
+                          Interests</strong>: Uwe
+                          Reinhardt argues that the
+                          U.S. government's
+                          susceptibility to special
+                          interest influence might
+                          undermine the effectiveness
+                          of a single-payer health
+                          care system. Unlike
+                          countries with stricter
+                          lobbying regulations, the
+                          U.S. has powerful health
+                          industry interests that
+                          could impact price-setting
+                          and policy decisions if a
+                          single-payer system were
+                          implemented.</li>
+                        <li><strong>Comparison with
+                          Other Systems</strong>:
+                          While the U.S. government,
+                          through programs like
+                          Medicare and Medicaid, can
+                          negotiate lower prices
+                          compared to private
+                          insurers, Reinhardt suggests
+                          that the effectiveness of
+                          such negotiations might be
+                          compromised by corruption
+                          and lobbying. This contrasts
+                          with countries like Taiwan
+                          and Canada, where lobbying
+                          is more restricted and
+                          bureaucrats are insulated
+                          from such pressures.</li>
+                        <li><strong>Independent
+                          Regulatory
+                          Models</strong>: The
+                          article highlights
+                          Maryland's unique all-payer
+                          rate-setting system as a
+                          successful example of
+                          independent regulation. The
+                          Maryland Health Services
+                          Cost Review Commission
+                          operates with significant
+                          autonomy from political
+                          pressures, which has helped
+                          it maintain its system. This
+                          model is compared to
+                          proposed independent boards
+                          for Medicare, suggesting
+                          that true independence might
+                          be key to managing health
+                          care costs effectively.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=J4zx8LRBB-Y"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Medicare for All and
+                        Administrative Costs
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Medicare's administrative
+                          costs are lower than those
+                          of private insurers, but
+                          that's partly because
+                          private plans do things that
+                          Medicare doesn't.</li>
+                        <li>Medicare's administrative
+                          costs have been falling over
+                          the years as a percent of
+                          total program spending.</li>
+                        <li>Some critics have argued
+                          that Medicare's
+                          administrative cost rate
+                          appears artificially low
+                          because Medicare's
+                          enrollee's health spending
+                          is so high.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003013"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Projected costs of single-payer
+                        healthcare financing in the
+                        United States: A systematic
+                        review of economic analyses
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>There is near-consensus in
+                          these analyses that
+                          single-payer would reduce
+                          health expenditures while
+                          providing high-quality
+                          insurance to all US
+                          residents.</li>
+                        <li>To achieve net savings,
+                          single-payer plans rely on
+                          simplified billing and
+                          negotiated drug price
+                          reductions, as well as
+                          global budgets to control
+                          spending growth over
+                          time.</li>
+                        <li>Replacing private insurers
+                          with a public system is
+                          expected to achieve lower
+                          net healthcare costs.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://catalyst.nejm.org/doi/full/10.1056/CAT.20.0456"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Reforming Health Care: The
+                        Single System Solution
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Flawed Assumptions: The
+                          healthcare system operates
+                          on outdated or incorrect
+                          assumptions that hinder
+                          effective care.</li>
+                        <li>Inadequate Information: A
+                          lack of comprehensive,
+                          real-time data hampers
+                          decision-making and care
+                          quality.</li>
+                        <li>Fragmented Systems: The
+                          divided nature of healthcare
+                          delivery, payment, and
+                          insurance leads to
+                          inefficiencies and
+                          cost-shifting rather than
+                          value improvement.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6775911/"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Single-Payer Health Care in the
+                        United States: Feasible Solution
+                        or Grand Illusion?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Sustained Attention
+                          to Single
+                          Payer:</strong> The
+                          single-payer health care
+                          system, long a dream for
+                          progressive reformers, is
+                          receiving significant
+                          attention as the 2020
+                          national elections approach.
+                          Its increased prominence is
+                          notable despite past
+                          skepticism about its
+                          political feasibility.</li>
+                        <li><strong>Current Health Care
+                          Options:</strong> The
+                          debate over health care
+                          reform includes various
+                          strategies: incremental
+                          improvements to the ACA,
+                          expanding Medicare and
+                          Medicaid, pursuing social
+                          insurance for universal
+                          coverage, and adopting a
+                          single-payer system. Each
+                          has its supporters, but
+                          single payer remains a
+                          particularly vocal and
+                          prominent option.</li>
+                        <li><strong>Impact of Recent
+                          Political
+                          Developments:</strong>
+                          The success of Democrats in
+                          the 2018 congressional
+                          elections and their unified
+                          stance on health care policy
+                          have bolstered the
+                          visibility and viability of
+                          single-payer health care.
+                          This shift raises questions
+                          about whether the political
+                          landscape has changed enough
+                          to reconsider the
+                          feasibility of single payer
+                          as a serious policy
+                          option.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.nejm.org/doi/full/10.1056/nejmp1501050"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        The Demise of Vermont's
+                        Single-Payer Plan
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Financial
+                          Feasibility
+                          Issues:</strong> The
+                          projected costs for
+                          Vermont's single-payer
+                          system, Green Mountain Care,
+                          increased significantly over
+                          time, making the plan
+                          economically
+                          unsustainable.</li>
+                        <li><strong>Political
+                          Challenges:</strong>
+                          Public and legislative
+                          support was weak,
+                          contributing to Governor
+                          Shumlin's decision to
+                          abandon the initiative.</li>
+                        <li><strong>Impact on Future
+                          Efforts:</strong>
+                          Vermont's failure highlights
+                          the challenges of
+                          implementing single-payer
+                          systems at the state level,
+                          complicating future attempts
+                          in other states.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=Dk0SZUJSibg"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Uwe Reinhardt and His Book
+                        'Priced Out'... BEST Healthcare
+                        Economist for You to Know
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Uwe Reinhardt was a famous
+                          healthcare economist who
+                          made significant
+                          contributions to the field.
+                          He is best known for his
+                          work on healthcare economics
+                          in the United States and
+                          Taiwan.</li>
+                        <li>Reinhardt's book <em>Priced
+                          Out</em> discusses the
+                          reasons for high healthcare
+                          costs in the United States.
+                          He argues that the primary
+                          reason is the high prices of
+                          healthcare services.</li>
+                        <li>Reinhardt advocated for a
+                          single-payer healthcare
+                          system in Taiwan, but he
+                          believes that the U.S.
+                          government is too corrupt
+                          for such a system to be
+                          successful.</li>
+                        <li>He instead proposes a system
+                          similar to the Affordable
+                          Care Act, with
+                          community-rated premiums and
+                          a mandate for everyone to
+                          participate.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.nytimes.com/2023/07/18/opinion/universal-health-care.html"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        We’re Already Paying for
+                        Universal Health Care. Why Don’t
+                        We Have It?
+
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li><strong>Flaws in Current
+                          Health Insurance
+                          System:</strong> Despite
+                          various reforms, the U.S.
+                          health insurance system
+                          remains deeply flawed. Many
+                          insured individuals still
+                          face significant medical
+                          bills, with about
+                          three-fifths of unpaid
+                          medical debt held by
+                          households with insurance.
+                          The current system’s
+                          complexity and inconsistency
+                          leave many Americans at risk
+                          of losing coverage or facing
+                          unexpected costs.</li>
+                        <li><strong>Need for Universal
+                          Coverage:</strong>
+                          Incremental reforms have
+                          proven insufficient. The
+                          article argues for a
+                          universal health care system
+                          that is automatic, free at
+                          the point of care, and
+                          provides basic coverage.
+                          This approach aims to
+                          eliminate gaps in coverage
+                          and reduce administrative
+                          burdens, addressing the root
+                          issues of insurance
+                          instability and inadequate
+                          protection.</li>
+                        <li><strong>Economic and
+                          Practical
+                          Justifications:</strong>
+                          The U.S. already spends a
+                          significant amount on health
+                          care, with half of it
+                          financed through taxes. The
+                          proposal suggests that
+                          implementing universal basic
+                          coverage would align U.S.
+                          spending with that of other
+                          high-income countries,
+                          potentially making health
+                          care more efficient and
+                          equitable while avoiding
+                          unnecessary administrative
+                          costs.</li>
+                      </ul>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <a
+                        href="https://www.youtube.com/watch?v=EY6wDY8eol0"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        Would Medicare for All Increase
+                        Your Wages?
+                      </a>
+                    </td>
+                    <td>
+                      <h5>Key Points</h5>
+                      <ul>
+                        <li>Economists believe that
+                          wages are lower to offset
+                          the cost of
+                          employer-provided health
+                          insurance.</li>
+                        <li>There is a debate on whether
+                          Medicare for All would cause
+                          wages to rise.</li>
+                        <li>Some studies suggest that
+                          wages would rise by the same
+                          amount as the reduction in
+                          employer health insurance
+                          costs.</li>
+                      </ul>
+                    </td>
+                  </tr></tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer className="footer mt-auto py-3 text-center">
+        <div className="divider"></div>
+        <div className="container pt-4">
+          <section className="mb-4">
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              data-mdb-ripple-color="dark"
+              data-mdb-ripple-init="data-mdb-ripple-init"
+              href="https://www.linkedin.com/company/howhealthcareworks"
+              role="button">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+          </section>
+        </div>
+      </footer>
+    </>
+  );
+}
