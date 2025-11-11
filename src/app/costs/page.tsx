@@ -1,15 +1,10 @@
 "use client"; // This component will use client-side features like Bootstrap JS
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 
-export default function CostsPage(): JSX.Element {
-  useEffect(() => {
-    // Dynamically import Bootstrap JS
-
-  }, []);
-
+export default function CostsPage(): React.ReactNode {
   return (
     <>
       {/* Head content will be handled by layout.tsx or metadata export */}
@@ -24,47 +19,43 @@ export default function CostsPage(): JSX.Element {
       ></iframe>
 
       {/* Home button */}
-      <Link href="/" className="btn btn-primary">
-          <i className="fa fa-home"></i> Home
+      <Link href="/">
+          <i></i> Home
       </Link>
 
-      <div className="row">
-        <div className="col-sm-2">
-          <div className="list-group" id="list-example">
-            <Link href="/" className="list-group-item list-group-item-action">
-              <h4 className="text-success">How Healthcare Works</h4>
+      <div>
+        <div>
+          <div>
+            <Link href="/">
+              <h4>How Healthcare Works</h4>
             </Link>
-            <a className="list-group-item list-group-item-action" href="#increase">Why Spending Is High</a>
-            <a className="list-group-item list-group-item-action" href="#Helping">What Has Worked To Decrease Costs</a>
+            <a href="#increase">Why Spending Is High</a>
+            <a href="#Helping">What Has Worked To Decrease Costs</a>
           </div>
         </div>
-        <div className="col-sm-8">
-          <div data-bs-offset="50" data-bs-spy="scroll" data-bs-target="#list-example" tabIndex={0}>
-            <div className="carousel slide" data-interval="false" id="carouselExampleControls">
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <Image alt="First slide" className="d-block w-100" src="/img/pricing/high_us_health_care_spending_where_is_it_all_going_exhibit_1.png" width={1000} height={500} />
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <Image alt="First slide" src="/img/pricing/high_us_health_care_spending_where_is_it_all_going_exhibit_1.png" width={1000} height={500} />
                 </div>
-                <div className="carousel-item">
-                  <Image alt="Second slide" className="d-block w-100" src="/img/pricing/us-per-capita-healthcare-spending-is-over-twice-the-average-of-other-wealthy-countries.jpg" width={1000} height={500} />
+                <div>
+                  <Image alt="Second slide" src="/img/pricing/us-per-capita-healthcare-spending-is-over-twice-the-average-of-other-wealthy-countries.jpg" width={1000} height={500} />
                 </div>
-                <div className="carousel-item">
-                  <Image alt="Third slide" className="d-block w-100" src="/img/pricing/healthcare-costs-in-the-united-states-have-increased-drastically-over-the-past-several-decades_1.jpg" width={1000} height={500} />
+                <div>
+                  <Image alt="Third slide" src="/img/pricing/healthcare-costs-in-the-united-states-have-increased-drastically-over-the-past-several-decades_1.jpg" width={1000} height={500} />
                 </div>
                 {/* Add more carousel items here if needed */}
               </div>
-              <a className="carousel-control-prev" data-bs-slide="prev" href="#carouselExampleControls" role="button">
-                <span aria-hidden="true" className="carousel-control-prev-icon"></span>
-                <span className="visually-hidden">Previous</span>
+              <a>
               </a>
-              <a className="carousel-control-next" data-bs-slide="next" href="#carouselExampleControls" role="button">
-                <span aria-hidden="true" className="carousel-control-next-icon"></span>
-                <span className="visually-hidden">Next</span>
+              <a>
               </a>
             </div>
             <section id="increase">
               <h3 id="increase" style={{ marginTop: '2.5rem' }}>Why Spending Is High</h3>
-              <table className="table table-striped">
+              <table>
                 <thead>
                   <tr>
                     <th scope="col">Resource</th>
@@ -292,7 +283,7 @@ export default function CostsPage(): JSX.Element {
             </section>
             <section id="Helping">
               <h3 id="Helping" style={{ marginTop: '2.5rem' }}>What Has Worked To Decrease Costs</h3>
-              <table className="table table-striped">
+              <table>
                 <thead>
                   <tr>
                     <th scope="col">Resource</th>
@@ -496,18 +487,12 @@ export default function CostsPage(): JSX.Element {
           </div>
         </div>
       </div>
-      <footer className="footer mt-auto py-3 text-center">
+      <footer>
         <div className="divider"></div>
-        <div className="container pt-4">
-          <section className="mb-4">
-            <a
-              className="btn btn-link btn-floating btn-lg text-dark m-1"
-              data-mdb-ripple-color="dark"
-              data-mdb-ripple-init="data-mdb-ripple-init"
-              href="https://www.linkedin.com/company/howhealthcareworks"
-              role="button"
-            >
-              <i className="fab fa-linkedin-in"></i>
+        <div>
+          <section>
+            <a href="https://www.linkedin.com/company/howhealthcareworks">
+              <i></i>
             </a>
           </section>
         </div>

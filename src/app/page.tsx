@@ -1,6 +1,8 @@
 "use client";
+import React from 'react';
+import Link from 'next/link';
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactNode {
   return (
     <>
       <nav>
@@ -34,16 +36,18 @@ export default function Home(): JSX.Element {
         <p className="section-subtitle">Crafting evidence-based policy solutions for North Carolina.</p>
 
         <div className="work-grid">
-          <div className="work-card">
-            <div className="work-image" style={{ background: 'white' }}>
-              <div>📚</div>
+          <Link href="/directory" passHref>
+            <div className="work-card">
+              <div className="work-image" style={{ background: 'white' }}>
+                <div>📚</div>
+              </div>
+              <h3 className="work-title">Resource Library</h3>
+              <p className="work-description">A comprehensive collection of datasets, research papers, and policy briefs providing
+                real-time insights into North Carolina's healthcare, education, and economic trends for policymakers and
+                researchers.</p>
+              <span className="work-tag">Data & Research</span>
             </div>
-            <h3 className="work-title">Resource Library</h3>
-            <p className="work-description">A comprehensive collection of datasets, research papers, and policy briefs providing
-              real-time insights into North Carolina's healthcare, education, and economic trends for policymakers and
-              researchers.</p>
-            <span className="work-tag">Data & Research</span>
-          </div>
+          </Link>
 
           <div className="work-card">
             <div className="work-image" style={{ background: 'white' }}>

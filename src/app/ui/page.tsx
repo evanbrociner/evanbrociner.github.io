@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
-
-
+import React from 'react';
 
 interface TableData {
   headers: string[];
   rows: string[][];
 }
 
-export default function UiPage(): JSX.Element {
+export default function UiPage(): React.ReactNode {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loadedTables, setLoadedTables] = useState<TableData[]>([]);
   const [selectedTableIndex, setSelectedTableIndex] = useState<number>(0);
@@ -102,14 +101,14 @@ export default function UiPage(): JSX.Element {
   const currentTable = loadedTables[selectedTableIndex];
 
   return (
-    <div className="container">
+    <div>
       <h3>Select HTML File to Load Table:</h3>
       <input type="file" id="fileInput" accept=".html" onChange={handleFileChange} ref={fileInputRef} />
 
       {loadedTables.length > 0 && (
         <>
           <label htmlFor="tableSelect" className="mt-3">Select a table:</label>
-          <select id="tableSelect" className="form-select" onChange={handleTableSelectChange} value={selectedTableIndex} ref={tableSelectRef}>
+          <select id="tableSelect" onChange={handleTableSelectChange} value={selectedTableIndex} ref={tableSelectRef}>
             {loadedTables.map((_, index) => (
               <option key={index} value={index}>
                 Table {index + 1}
@@ -119,7 +118,7 @@ export default function UiPage(): JSX.Element {
 
           <div id="tableContainer" className="mt-3">
             {currentTable && (
-              <table className="table table-bordered table-striped">
+              <table className="">
                 <thead>
                   <tr>
                     {currentTable.headers.map((header, index) => (
@@ -146,8 +145,8 @@ export default function UiPage(): JSX.Element {
             )}
           </div>
 
-          <button id="addRowBtn" className="btn btn-primary mt-3 me-2" onClick={addTableRow}>Add Row</button>
-          <button id="saveButton" className="btn btn-success mt-3" onClick={saveTable}>Save Changes</button>
+          <button id="addRowBtn" onClick={addTableRow}>Add Row</button>
+          <button id="saveButton" onClick={saveTable}>Save Changes</button>
         </>
       )}
     </div>

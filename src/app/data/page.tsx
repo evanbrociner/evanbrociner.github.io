@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: 'My Analysis - Evan Brociner',
 };
 
-export default function DataPage(): JSX.Element {
+export default function DataPage(): React.ReactNode {
   return (
     <>
       <header>

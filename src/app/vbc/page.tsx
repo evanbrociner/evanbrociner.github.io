@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 
-
-
-export default function VbcPage(): JSX.Element {
+export default function VbcPage(): React.ReactNode {
   useEffect(() => {
     // Dynamically import Bootstrap JS
 
@@ -16,52 +14,52 @@ export default function VbcPage(): JSX.Element {
     <>
       <iframe src="https://embeds.beehiiv.com/c3e1a851-1172-4562-997d-ad0a71dd5cca" data-test-id="beehiiv-embed" width="100%" height="320" frameBorder="0" scrolling="no" style={{ borderRadius: '4px', border: '2px solid #e5e7eb', margin: 0, backgroundColor: 'transparent' }}></iframe>
 
-      <div className="row">
-        <div className="col-sm-2">
-          <div id="list-example" className="list-group">
-            <Link className="list-group-item list-group-item-action" href="/">
-              <h4 className="text-success">
+      <div>
+        <div>
+          <div>
+            <Link href="/">
+              <h4>
                 How Healthcare Works
               </h4>
             </Link>
 
-            <a className="list-group-item list-group-item-action" href="#start">
+            <a href="#start">
               101
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#second">
+            <a href="#second">
               201
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#thought-pieces">
+            <a href="#thought-pieces">
               VBC Blueprints
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#quality-metrics">
+            <a href="#quality-metrics">
               Quality Metrics/Technology
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#contracting">
+            <a href="#contracting">
               Contracting
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#push-back">
+            <a href="#push-back">
               Push back/Obstacles
             </a>
 
-            <a className="list-group-item list-group-item-action" href="#people">
+            <a href="#people">
               Podcasts, Channels, Newsletters to Follow
             </a>
 
           </div>
         </div>
 
-        <div className="col-sm-9">
-          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="50" tabIndex={0}>
+        <div>
+          <div>
 
             <section id="start">
               <h3 id="start">101 on VBC</h3>
-              <table className="table table-striped">
+              <table>
                 <thead>
                   <tr>
                     <th scope="col">Term</th>
@@ -121,7 +119,7 @@ export default function VbcPage(): JSX.Element {
                     <td>Capitation</td>
                     <td>A fixed, per-member, per-month payment model used in VBC, where providers receive a set payment to cover the care of a patient regardless of the actual services the patient needs.</td>
                   </tr>
-                  <table className="table mx-auto" style={{ marginTop: '60px' }}>
+                  <table style={{ marginTop: '60px' }}>
                     <thead>
                       <tr>
                         <th scope="col">Resource</th>
@@ -142,8 +140,8 @@ export default function VbcPage(): JSX.Element {
                   </table>
                 </tbody>
               </table>
-              <Image className="rounded mx-auto d-block" height={600} src="/img/vbc/vbc_model.png" width={800} alt="VBC Model" />
-              <div className="text-center">
+              <Image height={600} src="/img/vbc/vbc_model.png" width={800} alt="VBC Model" />
+              <div>
                 <p>
                   Source:
                   <a href="https://bhmpc.com/2016/12/payers-providers-value-based-care-reimbursement/" rel="noopener noreferrer" target="_blank">BHM Healthcare Solutions</a>
@@ -152,7 +150,7 @@ export default function VbcPage(): JSX.Element {
             </section>
             <section id="second">
               <h3 id="second" style={{ marginTop: '40px' }}>201</h3>
-              <table className="table table-striped">
+              <table>
                 <thead>
                   <tr>
                     <th scope="col">Term</th>
@@ -185,9 +183,9 @@ export default function VbcPage(): JSX.Element {
                   </tr>
                 </tbody>
               </table>
-              <table className="table">
+              <table>
 
-                <table className="table table-striped" style={{ marginTop: '60px' }}>
+                <table style={{ marginTop: '60px' }}>
                   <thead>
                     <tr>
                       <th scope="col">Resource</th>
@@ -400,7 +398,7 @@ export default function VbcPage(): JSX.Element {
             </section>
             <section id="quality-metrics">
               <h3 id="quality-metrics" style={{ marginTop: '40px' }}>Quality Metrics/Technology</h3>
-              <table className="table table-striped" style={{ marginTop: '60px' }}>
+              <table style={{ marginTop: '60px' }}>
                 <thead>
                   <tr>
                     <th scope="col">Resource</th>
